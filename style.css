@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #f0f0f0;
+}
+
+section {
+  padding: 50px 20px;
+  margin: 30px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.skills ul {
+  padding-left: 20px;
+}
+
+.skill-title {
+  font-weight: bold;
+}
+
+.project-card {
+  background-color: #e8f0fe;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #4a90e2;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+#contact ul {
+  text-align: center;
+}
+
+#contact ul li {
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f0f0f0;
+}
