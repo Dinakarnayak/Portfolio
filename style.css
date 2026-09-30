@@ -6,3 +6,44 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 .hero-photo-card{position:relative;justify-self:end;width:min(100%,360px);aspect-ratio:3/4;margin:0;overflow:hidden;border:7px solid var(--surface);border-radius:13px;background:#dfe6ed;box-shadow:0 18px 48px rgba(28,47,76,.17)}.hero-photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,35,.02) 45%,rgba(10,20,35,.78) 100%);pointer-events:none}.hero-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center 46%}.hero-photo-card figcaption{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;display:flex;flex-direction:column;color:#fff}.photo-label{display:flex;align-items:center;gap:7px;margin-bottom:7px;color:#e4edff;font:9px var(--mono);letter-spacing:.09em}.photo-label i{width:6px;height:6px;border-radius:50%;background:#a7db7e;box-shadow:0 0 0 4px #a7db7e25}.hero-photo-card figcaption strong{font:600 17px var(--poppins);letter-spacing:-.03em}.hero-photo-card figcaption>span:last-child{font-size:10px;color:#e5eaf1;margin-top:2px}.photo-frame-mark{position:absolute;z-index:2;top:13px;right:14px;padding:6px 8px;border:1px solid #ffffff8a;border-radius:4px;background:#111b2b75;color:#fff;font:10px var(--mono);backdrop-filter:blur(8px)}.photo-frame-mark span{color:#a8c2ff}@media(max-width:900px){.hero-photo-card{width:min(100%,340px)}}@media(max-width:700px){.hero-photo-card{justify-self:start;width:min(100%,430px);aspect-ratio:4/4.3}}
 
+
+/* Keep browser Print / Save as PDF readable without changing the live screen design. */
+@page{size:A4;margin:13mm 12mm}
+@media print{
+  html,body{background:#fff!important;color:#202733!important;font-size:9pt;line-height:1.45;scroll-behavior:auto}
+  body{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .container{width:100%;max-width:none}
+  .site-header{position:static;background:#fff!important;color:#202733!important;box-shadow:none;border-bottom:1px solid #d7dce4;backdrop-filter:none}
+  .nav-wrap{height:auto;min-height:38px;gap:8px}
+  .brand{color:#202733!important;font-size:10pt}
+  .nav-links,.menu-toggle,.theme-toggle,.hero-grid-decoration,.ticker,.back-to-top{display:none!important}
+  .hero{overflow:visible;padding:9mm 0 7mm;background:#fff!important;break-after:page}
+  .hero-layout{grid-template-columns:minmax(0,1.35fr) minmax(45mm,.65fr);gap:8mm;align-items:center}
+  .hero-content{max-width:none}
+  .hero h1{font-size:25pt;line-height:1.08;overflow-wrap:anywhere}
+  .hero-role{font-size:14pt;margin:8px 0}
+  .hero-summary{font-size:9pt;line-height:1.5}
+  .hero-actions{gap:5px;margin-top:10px}
+  .button{padding:6px 8px;font-size:8pt;box-shadow:none}
+  .hero-note{margin-top:12px;font-size:8pt}
+  .hero-photo-card{justify-self:stretch;width:100%;max-width:none;height:105mm;aspect-ratio:auto;border:0;box-shadow:none;break-inside:avoid;page-break-inside:avoid}
+  .hero-photo{height:100%;object-fit:cover;object-position:center 42%}
+  .hero-photo-card figcaption{left:12px;right:12px;bottom:12px}
+  .hero-photo-card figcaption strong{font-size:12pt}
+  .photo-frame-mark{backdrop-filter:none}
+  .section-shell{padding:8mm 0;overflow:visible}
+  .section-heading{margin-bottom:5mm;break-after:avoid-page;page-break-after:avoid}
+  .section-heading h2,.contact-copy h2,.github-copy h2{font-size:20pt;line-height:1.15}
+  .heading-aside,.about-copy p,.experience-main p,.education-copy,.project-card p,.contact-copy p{font-size:8.5pt;line-height:1.5}
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .education-card,.experience-card,.skill-panel,.project-card,.cert-card,.github-panel,.contact-panel,.other-projects{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4mm}
+  .project-card{min-height:0;padding:5mm}
+  .project-card h3{font-size:12pt}
+  .skills-grid,.cert-grid{gap:3mm}
+  .site-footer{background:#fff!important;color:#202733!important;border-top:1px solid #d7dce4}
+  .footer-center,.copyright{color:#596273!important}
+  a{color:#244f9d}
+}
+
+
