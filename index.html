@@ -1,94 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dinakar Nayak N - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f9">
+  <meta name="description" content="Dinakar Nayak Narasimha Murthy — AI/ML Engineer and Software Developer based in Leicester, UK. Explore selected projects, experience, education and certifications.">
+  <meta property="og:title" content="Dinakar Nayak Narasimha Murthy | AI/ML Engineer & Software Developer">
+  <meta property="og:description" content="AI/ML engineering, software development, and practical intelligent systems.">
+  <meta property="og:type" content="website">
+  <title>Dinakar Nayak Narasimha Murthy | AI/ML Engineer & Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ffffff/resume.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233f74dd'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-size='27' font-weight='700' fill='white'%3EDN%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Dinakar Nayak N</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Dinakar Nayak Narasimha Murthy home"><span class="brand-mark">DN</span><span>Dinakar Nayak Narasimha Murthy</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a>
+        <a class="nav-cta" href="#contact">Contact <span>↗</span></a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle colour theme"><span aria-hidden="true">◐</span></button>
     </div>
   </header>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Hello! I'm Dinakar Nayak N, an AI/ML enthusiast with a passion for programming, machine learning, and developing innovative solutions. I aim to create impactful projects and contribute to the AI community.</p>
-  </section>
-
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-      <ul>
-        <li><span class="skill-title">Programming:</span> Python, C++, Java, JavaScript</li>
-        <li><span class="skill-title">Web Development:</span> React, Flask, HTML, CSS</li>
-        <li><span class="skill-title">Machine Learning:</span> Deep Learning, NLP, Data Analysis</li>
-        <li><span class="skill-title">Tools & Technologies:</span> AWS, Google Cloud, SQLite, Git</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>AccessManagement System (AMS)</h3>
-        <p>A user access management system designed to streamline the administration of access permissions within organizations.</p>
-        <a href="https://github.com/Dinakarnayak/AccessManagement-System" target="_blank" class="btn">View on GitHub</a>
+  <main>
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div class="hero-content reveal">
+          <div class="eyebrow"><span class="status-dot"></span> LEICESTER, UNITED KINGDOM <span class="eyebrow-divider">/</span> AI · SOFTWARE</div>
+          <p class="hero-kicker">Hello, I’m</p>
+          <h1 id="hero-title">Dinakar Nayak Narasimha Murthy<span class="hero-period">.</span></h1>
+          <h2 class="hero-role">AI/ML Engineer <span>|</span> Software Developer</h2>
+          <p class="hero-summary">I build practical AI and software systems—from agent tooling and observability to NLP, machine learning, and full-stack applications. Currently pursuing an MSc in Artificial Intelligence with Industry at the University of Leicester.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span>↓</span></a><a class="button button-quiet" href="https://github.com/Dinakarnayak" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a class="button button-quiet" href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a></div>
+          <div class="hero-note"><span class="note-line"></span><span>Curious about intelligent systems. Grounded in engineering.</span></div>
+        </div>
+        <figure class="hero-photo-card reveal"><img class="hero-photo" src="assets/uni.jpeg" alt="Dinakar Nayak Narasimha Murthy at the University of Leicester" width="1085" height="1456"><figcaption><span class="photo-label"><i></i> CURRENTLY STUDYING AT</span><strong>University of Leicester</strong><span>MSc Artificial Intelligence with Industry</span></figcaption><span class="photo-frame-mark" aria-hidden="true">DN<span>.</span></span></figure>
       </div>
+      <div class="hero-grid-decoration" aria-hidden="true"></div>
+    </section>
 
-      <div class="project-card">
-        <h3>LinguaSpeak: NLP Speech Translator</h3>
-        <p>An NLP-powered real-time speech translation and text-to-speech application, making cross-language communication seamless.</p>
-        <a href="https://github.com/Dinakarnayak/LinguaSpeak-NLP-Speech-Translator" target="_blank" class="btn">View on GitHub</a>
+    <div class="ticker"><div class="container ticker-content"><span>Building with intent</span><b>AI / ML</b><i>✳</i><b>Backend systems</b><i>✳</i><b>Developer tools</b><i>✳</i><b>Applied research</b></div></div>
+
+    <section class="section-shell" id="about"><div class="container">
+      <div class="section-heading reveal"><div><span class="section-index">01 / ABOUT</span><h2>AI curiosity.<br><span>Engineering discipline.</span></h2></div><p class="heading-aside">A software engineer who enjoys taking ideas from a notebook to something people can use.</p></div>
+      <div class="about-layout"><div class="about-copy reveal"><p>I’m an <strong>AI/ML Engineer and Software Developer</strong> based in Leicester, UK. My background combines computer science, artificial intelligence, and hands-on software development.</p><p>My work spans language technologies, machine learning, backend APIs, and full-stack applications. More recently, I’ve been building tools around AI agents, including a human-reviewed coding agent and an observability workbench for tracing and evaluating agent runs.</p><p>I’m currently pursuing an <strong>MSc Artificial Intelligence with Industry</strong> at the University of Leicester, developing my understanding of computational intelligence, AI security and responsible, production-minded AI.</p><a class="inline-link" href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank" rel="noopener noreferrer">More about my journey on LinkedIn <span>↗</span></a></div>
+        <div class="about-facts reveal"><div class="fact-card"><span class="fact-number">01</span><div><strong>Applied AI</strong><span>Machine learning, NLP, LLMs and intelligent applications</span></div></div><div class="fact-card"><span class="fact-number">02</span><div><strong>Full-stack thinking</strong><span>APIs, data layers, interfaces and deployment</span></div></div><div class="fact-card"><span class="fact-number">03</span><div><strong>Security minded</strong><span>AI security, cybersecurity and responsible systems</span></div></div><div class="fact-card"><span class="fact-number">04</span><div><strong>Learning by building</strong><span>Research, experiments and open-source projects</span></div></div></div></div>
+    </div></section>
+
+    <section class="section-shell section-tint" id="education"><div class="container">
+      <div class="section-heading reveal"><div><span class="section-index">02 / EDUCATION</span><h2>Building a deeper<br><span>technical foundation.</span></h2></div><p class="heading-aside">Formal study in computer science and AI, now extended through postgraduate work in artificial intelligence.</p></div>
+      <div class="education-grid"><article class="education-card education-current reveal"><div class="education-top"><span class="education-badge">CURRENT STUDY · 2026—2028</span><span class="education-symbol">MSc</span></div><span class="mono-label">POSTGRADUATE · FULL TIME</span><h3>MSc Artificial Intelligence with Industry</h3><p class="institution">University of Leicester <span>·</span> United Kingdom</p><p class="education-copy">Coursework includes AI and machine learning, computational intelligence, AI security and ethics, software engineering, big data, predictive analytics, and generative development.</p><div class="education-tags"><span>AI security & ethics</span><span>Predictive analytics</span><span>Computational intelligence</span></div></article>
+        <article class="education-card reveal"><div class="education-top"><span class="education-badge badge-muted">2021 — 2025</span><span class="education-symbol">B.Tech</span></div><span class="mono-label">UNDERGRADUATE</span><h3>Computer Science & Engineering</h3><p class="institution">Specialization in Artificial Intelligence & Machine Learning<br>Dayananda Sagar University <span>·</span> Bengaluru, India</p><div class="score-box"><strong>8.31<span>/10</span></strong><span>CGPA</span></div></article>
+        <article class="education-card education-compact reveal"><div class="education-top"><span class="education-badge badge-muted">PRE-UNIVERSITY</span><span class="education-symbol">PUC</span></div><h3>PCMC</h3><p class="institution">St. Joseph Indian Composite PU College</p><div class="score-box"><strong>74.50<span>%</span></strong><span>Score</span></div></article></div>
+    </div></section>
+
+    <section class="section-shell" id="experience"><div class="container">
+      <div class="section-heading reveal"><div><span class="section-index">03 / EXPERIENCE</span><h2>Learning through<br><span>real-world work.</span></h2></div><p class="heading-aside">AI product development alongside additional UK work experience.</p></div>
+      <div class="experience-list"><article class="experience-card reveal"><div class="experience-marker"><span></span></div><div class="experience-main"><div class="experience-meta"><span class="experience-type">AI PRODUCT DEVELOPMENT</span><span class="experience-dates">JAN 2025 — PRESENT</span></div><h3>Founder</h3><p class="institution">Next Tech AI <span>·</span> Remote</p><p>Building an early-stage AI and software venture, shaping product direction and exploring ideas through research, prototyping, and iterative product development.</p><div class="tag-row"><span>Product vision</span><span>AI/ML research</span><span>Prototyping</span><span>Software</span></div></div></article>
+        <article class="experience-card reveal"><div class="experience-marker"><span></span></div><div class="experience-main"><div class="experience-meta"><span class="experience-type">AI / MACHINE LEARNING</span><span class="experience-dates">JAN 2025 — JUL 2025</span></div><h3>AI Intern</h3><p class="institution">Wajooba India Private Limited <span>·</span> Remote</p><p>Worked on GPT-based course content generation, NLP pipelines, LLM fine-tuning and deployment—contributing across the process of developing AI-powered learning content.</p><div class="tag-row"><span>GPT</span><span>NLP</span><span>LLM fine-tuning</span><span>TypeScript</span><span>Pinecone</span></div></div></article>
+        <article class="experience-card reveal"><div class="experience-marker marker-neutral"><span></span></div><div class="experience-main"><div class="experience-meta"><span class="experience-type type-neutral">ADDITIONAL UK EXPERIENCE</span><span class="experience-dates">JUN 2026 — SEP 2026</span></div><h3>Fulfillment Associate</h3><p class="institution">Amazon <span>·</span> United Kingdom</p><p>Worked in a fast-paced fulfillment operation, building teamwork and operational experience alongside a continued focus on AI/ML and software engineering.</p></div></article></div>
+    </div></section>
+
+    <section class="section-shell section-tint" id="skills"><div class="container">
+      <div class="section-heading reveal"><div><span class="section-index">04 / TECHNICAL SKILLS</span><h2>A broad toolkit.<br><span>Constantly evolving.</span></h2></div><p class="heading-aside">Technologies and methods I’ve used across AI/ML projects, backend services, and full-stack software.</p></div>
+      <div class="skills-grid">
+        <article class="skill-panel reveal"><div class="skill-heading"><span class="skill-icon">{ }</span><h3>Programming</h3></div><div class="skill-pills"><span>Python</span><span>C++</span><span>Java</span><span>JavaScript</span><span>TypeScript</span></div></article>
+        <article class="skill-panel reveal"><div class="skill-heading"><span class="skill-icon">ML</span><h3>AI & Machine Learning</h3></div><div class="skill-pills"><span>Machine Learning</span><span>Deep Learning</span><span>Generative AI</span><span>NLP</span><span>Computer Vision</span><span>LLMs</span><span>LLM Fine-tuning</span><span>XAI</span></div></article>
+        <article class="skill-panel reveal"><div class="skill-heading"><span class="skill-icon">⌘</span><h3>Frameworks & Libraries</h3></div><div class="skill-pills"><span>TensorFlow</span><span>PyTorch</span><span>Keras</span><span>Scikit-learn</span><span>OpenCV</span><span>FastAPI</span><span>Flask</span><span>React</span><span>Node.js</span><span>Express.js</span></div></article>
+        <article class="skill-panel reveal"><div class="skill-heading"><span class="skill-icon">API</span><h3>Backend & Databases</h3></div><div class="skill-pills"><span>REST APIs</span><span>JWT</span><span>RBAC</span><span>TypeORM</span><span>Sequelize</span><span>Mongoose</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span></div></article>
+        <article class="skill-panel reveal"><div class="skill-heading"><span class="skill-icon">☁</span><h3>Cloud & Deployment</h3></div><div class="skill-pills"><span>AWS</span><span>Render</span><span>Vercel</span></div></article>
+        <article class="skill-panel reveal"><div class="skill-heading"><span class="skill-icon">✳</span><h3>Additional areas</h3></div><div class="skill-pills"><span>Blockchain</span><span>Cybersecurity</span><span>IoT</span><span>Bioinformatics</span><span>Signal Processing</span></div></article>
       </div>
+    </div></section>
 
-      <div class="project-card">
-        <h3>Blockchain-Based E-Voting System</h3>
-        <p>A blockchain-based system to ensure secure and transparent e-voting, using decentralized ledger technology for voting processes.</p>
-        <a href="https://github.com/Dinakarnayak/Blockchain-Voting-System" target="_blank" class="btn">View on GitHub</a>
+    <section class="section-shell" id="projects"><div class="container">
+      <div class="section-heading reveal"><div><span class="section-index">05 / FEATURED PROJECTS</span><h2>Selected work,<br><span>built to solve problems.</span></h2></div><p class="heading-aside">Recent AI agent work first, followed by projects across applied ML, NLP, APIs, and software engineering.</p></div>
+      <div class="project-grid">
+        <article class="project-card project-featured reveal"><div class="project-card-top"><span class="project-number">01</span><span class="project-kind">AI AGENTS · NEW</span></div><h3>Autonomous AI Coding Agent</h3><p>A human-reviewed coding agent that turns a GitHub issue into a proposed patch, validates it in an isolated Docker sandbox, and can open a draft PR.</p><div class="project-stack"><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Docker</span></div><a class="project-link" href="https://github.com/Dinakarnayak/autonomous-ai-coding-agent" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card project-featured reveal"><div class="project-card-top"><span class="project-number">02</span><span class="project-kind">OBSERVABILITY · NEW</span></div><h3>TraceLens Agent Observability</h3><p>A self-hostable workbench for inspecting AI agent traces, latency, errors, token use, estimated cost, and repeatable output evaluations.</p><div class="project-stack"><span>Python</span><span>FastAPI</span><span>SQLite</span><span>Docker</span></div><a class="project-link" href="https://github.com/Dinakarnayak/tracelens-agent-observability" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">03</span><span class="project-kind">GENERATIVE AI</span></div><h3>Generative AI for Fraud Detection</h3><p>Explores generative approaches for fraud detection, combining GANs and VAEs with XGBoost and SHAP-based explainability.</p><div class="project-stack"><span>GANs</span><span>VAEs</span><span>XGBoost</span><span>SHAP</span></div><a class="project-link" href="https://github.com/Dinakarnayak/Generative-AI-for-Fraud" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">04</span><span class="project-kind">AI · AUDIO</span></div><h3>Bunny Agent — AI Video Transcriber</h3><p>A FastAPI video agent for media processing, transcription, metadata generation, and semantic search.</p><div class="project-stack"><span>FastAPI</span><span>Whisper</span><span>FFmpeg</span><span>Pinecone</span></div><a class="project-link" href="https://github.com/Dinakarnayak/bunny_agent" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">05</span><span class="project-kind">AI · HEALTH</span></div><h3>Cancer Prediction AI Agents / GenomeGuard</h3><p>AI agent work exploring cancer prediction, machine learning, and explainable model outputs.</p><div class="project-stack"><span>Python</span><span>Scikit-learn</span><span>XAI</span></div><span class="project-link project-private">Project details available on request</span></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">06</span><span class="project-kind">GENERATIVE AI · NLP</span></div><h3>Automated Course Content Generator</h3><p>Automates learning content generation with language models and transformer-based NLP tools.</p><div class="project-stack"><span>FastAPI</span><span>Hugging Face</span><span>LLMs</span></div><a class="project-link" href="https://github.com/Dinakarnayak/course-genration" target="_blank" rel="noopener noreferrer">View related repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">07</span><span class="project-kind">BACKEND API</span></div><h3>WorkForce API</h3><p>A workforce management API built around backend services, data stores, and role-based access control.</p><div class="project-stack"><span>Node.js</span><span>TypeScript</span><span>MySQL</span><span>MongoDB</span><span>RBAC</span></div><a class="project-link" href="https://github.com/Dinakarnayak/WorkForce-API" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">08</span><span class="project-kind">FULL STACK</span></div><h3>EMS-Pro</h3><p>Employee management project covering attendance, leave, and permissions workflows.</p><div class="project-stack"><span>Node.js</span><span>TypeScript</span><span>Attendance</span><span>Permissions</span></div><a class="project-link" href="https://github.com/Dinakarnayak/EMS-Pro" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">09</span><span class="project-kind">BACKEND · SECURITY</span></div><h3>Auth Service API</h3><p>An authentication service API focused on token-based user authentication.</p><div class="project-stack"><span>FastAPI</span><span>JWT</span></div><a class="project-link" href="https://github.com/Dinakarnayak/auth-service-api" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">10</span><span class="project-kind">NLP · SPEECH</span></div><h3>LinguaSpeak — NLP Speech Translator</h3><p>A speech translation application with speech-to-text and text-to-speech capabilities.</p><div class="project-stack"><span>Flask</span><span>JavaScript</span><span>Speech-to-text</span><span>Text-to-speech</span></div><a class="project-link" href="https://github.com/Dinakarnayak/LinguaSpeak-NLP-Speech-Translator" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">11</span><span class="project-kind">BLOCKCHAIN</span></div><h3>TrustVote / Z-Vote</h3><p>Decentralized e-voting projects exploring blockchain-based approaches to voting systems.</p><div class="project-stack"><span>Blockchain</span><span>Django / Flask</span><span>E-voting</span></div><a class="project-link" href="https://github.com/Dinakarnayak/z-vote" target="_blank" rel="noopener noreferrer">View Z-Vote repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">12</span><span class="project-kind">AI · WEB APP</span></div><h3>AI Task Web App</h3><p>A Flask web app for text generation, text analysis, and image recognition through an interactive interface.</p><div class="project-stack"><span>Flask</span><span>OpenAI API</span><span>NLP</span></div><a class="project-link" href="https://github.com/Dinakarnayak/ai-task-web-app" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">13</span><span class="project-kind">BIOINFORMATICS</span></div><h3>Genome Sequencing Analyzer</h3><p>A Python project applying computational techniques to genome sequencing analysis.</p><div class="project-stack"><span>Python</span><span>Bioinformatics</span></div><span class="project-link project-private">Repository link not provided</span></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">14</span><span class="project-kind">DEEP LEARNING</span></div><h3>Deep Learning Assignments</h3><p>Coursework and implementations exploring neural networks, recurrent models, and sequence learning.</p><div class="project-stack"><span>Python</span><span>TensorFlow</span><span>Jupyter</span><span>RNN</span><span>LSTM</span></div><a class="project-link" href="https://github.com/Dinakarnayak/DeepLearningAssignments" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></article>
+        <article class="project-card reveal"><div class="project-card-top"><span class="project-number">15</span><span class="project-kind">FULL STACK · CLOUD</span></div><h3>Next Tech Platform</h3><p>A full-stack platform project bringing together a React interface, Node.js backend, data storage, cloud, and authentication.</p><div class="project-stack"><span>React</span><span>Node.js</span><span>MongoDB</span><span>AWS</span><span>JWT</span></div><span class="project-link project-private">Repository link not provided</span></article>
       </div>
-    </div>
-  </section>
+      <div class="other-projects reveal"><div class="other-projects-heading"><div><span class="section-index">MORE IN THE ARCHIVE</span><h3>Other projects & experiments</h3></div><span class="archive-count">14 PROJECTS</span></div><div class="archive-grid">
+        <span>Weather Prediction Web App</span><span>Crop Disease Detection</span><span>IoT Air Quality Monitoring</span><span>CNN Image Classification — Caltech101</span><span>Brain Tumor Detection from MRI</span><span>Brain-Computer Interface</span><span>Text Summary Web App</span><a href="https://github.com/Dinakarnayak/Stock-Market-Prediction" target="_blank" rel="noopener noreferrer">Stock Market Prediction ↗</a><span>Ground Penetrating Radar with AI</span><span>EventHub</span><span>ShubhaVidya</span><a href="https://github.com/Dinakarnayak/student-management-system-" target="_blank" rel="noopener noreferrer">Student Management System ↗</a><a href="https://github.com/Dinakarnayak/bulletproof_employee_management_system" target="_blank" rel="noopener noreferrer">Bulletproof Employee Management System ↗</a><a href="https://github.com/Dinakarnayak/crud-operation-node-mysql" target="_blank" rel="noopener noreferrer">CRUD Applications ↗</a>
+      </div></div>
+    </div></section>
 
-  <section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li><strong>AWS Certified Machine Learning - Specialty</strong> - Nov 2023</li>
-      <li><strong>Certified Ethical Hacker (CEH)</strong> - Oct 2024</li>
-      <li><strong>ServiceNow Certified Application Developer (CAD)</strong> - Aug 2024</li>
-      <li><strong>Java JSP and Java Database Certification</strong> - Oct 2024</li>
-      <li><strong>Certified System Administrator (CSA) - ServiceNow</strong> - Jun 2024</li>
-      <li><strong>INTRODUCTION TO R</strong> - Infosys Springboard</li>
-    </ul>
-  </section>
+    <section class="section-shell section-tint" id="certifications"><div class="container">
+      <div class="section-heading reveal"><div><span class="section-index">06 / CERTIFICATIONS</span><h2>Continued learning,<br><span>made concrete.</span></h2></div><p class="heading-aside">Credentials across machine learning, application development, cybersecurity, and programming.</p></div>
+      <div class="cert-grid"><article class="cert-card reveal"><span class="cert-icon">AWS</span><div><h3>AWS Certified Machine Learning — Specialty</h3><span>Amazon Web Services <i>·</i> Nov 2023</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">SN</span><div><h3>Certified Application Developer</h3><span>ServiceNow <i>·</i> Aug 2024</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">SN</span><div><h3>Certified System Administrator</h3><span>ServiceNow <i>·</i> Jun 2024</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">SEC</span><div><h3>Ethical Hacking / Penetration Testing & Bug Bounty Hunting</h3><span>Professional development</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">CEH</span><div><h3>Certified Ethical Hacker</h3><span>Oct 2024</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">R</span><div><h3>Statistics for R Programming Language</h3><span>Infosys Springboard <i>·</i> Nov 2024</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">JDBC</span><div><h3>Java Database Connectivity (JDBC)</h3><span>Coursera</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">CYB</span><div><h3>Cybersecurity</h3><span>HP</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">CAD</span><div><h3>Computer-Aided Design (CAD)</h3><span>Professional certification</span></div><span class="cert-arrow">↗</span></article><article class="cert-card reveal"><span class="cert-icon">JSP</span><div><h3>JavaServer Pages (JSP)</h3><span>Oct 2024</span></div><span class="cert-arrow">↗</span></article></div>
+    </div></section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>You can reach me via the following:</p>
-    <ul>
-      <li>Email: <a href="mailto:dinakarnayak4248@gmail.com">dinakarnayak4248@gmail.com</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank">Dinakar Nayak N</a></li>
-    </ul>
-  </section>
+    <section class="section-shell" id="github"><div class="container">
+      <div class="github-panel reveal"><div class="github-copy"><span class="section-index">07 / GITHUB ACTIVITY</span><h2>Open source is<br><span>where ideas travel.</span></h2><p>My GitHub is home to experiments in AI agents, observability, machine learning, NLP, and full-stack development. Start with the newest work, or browse the full repository archive.</p><div class="github-actions"><a class="button button-primary" href="https://github.com/Dinakarnayak" target="_blank" rel="noopener noreferrer">Explore GitHub <span>↗</span></a><a class="button button-outline" href="https://github.com/Dinakarnayak?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories <span>↗</span></a></div></div><div class="github-repos"><a href="https://github.com/Dinakarnayak/autonomous-ai-coding-agent" target="_blank" rel="noopener noreferrer"><span class="repo-dot"></span><span><strong>autonomous-ai-coding-agent</strong><small>Human-reviewed AI coding agent</small></span><b>↗</b></a><a href="https://github.com/Dinakarnayak/tracelens-agent-observability" target="_blank" rel="noopener noreferrer"><span class="repo-dot repo-dot-blue"></span><span><strong>tracelens-agent-observability</strong><small>Tracing & evaluation for agent systems</small></span><b>↗</b></a><a href="https://github.com/Dinakarnayak/Generative-AI-for-Fraud" target="_blank" rel="noopener noreferrer"><span class="repo-dot repo-dot-orange"></span><span><strong>Generative-AI-for-Fraud</strong><small>Generative models for fraud detection</small></span><b>↗</b></a><div class="github-note"><span class="github-note-icon">⌘</span><span>New projects added <strong>September 2026</strong></span></div></div></div>
+    </div></section>
 
-  <footer>
-    <p>&copy; 2024 Dinakar Nayak N</p>
-  </footer>
+    <section class="section-shell contact-section" id="contact"><div class="container"><div class="contact-panel reveal"><div class="contact-copy"><span class="section-index">08 / CONTACT</span><h2>Let’s make something<br><span>useful and thoughtful.</span></h2><p>Open to conversations about AI/ML, software engineering, collaboration, and new opportunities.</p></div><div class="contact-links"><a href="mailto:dinakarnayak4248@gmail.com"><span class="contact-label">EMAIL</span><span>dinakarnayak4248@gmail.com</span><b>↗</b></a><a href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank" rel="noopener noreferrer"><span class="contact-label">LINKEDIN</span><span>Let’s connect professionally</span><b>↗</b></a><a href="https://github.com/Dinakarnayak" target="_blank" rel="noopener noreferrer"><span class="contact-label">GITHUB</span><span>See what I’m building</span><b>↗</b></a></div></div></div></section>
+  </main>
 
+    <footer class="site-footer"><div class="container footer-layout"><a class="brand footer-brand" href="#top"><span class="brand-mark">DN</span><span>Dinakar Nayak Narasimha Murthy</span></a><span class="footer-center">AI/ML Engineer <i>·</i> Software Developer <i>·</i> Leicester, UK</span><a class="back-to-top" href="#top">BACK TO TOP ↑</a><span class="copyright">© <span id="year"></span> Dinakar Nayak Narasimha Murthy</span></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
+
