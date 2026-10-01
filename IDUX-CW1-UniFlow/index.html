@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UniFlow — Intelligent Student Experience</title>
+<meta name="description" content="UniFlow professional ID&UX prototype">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">U</div><div><strong>UniFlow</strong><small>Student Experience</small></div></div>
+    <nav>
+      <button class="nav active" data-screen="dashboard">⌂ <span>Dashboard</span></button>
+      <button class="nav" data-screen="calendar">▦ <span>Calendar</span></button>
+      <button class="nav" data-screen="tasks">✓ <span>Tasks</span></button>
+      <button class="nav" data-screen="planner">✦ <span>AI Planner</span></button>
+      <button class="nav" data-screen="focus">◷ <span>Focus</span></button>
+      <button class="nav" data-screen="groups">◎ <span>Groups</span></button>
+      <button class="nav" data-screen="analytics">⌁ <span>Analytics</span></button>
+      <button class="nav" data-screen="whatif">◇ <span>What-if</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <button class="nav" data-screen="settings">⚙ <span>Settings</span></button>
+      <div class="profile"><div class="avatar">DN</div><div><strong>Student</strong><small>University of Leicester</small></div></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div><span class="eyebrow">UNIFLOW / ID&UX PROTOTYPE</span><h1 id="pageTitle">Good morning, Dinakar</h1></div>
+      <div class="top-actions"><button class="icon-btn" aria-label="Notifications">♧<span class="badge">3</span></button><button class="avatar">DN</button></div>
+    </header>
+    <section id="content"></section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
