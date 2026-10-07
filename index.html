@@ -58,7 +58,30 @@
 </section>
 
 <section class="about" id="about">
-<div class="section-label">01 / ABOUT</div><p class="legacy-section-copy">AI curiosity. Engineering discipline.</p>
+<div class="section-label">01 / ABOUT</div>
+<button class="about-ai-trigger" id="about-ai-trigger" type="button" aria-controls="about-ai-panel" aria-expanded="false">
+  <span class="about-ai-orbit" aria-hidden="true"><i></i><i></i><i></i></span>
+  <span><small>DINAKAR AI</small><b>ASK ABOUT ME</b></span>
+  <em>↗</em>
+</button>
+<div class="about-ai-panel" id="about-ai-panel" aria-hidden="true">
+  <div class="about-ai-top"><span><i></i> DINAKAR AI · ABOUT ASSISTANT</span><button type="button" id="about-ai-close" aria-label="Close Dinakar AI">×</button></div>
+  <div class="about-ai-message">
+    <div class="about-ai-avatar" aria-hidden="true">AI</div>
+    <div>
+      <small>DINAKAR AI</small>
+      <p><strong>Hi, I’m Dinakar.</strong> I’m an AI/ML Engineer and Software Developer based in Leicester, UK.</p>
+      <p>I can explain who I am, what I build, what I’m studying, and the areas of AI and software engineering I work across.</p>
+    </div>
+  </div>
+  <div class="about-ai-actions" role="group" aria-label="Ask about Dinakar">
+    <button type="button" data-about-ai="profile">Who is Dinakar?</button>
+    <button type="button" data-about-ai="work">What does he build?</button>
+    <button type="button" data-about-ai="study">What is he studying?</button>
+    <button type="button" data-about-ai="ai">What are his AI interests?</button>
+  </div>
+  <div class="about-ai-answer" id="about-ai-answer" aria-live="polite"></div>
+</div><p class="legacy-section-copy">AI curiosity. Engineering discipline.</p>
 <div class="about-grid"><h2>Hi, I'm<br><em>Dinakar.</em></h2><div class="about-copy"><p>I’m an AI/ML Engineer and Software Developer based in Leicester, UK.</p><p>I’m <strong>Dinakar Nayak Narasimha Murthy</strong>, a Computer Science graduate specialising in Artificial Intelligence and Machine Learning, currently studying MSc Artificial Intelligence with Industry at the University of Leicester.</p><p>I love turning complicated problems into simple, useful software — from AI agents and NLP systems to research models and full-stack applications.</p><p>A software engineer who enjoys taking ideas from a notebook to something people can use.</p><p>My work spans language technologies, machine learning, backend APIs, and full-stack applications. More recently, I’ve been building tools around AI agents, including a human-reviewed coding agent and an observability workbench for tracing and evaluating agent runs.</p><p>I’m currently pursuing an MSc Artificial Intelligence with Industry at the University of Leicester, developing my understanding of computational intelligence, AI security, responsible AI, and production-minded engineering.</p><p class="about-manifesto">Curious about intelligent systems. Grounded in engineering.</p><a class="line-link" href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank" rel="noopener noreferrer">MORE ABOUT ME · More about my journey on LinkedIn ↗</a></div></div>
 <div class="about-strip"><div><small>CURRENTLY STUDYING AT</small><b>University of Leicester · MSc Artificial Intelligence with Industry</b></div><div><small>BASED IN</small><b>Leicester, UK</b></div><div><small>EDUCATION</small><b>MSc Artificial Intelligence</b></div><div><small>BACKGROUND</small><b>AI & ML · Software</b></div></div><div class="about-pillars"><article><small>01</small><b>Applied AI</b><span>Machine learning, NLP, LLMs and intelligent applications.</span></article><article><small>02</small><b>Full-stack thinking</b><span>APIs, data layers, interfaces and deployment.</span></article><article><small>03</small><b>Security minded</b><span>AI security, cybersecurity and responsible systems.</span></article><article><small>04</small><b>Learning by building</b><span>Research, experiments and open-source projects.</span></article></div>
 </section>
