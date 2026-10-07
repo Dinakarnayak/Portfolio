@@ -2234,6 +2234,10 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 :root[data-theme="light"] .ai-profile-copy span{color:#6c6256}
 
 
+
+/* DINAKAR AI — keep the open assistant above the sticky navigation too */
+body.ai-panel-open header{z-index:1 !important}
+.ask-dinakar-panel{z-index:2147483647 !important}
 /* DINAKAR AI — keep the open assistant above every portfolio section */
 .ask-dinakar-panel{
   position:fixed !important;
