@@ -327,3 +327,216 @@ footer b{text-decoration:none}
 :root[data-theme="light"]{color-scheme:light;--bg:#f5f1e8;--paper:#fffdf8;--ink:#211d17;--muted:#62594f;--line:#211d1726;--accent:#936b35;--dark:#f5f1e8}
 :root[data-theme="light"] body{background:#e8e2d7;color:#211d17}:root[data-theme="light"] .site{background:#f5f1e8;color:#211d17}:root[data-theme="light"] .nav{background:#f5f1e8f2;border-color:#211d1724}:root[data-theme="light"] .nav nav a{color:#554c42}:root[data-theme="light"] .nav nav a.active,:root[data-theme="light"] .nav nav a:hover{background:#936b35;color:#fff}:root[data-theme="light"] .theme-toggle,:root[data-theme="light"] .nav-dot{border-color:#5b4a343b;color:#765523}:root[data-theme="light"] .hero{background:radial-gradient(ellipse at 74% 42%,#e5d8c2 0,#f4efe5 44%,#f5f1e8 78%)}:root[data-theme="light"] .hero h1,:root[data-theme="light"] .about h2,:root[data-theme="light"] .skills-title h2,:root[data-theme="light"] .work-title h2,:root[data-theme="light"] .cert-wrap h2,:root[data-theme="light"] .achievement-wrap h2{color:#211d17}:root[data-theme="light"] .hero-copy>p:not(.mini),:root[data-theme="light"] .about-grid p,:root[data-theme="light"] .skills-title p,:root[data-theme="light"] .work-title p,:root[data-theme="light"] .timeline p,:root[data-theme="light"] .achievement-wrap p{color:#62594f}:root[data-theme="light"] section{color:#211d17}:root[data-theme="light"] .about,:root[data-theme="light"] .skills,:root[data-theme="light"] .work,:root[data-theme="light"] .experience,:root[data-theme="light"] .certs,:root[data-theme="light"] .achievements{background:#f5f1e8}:root[data-theme="light"] .project{background:#fffdf8}:root[data-theme="light"] .project-info h3{color:#211d17}:root[data-theme="light"] .project-info p{color:#62594f}:root[data-theme="light"] .element{background:#fffdf8;color:#211d17;border:1px solid #3328192b}:root[data-theme="light"] .element.lang,:root[data-theme="light"] .element.ai{background:#f0e6d2;color:#211d17}:root[data-theme="light"] .element:hover,:root[data-theme="light"] .element.active{background:#e9dbc0;color:#211d17}:root[data-theme="light"] .cert-list>div{border-color:#211d1726}:root[data-theme="light"] .next{background:#211d17}:root[data-theme="light"] footer{background:#211d17}
 .theme-toggle{width:30px;height:30px;border:1px solid #aaa;border-radius:50%;background:transparent;color:inherit;display:grid;place-items:center;cursor:pointer;font-size:13px}.theme-toggle:hover{background:#111;color:#fff}.nav .theme-toggle{margin-left:auto;margin-right:10px}
+
+/* CONTACT / TERMINAL REPAIR
+   The contact section uses the same editorial system as the rest of the portfolio.
+   This overrides browser-default form controls that previously leaked into the beige section.
+*/
+.next#contact{
+  padding-top:clamp(72px,8vw,118px);
+  padding-bottom:clamp(72px,8vw,118px);
+  background:#c5a36e;
+  color:#15120e;
+}
+.next#contact .section-label{color:#4a3820}
+.contact-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr);
+  gap:clamp(40px,7vw,110px);
+  align-items:start;
+  margin-top:48px;
+}
+.next#contact h2{
+  margin:0;
+  font:500 clamp(82px,11vw,160px)/.74 var(--display);
+  letter-spacing:-.055em;
+  color:#17130e;
+}
+.next#contact h2 em{color:#f0e4ce;font-style:normal}
+.next#contact .contact-grid>div:first-child>p{
+  max-width:500px;
+  margin:20px 0 0;
+  color:#44331f;
+  font-size:12px;
+  line-height:1.8;
+}
+.next#contact .button.dark{
+  display:inline-flex;
+  margin-top:30px;
+  background:#080807;
+  color:#f0e8dc;
+  border:1px solid #080807;
+  text-decoration:none;
+}
+.next#contact .button.dark:hover{
+  background:#17130e;
+  transform:translateY(-3px);
+}
+.next#contact .social-links{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:16px;
+}
+.next#contact .social-links a{
+  min-width:0;
+  box-sizing:border-box;
+  color:#2c2115;
+  border:1px solid #665031;
+  background:transparent;
+  text-decoration:none;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.next#contact .social-links a:hover{
+  background:#d3b27e;
+  border-color:#3e2e1b;
+  transform:translateY(-2px);
+}
+.next#contact .social-links a small{color:#756047}
+
+/* Terminal */
+.contact-terminal{
+  width:100%;
+  box-sizing:border-box;
+  background:#080807;
+  color:#eee9df;
+  border:1px solid #211b12;
+  box-shadow:0 24px 65px #6d532f55;
+  padding:0;
+  overflow:hidden;
+}
+.terminal-top{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-height:48px;
+  padding:0 18px;
+  box-sizing:border-box;
+  border-bottom:1px solid #ffffff1b;
+  background:#0d0c0a;
+  font:9px var(--mono);
+  letter-spacing:.12em;
+}
+.terminal-top>span{
+  color:#d4af72;
+  letter-spacing:2px;
+  white-space:nowrap;
+}
+.terminal-top b{
+  color:#eee9df;
+  font-weight:500;
+}
+.terminal-top small{
+  margin-left:auto;
+  color:#9f988e;
+  font:8px var(--mono);
+  letter-spacing:.1em;
+}
+.terminal-top small:before{
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:6px;
+  margin-right:7px;
+  border-radius:50%;
+  background:#9cbd78;
+  box-shadow:0 0 10px #9cbd78;
+}
+.contact-terminal form{
+  padding:24px;
+}
+.contact-terminal .form-row{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.contact-terminal form label{
+  display:block;
+  color:#bdb3a6;
+  font:8px var(--mono);
+  letter-spacing:.1em;
+}
+.contact-terminal input,
+.contact-terminal textarea{
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  margin-top:8px;
+  padding:12px 13px;
+  border:1px solid #ffffff2b;
+  border-radius:0;
+  outline:0;
+  background:#11100e;
+  color:#f0e9df;
+  font:11px/1.5 var(--mono);
+  box-shadow:none;
+  transition:border-color .2s ease,background .2s ease;
+}
+.contact-terminal textarea{
+  min-height:142px;
+  resize:vertical;
+}
+.contact-terminal input::placeholder,
+.contact-terminal textarea::placeholder{color:#6f685e}
+.contact-terminal input:focus,
+.contact-terminal textarea:focus{
+  border-color:#d4af72;
+  background:#15130f;
+}
+.contact-terminal form>label{margin-top:18px}
+.contact-terminal form>button{
+  margin-top:18px;
+  padding:13px 16px;
+  border:1px solid #d4af72;
+  border-radius:0;
+  background:#d4af72;
+  color:#17130e;
+  cursor:pointer;
+  font:9px var(--mono);
+  letter-spacing:.08em;
+  transition:transform .2s ease,background .2s ease;
+}
+.contact-terminal form>button:hover{
+  transform:translateY(-2px);
+  background:#e6c995;
+}
+.form-success{
+  padding:28px 24px;
+  border-top:1px solid #ffffff1b;
+  background:#0d0c0a;
+}
+.form-success strong{
+  display:block;
+  color:#d4af72;
+  font:11px var(--mono);
+  letter-spacing:.1em;
+}
+.form-success span{
+  display:block;
+  margin-top:8px;
+  color:#9f988e;
+  font:9px var(--mono);
+}
+.next#contact .next-stats{
+  margin-top:72px;
+  border-top:1px solid #6b543466;
+}
+.next#contact .next-stats div{border-color:#6b543466}
+.next#contact .next-stats b{color:#17130e}
+.next#contact .next-stats span{color:#4a3820}
+
+@media(max-width:850px){
+  .contact-grid{grid-template-columns:1fr;gap:42px;margin-top:38px}
+  .contact-terminal{max-width:720px}
+}
+@media(max-width:560px){
+  .next#contact h2{font-size:clamp(76px,20vw,112px)}
+  .next#contact .social-links{grid-template-columns:1fr}
+  .contact-terminal .form-row{grid-template-columns:1fr;gap:16px}
+  .contact-terminal form{padding:18px}
+  .terminal-top{padding:0 13px;gap:8px;font-size:8px}
+  .terminal-top small{display:none}
+}
+
+/* Prevent anchor navigation from hiding headings under the sticky header. */
+section[id]{scroll-margin-top:90px}
