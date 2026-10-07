@@ -2170,3 +2170,65 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
   .skills-bento-card{padding:21px;min-height:160px}
   .skills-bento-card h3{font-size:36px}
 }
+
+
+/* HERO — DINAKAR AI ONLINE refinement */
+.ai-profile-card{
+  width:248px;
+  padding:15px 16px 13px;
+  grid-template-columns:56px 1fr;
+  gap:11px 13px;
+  border-color:#8fd3ff48;
+  background:linear-gradient(145deg,rgba(9,25,38,.94),rgba(4,13,21,.9));
+}
+.ai-profile-card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(120deg,#8fd3ff08,transparent 45%,#d4af7206);
+  pointer-events:none;
+}
+.ai-avatar{width:56px;height:56px}
+.ai-avatar-core{width:44px;height:44px}
+.ai-profile-copy{position:relative;z-index:1}
+.ai-profile-copy small{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:#a9e1ff;
+  font-weight:500;
+}
+.ai-profile-copy small:before{
+  content:"";
+  width:5px;
+  height:5px;
+  flex:none;
+  border-radius:50%;
+  background:#8fd3ff;
+  box-shadow:0 0 10px #8fd3ff;
+}
+.ai-profile-copy strong{
+  font-size:10px;
+  color:#f5f9fc;
+}
+.ai-profile-copy span{color:#a6b9c5}
+.ai-profile-meta{
+  position:relative;
+  z-index:1;
+  color:#879eac;
+}
+.ai-profile-card:hover .ai-online{
+  box-shadow:0 0 0 4px #8fd3ff18,0 0 20px #8fd3ff;
+}
+:root[data-theme="light"] .ai-profile-card{
+  background:linear-gradient(145deg,#fffdf8f2,#f1eadfef);
+  border-color:#936b3550;
+}
+:root[data-theme="light"] .ai-profile-copy small{color:#805b2c}
+:root[data-theme="light"] .ai-profile-copy small:before{
+  background:#4f8982;
+  box-shadow:0 0 9px #4f8982;
+}
+:root[data-theme="light"] .ai-profile-copy strong{color:#211d17}
+:root[data-theme="light"] .ai-profile-copy span{color:#6c6256}
