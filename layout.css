@@ -135,7 +135,7 @@ section.visible,.card.visible{opacity:1;transform:translateY(0);transition:opaci
 .portrait-story-corner i{display:inline-block;width:6px;height:6px;margin-left:7px;border-radius:50%;background:#8fd3ff;box-shadow:0 0 12px #8fd3ff;animation:portraitOnlinePulse 1.8s ease-in-out infinite}
 @keyframes portraitOnlinePulse{50%{opacity:.35;transform:scale(.72)}}
 .portrait-story-card .photo-index,.portrait-story-card .person-caption{z-index:5}
-.portrait-story-card img{position:relative;z-index:2;display:block;width:100%;height:100%;object-fit:cover;clip-path:polygon(8% 0,92% 0,100% 8%,100% 92%,92% 100%,8% 100%,0 92%,0 8%);opacity:1;visibility:visible}
+.portrait-story-card img{position:relative;z-index:2;display:block;width:100%;height:100%;object-fit:cover;clip-path:none;opacity:1;visibility:visible}
 .portrait-story-brackets{clip-path:none}
 .portrait-story-focus{border-radius:50%}
 .portrait-story-brackets{position:absolute;inset:34px;z-index:5;pointer-events:none}
