@@ -16,7 +16,7 @@
 <div class="hero-grid">
 <div class="hero-copy cinematic-reveal"><p class="mini">AI / ML ENGINEER · SOFTWARE DEVELOPER</p><h1>Dinakar<br><em>Nayak.</em><span class="hero-fullname">Narasimha Murthy</span></h1><p class="sub">I build thoughtful software and intelligent systems, turning complex ideas into useful products.</p><p class="hero-detail">I build practical AI and software systems—from agent tooling and observability to NLP, machine learning, and full-stack applications. Currently pursuing an MSc in Artificial Intelligence with Industry at the University of Leicester.</p><a class="button" href="#work">EXPLORE MY WORK <span>↗</span></a><p class="hero-location"><span></span> BASED IN LEICESTER, UNITED KINGDOM</p><div class="hero-proof" aria-label="Portfolio highlights"><span><b>15+</b> PROJECTS</span><span><b>8.31</b> B.TECH CGPA</span><span><b>95.55%</b> EEG ACCURACY</span></div></div>
 <div class="hero-person tilt-card"><img src="assets/uni.jpeg" alt="Dinakar Nayak Narasimha Murthy at the University of Leicester"><div class="photo-index">LEICESTER · UNITED KINGDOM <span>01 / 09</span></div><div class="person-caption"><span>AI / ML ENGINEER</span><b>Dinakar Nayak<br>Narasimha Murthy</b></div></div>
-<div class="ai-profile-card" aria-label="Dinakar AI profile">
+<button class="ai-profile-card" id="ai-profile-trigger" type="button" aria-expanded="false" aria-controls="ask-dinakar-panel" aria-label="Open Ask Dinakar AI profile">
   <div class="ai-avatar">
     <span class="ai-orbit ai-orbit-one"></span>
     <span class="ai-orbit ai-orbit-two"></span>
@@ -26,9 +26,28 @@
   <div class="ai-profile-copy">
     <small>DINAKAR AI · ONLINE</small>
     <strong>AI / ML ENGINEER</strong>
-    <span>Agents · ML · NLP · Software</span>
+    <span>Click to explore my profile</span>
   </div>
   <div class="ai-profile-meta"><span>15+ PROJECTS</span><span>LEICESTER · UK</span></div>
+</button>
+<div class="ask-dinakar-panel" id="ask-dinakar-panel" hidden aria-hidden="true">
+  <div class="ask-dinakar-backdrop" data-ai-close></div>
+  <div class="ask-dinakar-card" role="dialog" aria-modal="true" aria-labelledby="ask-dinakar-title">
+    <button class="ask-dinakar-close" type="button" data-ai-close aria-label="Close Ask Dinakar AI">×</button>
+    <span class="ask-dinakar-kicker">DINAKAR AI · PROFILE ASSISTANT</span>
+    <h3 id="ask-dinakar-title">Ask about <em>my work.</em></h3>
+    <p class="ask-dinakar-intro">Explore my AI/ML background, projects, research interests and ways to connect.</p>
+    <div class="ask-dinakar-grid">
+      <button type="button" data-ai-topic="profile"><b>01</b><strong>Profile</strong><span>Who I am & what I build</span></button>
+      <button type="button" data-ai-topic="skills"><b>02</b><strong>Skills</strong><span>AI, ML, software & tools</span></button>
+      <button type="button" data-ai-topic="projects"><b>03</b><strong>Projects</strong><span>29 projects across my archive</span></button>
+      <button type="button" data-ai-topic="research"><b>04</b><strong>Research</strong><span>AI, agents & intelligent systems</span></button>
+    </div>
+    <div class="ask-dinakar-answer" id="ask-dinakar-answer" aria-live="polite">
+      <small>SELECT A TOPIC</small><p>Choose a card above to explore Dinakar's profile.</p>
+    </div>
+    <div class="ask-dinakar-links"><a href="#work" data-ai-close>VIEW PROJECTS ↗</a><a href="#contact" data-ai-close>CONTACT ↗</a><a href="https://github.com/Dinakarnayak" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div>
+  </div>
 </div>
 </div>
 <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span>01 — 09</span></div>
