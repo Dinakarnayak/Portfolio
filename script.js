@@ -266,3 +266,28 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
  panel.querySelectorAll('[data-about-ai]').forEach(btn=>btn.addEventListener('click',()=>{answer.innerHTML=replies[btn.dataset.aboutAi]||'';answer.classList.add('is-visible')}));
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('is-open')){setOpen(false);trigger.focus()}});
 })();
+
+
+/* Achievements — interactive milestone controller */
+(()=>{
+  const rows=[...document.querySelectorAll('#achievements .achievement-row')];
+  const title=document.getElementById('achievement-detail-title');
+  const copy=document.getElementById('achievement-detail-copy');
+  const link=document.getElementById('achievement-detail-link');
+  if(!rows.length||!title||!copy||!link)return;
+  const details={
+    research:{title:'EEG MODEL ACCURACY',copy:'A GRU-based emotion classification model evaluated on EEG data, reaching 95.55% test accuracy.',href:'#work',label:'EXPLORE THE WORK'},
+    academic:{title:'COMPUTER SCIENCE',copy:'Final B.Tech CGPA of 8.31/10 in Computer Science & Engineering with an Artificial Intelligence & Machine Learning specialisation.',href:'#education',label:'VIEW EDUCATION'},
+    build:{title:'PROJECT PORTFOLIO',copy:'15+ selected projects spanning AI, machine learning, agents, software engineering and research.',href:'#github',label:'EXPLORE GITHUB'}
+  };
+  const select=(key)=>{
+    const d=details[key]||details.research;
+    rows.forEach(row=>{
+      const active=row.dataset.achievement===key;
+      row.classList.toggle('is-active',active);
+      row.setAttribute('aria-expanded',active?'true':'false');
+    });
+    title.textContent=d.title;copy.textContent=d.copy;link.href=d.href;link.innerHTML=d.label+' <span>↗</span>';
+  };
+  rows.forEach(row=>row.addEventListener('click',()=>select(row.dataset.achievement)));
+})();
