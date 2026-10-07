@@ -1445,7 +1445,7 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 
 
 /* Ask Dinakar AI panel */
-.ai-profile-card{appearance:none;-webkit-appearance:none;text-align:left;font:inherit;cursor:pointer}
+.hero-grid{position:relative}.ai-profile-card{appearance:none;-webkit-appearance:none;text-align:left;font:inherit;cursor:pointer;pointer-events:auto;z-index:20}
 .ai-profile-card:focus-visible{outline:2px solid #8fd3ff;outline-offset:4px}
 .ask-dinakar-panel[hidden]{display:none}.ask-dinakar-panel{position:fixed;inset:0;z-index:11000;display:grid;place-items:center;padding:24px}
 .ask-dinakar-backdrop{position:absolute;inset:0;background:rgba(2,9,15,.76);backdrop-filter:blur(16px)}
