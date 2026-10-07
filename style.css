@@ -123,3 +123,6 @@ section.visible,.card.visible{opacity:1;transform:translateY(0);transition:opaci
 
 body{margin:0;overflow-x:hidden}header{position:sticky;top:0;z-index:20}
 
+
+.menu{background:transparent;border:0;color:var(--green);font:16px var(--mono);line-height:1;padding:8px;box-shadow:none}
+
