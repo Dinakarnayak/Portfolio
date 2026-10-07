@@ -1779,3 +1779,11 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
   transform:none!important;
 }
 .about .about-grid>h2:after{visibility:visible!important}
+
+
+/* Final About name + AI interaction visibility */
+.about-grid>h2{opacity:1!important;visibility:visible!important;display:block!important;color:var(--text-strong)!important;z-index:5}
+.about-grid>h2 em{opacity:1!important;visibility:visible!important;display:inline-block!important;color:var(--accent)!important}
+.about-ai-trigger{pointer-events:auto!important;opacity:1!important;visibility:visible!important;z-index:50!important}
+.about-ai-panel{pointer-events:none}
+.about-ai-panel.is-open{pointer-events:auto!important}
