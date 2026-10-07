@@ -291,3 +291,21 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
   };
   rows.forEach(row=>row.addEventListener('click',()=>select(row.dataset.achievement)));
 })();
+
+
+/* Achievements — cinematic milestone switching */
+(()=>{
+  const dots=[...document.querySelectorAll('#achievements .achievement-dot')];
+  const number=document.getElementById('achievement-hero-number');
+  const unit=document.getElementById('achievement-hero-unit');
+  const index=document.getElementById('achievement-live-index');
+  const kicker=document.getElementById('achievement-stage-kicker');
+  const title=document.getElementById('achievement-stage-title');
+  const copy=document.getElementById('achievement-stage-copy');
+  const link=document.getElementById('achievement-stage-link');
+  const note=document.getElementById('achievement-bottom-note');
+  if(!dots.length||!number||!unit||!index||!kicker||!title||!copy||!link||!note)return;
+  const data={research:{number:'95.55',unit:'%',index:'01',kicker:'RESEARCH · 2025',title:'EEG MODEL<br><em>ACCURACY</em>',copy:'A GRU-based emotion classification model evaluated on EEG data, reaching 95.55% test accuracy.',href:'#work',label:'EXPLORE THE WORK',note:'95.55% TEST ACCURACY · EEG EMOTION CLASSIFICATION'},academic:{number:'8.31',unit:'/10',index:'02',kicker:'ACADEMIC · 2025',title:'COMPUTER<br><em>SCIENCE</em>',copy:'Final B.Tech performance in Computer Science & Engineering with an Artificial Intelligence & Machine Learning specialisation.',href:'#education',label:'VIEW EDUCATION',note:'8.31 / 10 FINAL B.TECH CGPA · AI / ML'},build:{number:'15',unit:'+',index:'03',kicker:'BUILD · 2021—2026',title:'PROJECT<br><em>PORTFOLIO</em>',copy:'15+ selected projects spanning AI, machine learning, agents, software engineering and research.',href:'#github',label:'EXPLORE GITHUB',note:'15+ SELECTED PROJECTS · AI · SOFTWARE'}};
+  const select=(key)=>{const d=data[key]||data.research;dots.forEach(dot=>{const active=dot.dataset.achievement===key;dot.classList.toggle('is-active',active);dot.setAttribute('aria-pressed',active?'true':'false')});number.textContent=d.number;unit.textContent=d.unit;index.textContent=d.index;kicker.textContent=d.kicker;title.innerHTML=d.title;copy.textContent=d.copy;link.href=d.href;link.innerHTML=d.label+' <span>↗</span>';note.textContent=d.note};
+  dots.forEach(dot=>dot.addEventListener('click',()=>select(dot.dataset.achievement)));
+})();
