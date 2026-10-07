@@ -453,6 +453,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!p.hidden)close();}
     const p=document.getElementById('ask-dinakar-panel');
     if(!t||!p||t.dataset.heroAiFallback==='1')return;
     t.dataset.heroAiFallback='1';
+    // Portal the modal to <body> so the hero's stacking context/overflow cannot cover it.
+    if(p.parentElement!==document.body) document.body.appendChild(p);
     const close=()=>{
       p.hidden=true;
       p.setAttribute('aria-hidden','true');
