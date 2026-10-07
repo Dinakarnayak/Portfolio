@@ -1758,3 +1758,24 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 .about .about-pillars article{
   visibility:visible!important;
 }
+
+
+/* About identity: always visible */
+.about .about-grid>h2{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  color:var(--text-strong)!important;
+  position:relative;
+  z-index:2;
+  transform:none!important;
+  filter:none!important;
+}
+.about .about-grid>h2 em{
+  display:inline-block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  color:var(--accent)!important;
+  transform:none!important;
+}
+.about .about-grid>h2:after{visibility:visible!important}
