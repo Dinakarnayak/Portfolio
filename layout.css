@@ -171,6 +171,15 @@ section.visible,.card.visible{opacity:1;transform:translateY(0);transition:opaci
 @keyframes photoWave{0%{transform:translate(-50%,-50%) scale(.45);opacity:.7}70%{opacity:.18}100%{transform:translate(-50%,-50%) scale(1.55);opacity:0}}
 @media(prefers-reduced-motion:reduce){.hero-person:before,.hero-person:after{animation:none;opacity:.22;transform:translate(-50%,-50%) scale(1)}}
 
+/* Cinematic hero portrait: controlled reveal, depth, light sweep, and wave. */
+.hero-person{animation:heroPortraitIn 1.4s cubic-bezier(.16,1,.3,1) both}
+.hero-person img{animation:heroPhotoIn 1.6s cubic-bezier(.16,1,.3,1) both}
+.hero-person:after{z-index:4;background:linear-gradient(105deg,transparent 25%,#8fd3ff12 46%,#ffffff18 50%,#8fd3ff08 54%,transparent 75%),linear-gradient(180deg,#09080600 50%,#090806bb 100%),linear-gradient(90deg,#09080618,transparent 40%);background-size:220% 100%,100% 100%,100% 100%;animation:heroLightSweep 5.5s ease-in-out 1.2s both}
+@keyframes heroPortraitIn{0%{opacity:0;transform:translateY(24px) scale(.97);filter:brightness(.65)}55%{opacity:1}100%{opacity:1;transform:translateY(0) scale(1);filter:brightness(1)}}
+@keyframes heroPhotoIn{0%{opacity:0;transform:scale(1.08);filter:saturate(.55) contrast(1.02) brightness(.72)}55%{opacity:1}100%{opacity:1;transform:scale(1);filter:saturate(.82) contrast(1.04) brightness(1)}}
+@keyframes heroLightSweep{0%{background-position:120% 0,0 0,0 0}100%{background-position:-120% 0,0 0,0 0}}
+@media(prefers-reduced-motion:reduce){.hero-person,.hero-person img,.hero-person:after{animation:none}.hero-person img{transform:none}}
+
 body{margin:0;overflow-x:hidden}header{position:sticky;top:0;z-index:20}
 
 
