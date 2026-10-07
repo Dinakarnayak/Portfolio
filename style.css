@@ -225,3 +225,7 @@ body{margin:0;overflow-x:hidden}header{position:sticky;top:0;z-index:20}
 .social-links a small{display:block;margin-top:6px;font:7px var(--sans);letter-spacing:0;color:#a9a095}
 @media(max-width:850px){.about-strip,.about-pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.about-strip,.about-pillars{grid-template-columns:1fr}}
+
+.legacy-section-copy{max-width:690px;margin:14px 0 0;color:#a69c8d;font:8px/1.8 var(--mono);letter-spacing:.045em}
+.timeline small.legacy-role{display:block;margin-top:5px;color:var(--green)}
+.button .contact-type{color:#15120d;font-size:7px;letter-spacing:.14em}
