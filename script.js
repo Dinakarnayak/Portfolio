@@ -165,7 +165,10 @@ const themeToggle=document.querySelector('#theme-toggle');if(themeToggle){const 
     projects:['PROJECTS','29 projects across AI/ML, agents, NLP, software engineering, research and web applications.','Featured work includes autonomous coding agents, TraceLens observability, fraud detection, LinguaSpeak and deep-learning research.'],
     research:['RESEARCH','AI agents · machine learning · NLP · intelligent systems · explainability · AI security','Current interests focus on reliable, observable and useful AI systems that connect research ideas to real products.']
   };
-  trigger.addEventListener('click',open);
+  const openPanel=()=>{open();};
+  trigger.addEventListener('click',openPanel);
+  trigger.addEventListener('pointerup',openPanel);
+  trigger.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPanel()}});
   panel.addEventListener('click',e=>{
     if(e.target.closest('[data-ai-close]')){close();return}
     const card=e.target.closest('[data-ai-topic]');
