@@ -229,3 +229,95 @@ body{margin:0;overflow-x:hidden}header{position:sticky;top:0;z-index:20}
 .legacy-section-copy{max-width:690px;margin:14px 0 0;color:#a69c8d;font:8px/1.8 var(--mono);letter-spacing:.045em}
 .timeline small.legacy-role{display:block;margin-top:5px;color:var(--green)}
 .button .contact-type{color:#15120d;font-size:7px;letter-spacing:.14em}
+
+/* Cinematic layout system: clearer rhythm, full-name hero and editorial project cards. */
+header{display:flex;align-items:center;justify-content:space-between;gap:28px;min-width:0}
+header nav{display:flex;align-items:center;justify-content:center;flex:1;min-width:0;gap:clamp(12px,1.7vw,27px)}
+header nav a{white-space:nowrap;text-decoration:none;transition:color .2s ease}
+.insta{display:grid;place-items:center;width:36px;height:36px;flex:0 0 36px;border:1px solid #ffffff35;border-radius:50%;text-decoration:none;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.insta:hover{background:var(--green);border-color:var(--green);color:#111}
+.menu{display:none}
+.hero{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);align-items:center;flex:1;gap:clamp(38px,6vw,110px);padding:clamp(38px,5vh,70px) 0}
+.hero-copy{position:relative;z-index:2;max-width:720px;padding:24px 0}
+.hero h1{font-family:var(--kinetic,"Bebas Neue",sans-serif);font-size:clamp(90px,11.2vw,174px);font-weight:400;line-height:.76;letter-spacing:.005em;text-transform:uppercase}
+.hero h1 em{font-style:normal;background:linear-gradient(110deg,#f2dcb3 5%,#c99e5d 58%,#81603a 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero-fullname{display:block;margin-top:20px;color:#c2b9ad;font:500 clamp(14px,1.35vw,20px)/1.2 var(--mono);letter-spacing:.17em}
+.hero .sub{margin-top:30px;max-width:510px;font-size:14px}
+.hero-person{position:relative;width:100%;height:min(70vh,690px);min-height:460px;align-self:center;overflow:hidden;border:1px solid #c99e5d44;background:#12100d;box-shadow:0 30px 100px #0009}
+.hero-person:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#09080600 50%,#090806bb 100%),linear-gradient(90deg,#09080618,transparent 40%)}
+.hero-person img{display:block;object-fit:cover;object-position:57% 42%}
+.photo-index,.person-caption{z-index:1}
+.hero-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);font:8px var(--mono);letter-spacing:.16em}
+section{scroll-margin-top:82px}
+.about-grid{display:grid;grid-template-columns:minmax(260px,.78fr) minmax(0,1fr);align-items:start}
+.about-copy{max-width:690px}
+.about-strip{display:grid;gap:0;margin-top:64px}
+.about-strip div{min-width:0}
+.about-pillars{align-items:stretch}
+.work-heading{display:flex;justify-content:space-between;gap:40px;margin-bottom:52px}
+.work-heading p{max-width:320px}
+.cards{display:grid;align-items:stretch}
+.card{display:block;min-width:0;color:inherit;text-decoration:none}
+.visual{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#f0d8a30d,transparent 48%,#0007);pointer-events:none}
+.visual>small{position:absolute;top:18px;left:18px;z-index:1;font-family:var(--mono)}
+.screen{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;width:min(74%,330px);min-height:175px;padding:24px}
+.screen strong{line-height:.9}
+.wave{width:100%;height:42px}
+.nodes{position:relative;z-index:1;display:flex;gap:18px;align-items:center}
+.nodes i{display:block;width:18px;height:18px;border-radius:50%;box-shadow:0 0 24px #d4af7266}
+.nodes i:nth-child(even){transform:translateY(28px)}
+.card-copy{position:relative}
+.card-copy>b{position:absolute;right:22px;bottom:22px}
+.skills-grid{display:grid;grid-template-columns:minmax(250px,.78fr) minmax(0,1fr);align-items:start}
+.skill-copy{min-width:0}
+.periodic{align-items:stretch}
+.experience .timeline{display:grid;grid-template-columns:1fr}
+.timeline article{display:grid;grid-template-columns:minmax(150px,.38fr) minmax(0,1fr);gap:36px;padding:28px 0}
+.timeline article>div{min-width:0}
+.timeline h3{margin:0 0 9px}
+.timeline p{margin:10px 0 0;max-width:740px;font-size:11px}
+.cert-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.6fr);align-items:end;gap:40px;margin-bottom:36px}
+.cert-heading h2{margin:0}
+.cert-grid{display:grid}
+.next{display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.next-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;width:100%;margin-top:80px}
+.next-stats div{display:flex;flex-direction:column;gap:8px;padding:18px 22px}
+.social-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.social-links a{display:inline-flex;flex-direction:column;min-width:145px;padding:14px 16px;border:1px solid #57452e;text-decoration:none;transition:background .2s ease,border .2s ease}
+.social-links a:hover{background:#17130e;border-color:#a98049}
+footer{display:flex;align-items:center;justify-content:space-between;gap:24px}
+footer b{text-decoration:none}
+.project-record-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.project-record{position:relative;isolation:isolate;overflow:hidden;min-height:310px;border-color:#c99e5d38;background:linear-gradient(145deg,#191612,#100f0d 68%);padding:clamp(22px,3vw,36px)}
+.project-record:before{content:attr(data-index);position:absolute;right:16px;top:18px;color:#e8d7c508;font:120px/.8 var(--kinetic,"Bebas Neue",sans-serif);pointer-events:none;z-index:-1}
+.project-record:after{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,#d4af72aa,transparent);opacity:.65}
+.project-record:hover{transform:translateY(-5px);border-color:#d4af7290;background:linear-gradient(145deg,#211b12,#11100e 72%);box-shadow:0 28px 65px #0008}
+.project-record h3{max-width:620px;font-family:var(--kinetic,"Bebas Neue",sans-serif);font-size:clamp(31px,3.4vw,48px);font-weight:400;line-height:.95;letter-spacing:.015em;text-transform:uppercase}
+.project-record>p{max-width:620px;font-size:11px;line-height:1.85}
+.project-stack span{border-radius:2px;background:#ffffff06}
+.project-link{font-size:9px}
+@media(max-width:1050px){
+ header{gap:16px}header nav{gap:12px}header nav a{font-size:8px;letter-spacing:.08em}
+ .hero-grid{gap:36px}.about-grid,.skills-grid{gap:6vw}
+}
+@media(max-width:850px){
+ header{height:72px;justify-content:flex-start}header nav{display:none;position:absolute;top:72px;left:0;right:0;z-index:10;flex:none;align-items:stretch;gap:0;padding:14px 22px 22px}
+ header.open nav{display:flex}.menu{display:block;margin-left:0}.insta{margin-left:auto}
+ .hero{min-height:0}.hero-grid{grid-template-columns:1fr;gap:28px;padding:44px 0 32px}.hero-copy{padding:20px 0 0}.hero h1{font-size:clamp(78px,14vw,132px)}
+ .hero-person{height:min(74svh,650px);min-height:390px;max-width:620px}
+ section{scroll-margin-top:72px}.about-grid,.skills-grid{grid-template-columns:1fr;gap:34px}.about-grid,.skills-grid{margin-top:38px}
+ .work-heading{align-items:flex-start}.timeline article{grid-template-columns:140px minmax(0,1fr);gap:24px}
+ .cert-heading{grid-template-columns:1fr;gap:12px}.cert-heading p{max-width:520px}
+}
+@media(max-width:560px){
+ header{padding-inline:18px}.hero{padding-inline:18px}.hero-note{font-size:7px}.hero-grid{padding-top:28px}.hero h1{font-size:clamp(72px,16vw,100px)}.hero-fullname{font-size:12px;letter-spacing:.1em;margin-top:15px}.hero .sub{font-size:12px;margin-top:22px}.hero-detail{font-size:10px}
+ .hero-person{height:68svh;min-height:340px}.work-heading{display:block}.work-heading p{margin-top:18px}
+ .about-grid,.skills-grid{margin-top:30px}.about-strip,.about-pillars{grid-template-columns:1fr}.project-record-grid{grid-template-columns:1fr}.project-record{min-height:250px}.project-record h3{font-size:34px}
+ .timeline article{grid-template-columns:1fr;gap:9px}.next-stats{grid-template-columns:1fr;margin-top:48px}.next-stats div{padding:16px 0;border-bottom:1px solid #35291955}
+ footer{align-items:flex-start;flex-direction:column}footer>span{order:0;width:auto}
+}
+@media(prefers-reduced-motion:reduce){.card,.project-record,.hero-person img{transition:none}}
+
+
