@@ -193,3 +193,26 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
 (()=>{const cards=[...document.querySelectorAll('.project-story-card')],bar=document.querySelector('.story-progress i b');if(!cards.length)return;const update=()=>{let active=0,best=Infinity;cards.forEach((card,i)=>{const r=card.getBoundingClientRect();const d=Math.abs((r.top+r.height*.35)-innerHeight*.42);if(d<best){best=d;active=i}card.style.setProperty('--story-depth',Math.min(i,2));});cards.forEach((card,i)=>card.classList.toggle('story-active',i===active));if(bar)bar.style.width=((active+1)/cards.length*100)+'%')};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update()})();
 /* Premium project story interactions */
 (()=>{const cards=[...document.querySelectorAll('.project-story-card')],bar=document.querySelector('.story-counter i span');if(!cards.length)return;const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const update=()=>{let a=0,best=1e9;cards.forEach((c,i)=>{const r=c.getBoundingClientRect(),d=Math.abs(r.top+r.height*.34-innerHeight*.42);if(d<best){best=d;a=i}});cards.forEach((c,i)=>c.classList.toggle('story-active',i===a));if(bar)bar.style.width=((a+1)/cards.length*100)+'%'};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();if(!reduce&&matchMedia('(pointer:fine)').matches)cards.forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.setProperty('--ry',x*5+'deg');c.style.setProperty('--rx',-y*4+'deg');c.style.setProperty('--mx',x*5+'px');c.style.setProperty('--my',y*3+'px')});c.addEventListener('pointerleave',()=>{c.style.setProperty('--ry','0deg');c.style.setProperty('--rx','0deg');c.style.setProperty('--mx','0px');c.style.setProperty('--my','0px')})})})();
+
+/* Hero photo pointer spotlight */
+(()=>{
+  const hero=document.querySelector('.hero-person');
+  if(!hero || matchMedia('(pointer:coarse)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  hero.addEventListener('pointermove',e=>{
+    const r=hero.getBoundingClientRect();
+    const x=((e.clientX-r.left)/r.width)*100;
+    const y=((e.clientY-r.top)/r.height)*100;
+    hero.style.setProperty('--hero-mx',x.toFixed(2)+'%');
+    hero.style.setProperty('--hero-my',y.toFixed(2)+'%');
+    hero.style.setProperty('--hero-rx',((50-y)*.035).toFixed(2)+'deg');
+    hero.style.setProperty('--hero-ry',((x-50)*.035).toFixed(2)+'deg');
+    hero.classList.add('hero-hovering');
+  });
+  hero.addEventListener('pointerleave',()=>{
+    hero.style.setProperty('--hero-mx','50%');
+    hero.style.setProperty('--hero-my','50%');
+    hero.style.setProperty('--hero-rx','0deg');
+    hero.style.setProperty('--hero-ry','0deg');
+    hero.classList.remove('hero-hovering');
+  });
+})();
