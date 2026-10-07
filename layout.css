@@ -165,7 +165,7 @@ section.visible,.card.visible{opacity:1;transform:translateY(0);transition:opaci
 
 
 .hero-person{position:relative;overflow:hidden}
-.hero-person:before{content:"";position:absolute;left:50%;top:45%;width:180px;height:180px;transform:translate(-50%,-50%) scale(.55);border:1px solid #8fd3ff30;border-radius:50%;box-shadow:0 0 0 28px #8fd3ff0d,0 0 0 56px #8fd3ff07,0 0 35px #8fd3ff10;pointer-events:none;z-index:1;animation:photoWave 4.5s ease-out infinite}
+.hero-person:before{content:"";position:absolute;left:50%;top:45%;width:180px;height:180px;transform:translate(-50%,-50%) scale(.55);border:1px solid #8fd3ff30;border-radius:50%;box-shadow:0 0 0 28px #8fd3ff0d,0 0 0 56px #8fd3ff07,0 0 35px #8fd3ff10;pointer-events:none;z-index:3;animation:photoWave 4.5s ease-out infinite}
 .hero-person:after{content:"";position:absolute;left:50%;top:45%;width:180px;height:180px;transform:translate(-50%,-50%) scale(.55);border:1px solid #8fd3ff22;border-radius:50%;pointer-events:none;z-index:1;animation:photoWave 4.5s ease-out 2.25s infinite}
 .hero-person img{position:relative;z-index:2}
 @keyframes photoWave{0%{transform:translate(-50%,-50%) scale(.45);opacity:.7}70%{opacity:.18}100%{transform:translate(-50%,-50%) scale(1.55);opacity:0}}
