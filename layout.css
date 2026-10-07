@@ -1181,3 +1181,47 @@ body{
   }
   .experience .timeline article:hover>div{transform:translateY(-4px)}
 }
+
+/* UI / UX experience capability strip */
+.experience-ux{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:7px;
+  margin-top:13px;
+  padding-top:14px;
+  border-top:1px solid rgba(185,211,155,.12);
+}
+.experience-ux span{
+  padding:6px 8px;
+  border-radius:7px;
+  border:1px solid rgba(185,211,155,.13);
+  color:#a9c39d;
+  background:rgba(185,211,155,.035);
+  font:7px var(--mono);
+  letter-spacing:.05em;
+}
+.experience-ux .ux-label{
+  color:#d6e9c9;
+  background:linear-gradient(135deg,rgba(185,211,155,.18),rgba(212,183,125,.10));
+  border-color:rgba(185,211,155,.30);
+  letter-spacing:.11em;
+}
+.experience-ux span:not(.ux-label):hover{
+  border-color:rgba(185,211,155,.35);
+  color:#d6e9c9;
+  transform:translateY(-1px);
+}
+:root[data-theme="light"] .experience-ux{
+  border-top-color:rgba(79,122,75,.12);
+}
+:root[data-theme="light"] .experience-ux span{
+  color:#52724f;
+  background:#f5f9f2;
+  border-color:rgba(79,122,75,.13);
+}
+:root[data-theme="light"] .experience-ux .ux-label{
+  color:#365f3b;
+  background:linear-gradient(135deg,#e5f0e1,#f3f5e8);
+  border-color:rgba(79,122,75,.28);
+}
