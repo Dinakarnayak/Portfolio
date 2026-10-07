@@ -120,3 +120,6 @@ section.visible,.card.visible{opacity:1;transform:translateY(0);transition:opaci
 
 .hero-person img{width:100%;height:100%;object-fit:cover}
 
+
+body{margin:0;overflow-x:hidden}header{position:sticky;top:0;z-index:20}
+
