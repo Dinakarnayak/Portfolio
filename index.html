@@ -225,5 +225,44 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!p.hidden)close();}
 })();
 </script><script>
 (()=>{const b=document.getElementById('theme-toggle');if(!b)return;const apply=t=>{t=t==='light'?'light':'dark';document.documentElement.setAttribute('data-theme',t);b.setAttribute('aria-pressed',String(t==='light'));b.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');b.innerHTML='<span aria-hidden="true">'+(t==='light'?'☾':'☼')+'</span>';try{localStorage.setItem('portfolio-theme',t)}catch(e){}};let t='dark';try{const saved=localStorage.getItem('portfolio-theme');if(saved==='light'||saved==='dark')t=saved}catch(e){}apply(t);b.onclick=()=>apply(document.documentElement.getAttribute('data-theme')==='light'?'dark':'light');})();
-</script><script src="script.js"></script></body></html>
+</script><script src="script.js"></script>
+<script>
+(()=> {
+  const initAboutAI=()=>{
+    const trigger=document.getElementById('about-ai-trigger');
+    const panel=document.getElementById('about-ai-panel');
+    const close=document.getElementById('about-ai-close');
+    const answer=document.getElementById('about-ai-answer');
+    if(!trigger||!panel||!close||!answer)return;
+    if(trigger.dataset.bound==='1')return;
+    trigger.dataset.bound='1';
+    const open=()=>{
+      panel.classList.add('is-open');
+      panel.setAttribute('aria-hidden','false');
+      trigger.setAttribute('aria-expanded','true');
+    };
+    const shut=()=>{
+      panel.classList.remove('is-open');
+      panel.setAttribute('aria-hidden','true');
+      trigger.setAttribute('aria-expanded','false');
+    };
+    trigger.addEventListener('click',open);
+    close.addEventListener('click',shut);
+    panel.querySelectorAll('[data-about-ai]').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const replies={
+          profile:'<strong>Hi, I’m Dinakar.</strong> I’m an AI/ML Engineer and Software Developer based in Leicester, UK.',
+          work:'I build AI agents, NLP systems, machine-learning solutions, backend APIs and full-stack applications.',
+          study:'I’m pursuing an MSc Artificial Intelligence with Industry at the University of Leicester.',
+          ai:'My interests include AI agents, NLP, LLMs, machine learning, intelligent systems and AI security.'
+        };
+        answer.innerHTML=replies[btn.dataset.aboutAi]||'';
+        answer.classList.add('is-visible');
+      });
+    });
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initAboutAI,{once:true});
+  else initAboutAI();
+})();
+</script></body></html>
 
