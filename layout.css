@@ -321,3 +321,325 @@ footer b{text-decoration:none}
 @media(prefers-reduced-motion:reduce){.card,.project-record,.hero-person img{transition:none}}
 
 
+
+/* =========================================================
+   ACCESSIBLE DUAL-THEME SYSTEM — final contrast pass
+   Keeps the cinematic/nature direction while guaranteeing
+   readable text, controls and surfaces in both themes.
+   ========================================================= */
+
+:root{
+  --bg:#0b120e;
+  --surface:#111b15;
+  --surface-2:#16231b;
+  --surface-3:#1d2b21;
+  --text:#f2f6ef;
+  --text-strong:#ffffff;
+  --text-muted:#b9c5ba;
+  --text-soft:#94a398;
+  --border:rgba(238,246,239,.18);
+  --border-strong:rgba(238,246,239,.32);
+  --accent:#a8c987;
+  --accent-strong:#c1dda1;
+  --accent-ink:#102014;
+  --hero-glow:#294b35;
+}
+
+html,body{background:var(--bg);color:var(--text)}
+body{color:var(--text)}
+.page{background:var(--bg);color:var(--text)}
+header{
+  background:rgba(11,18,14,.94);
+  color:var(--text);
+  border-color:var(--border);
+  backdrop-filter:blur(18px);
+}
+.logo{color:var(--text-strong)}
+.logo span,nav a:hover,nav a.active,.section-label,
+.hero h1 em,.about h2 em,.work-heading h2 em,.skills h2 em,
+.cert-heading h2 em,.github-feature h2 em,.extra-heading h2 em,
+.project-number,.archive-count,.card-copy span,.card-copy>b,
+.project-link,.github-repos>a>span,.github-repos strong,
+footer a,.hero-copy .mini,.person-caption span{color:var(--accent)}
+
+nav a{color:var(--text-muted)}
+.insta,.theme-toggle,.menu{color:var(--accent);border-color:var(--border-strong)}
+.insta:hover,.theme-toggle:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+.hero{
+  background:
+    radial-gradient(circle at 72% 38%,rgba(41,75,53,.72),transparent 42%),
+    linear-gradient(135deg,#0b120e 0%,#101a14 58%,#0b120e 100%);
+}
+.hero-note{color:var(--text-muted);border-color:var(--border)}
+.hero-note b{color:var(--accent)}
+.hero h1,.about h2,.work-heading h2,.skills h2,.cert-heading h2,
+.github-feature h2,.extra-heading h2,.project-record h3,
+.card-copy h3,.timeline h3,.cert-card h3,.education-extra-grid h3,
+.project-archive-list h3,.skill-groups h3,.github-repos b{color:var(--text-strong)}
+.hero h1 em{
+  background:linear-gradient(110deg,#d8edbd 5%,#a8c987 58%,#789a67 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .sub,.hero-detail,.about-copy p,.work-heading p,.skill-copy p,
+.timeline p,.cert-heading p,.extra-heading>p,.github-feature-grid>div:first-child>p,
+.project-record>p,.showcase-detail,.archive-heading p,.skill-inventory-heading p,
+.education-extra-grid p,.github-note,.github-repos small,.about-pillars span,
+.person-caption,.hero-location{color:var(--text-muted)}
+.hero-location span{background:#9dcc79;box-shadow:0 0 12px rgba(157,204,121,.65)}
+.hero-person{background:var(--surface);border-color:var(--border-strong)}
+.hero-bottom{color:var(--text-soft);border-color:var(--border)}
+section{background:var(--bg);color:var(--text)}
+.about,.certifications,.github-feature,.skills{background:#0d1711}
+.work,.experience,.education-extra{background:#132018}
+.about-strip,.about-strip div,.timeline,.timeline article,
+.education-extra-grid .edu-copy,.github-repos{border-color:var(--border)}
+.about-strip small,.skill-inventory-heading p,.timeline time,.timeline small,
+.cert-card small,.project-kind,.archive-pills span,.inventory-pills span,
+.element small,.element span,.project-stack span{color:var(--text-soft)}
+.about-strip b,.about-pillars b{color:var(--text-strong)}
+.about-pillars article,.skill-groups article,.education-extra-grid article{
+  background:var(--surface);border-color:var(--border)
+}
+.card,.project-record,.cert-card{
+  background:var(--surface);
+  border-color:var(--border);
+  color:var(--text);
+}
+.card:hover,.project-record:hover,.cert-card:hover{
+  border-color:rgba(168,201,135,.72);
+  box-shadow:0 24px 60px rgba(0,0,0,.34)
+}
+.card-copy{background:var(--surface)}
+.visual{background:var(--surface-2)}
+.visual-one{background:radial-gradient(circle at 75% 25%,#536b4a,#263a2b 52%,#152219)}
+.visual-two{background:radial-gradient(circle at 70% 30%,#54756a,#253c32 52%,#142119)}
+.visual-three{background:radial-gradient(circle at 70% 25%,#6c694d,#3a3b2b 52%,#1a2118)}
+.visual>small{color:#e8f0e4}
+.screen{background:#0e1712;color:var(--text-strong);border-color:rgba(168,201,135,.55)}
+.screen b,.screen span{color:var(--text-muted)}
+.screen strong{color:var(--accent-strong)}
+.skill-list span,.archive-pills a,.archive-pills span,.inventory-pills span{
+  background:var(--surface);color:var(--text);border-color:var(--border)
+}
+.filters button,.element{
+  background:var(--surface);color:var(--text);border-color:var(--border)
+}
+.filters button:hover,.filters button.selected{
+  background:var(--accent);border-color:var(--accent);color:var(--accent-ink)
+}
+.element.lang,.element.ai{background:var(--surface-2);border-color:rgba(168,201,135,.34)}
+.element:hover,.element.active{background:var(--surface-3);border-color:var(--accent)}
+.element strong{color:var(--accent-strong)}
+.timeline h3,.cert-card h3,.education-extra-grid h3,.project-archive-list h3{color:var(--text-strong)}
+.timeline time,.timeline small,.cert-card small,.edu-top span,
+.education-extra-grid article>small{color:#a9bd9d}
+.project-record{
+  background:linear-gradient(145deg,#17251b,#0f1812 76%);
+}
+.project-record:hover{
+  background:linear-gradient(145deg,#1e3024,#111b15 76%);
+}
+.project-stack span,.experience-tags span{color:#c7d5c7;border-color:var(--border)}
+.edu-top b,.score{color:var(--accent-strong)}
+.github-outline,.social-links a{color:#d7e2d7;border-color:rgba(168,201,135,.5)}
+.github-outline:hover,.social-links a:hover{color:var(--text-strong);border-color:var(--accent);background:#18271d}
+.button{
+  background:var(--accent);
+  color:var(--accent-ink);
+}
+.button:hover{background:var(--accent-strong)}
+.button span,.button .contact-type{color:var(--accent-ink)}
+.next{
+  background:linear-gradient(135deg,#9fbe7f 0%,#b8d495 52%,#8fac70 100%);
+  color:#102014;
+}
+.next .section-label{color:#29462f}
+.next h2{color:#102014}
+.next h2 em{color:#eef6e8}
+.next>p{color:#29462f}
+.next-stats,.next-stats div{border-color:rgba(16,32,20,.28)}
+.next-stats b{color:#102014}
+.next-stats span{color:#29462f}
+.button.dark{background:#102014;color:#eef6e8}
+.button.dark:hover{background:#18351f}
+.button.dark span{color:#eef6e8}
+footer{background:#08100b;color:var(--text-muted);border-color:var(--border)}
+footer b{color:var(--text-strong)}
+footer>span{color:var(--text-soft)}
+:focus-visible{outline-color:var(--accent-strong)}
+
+.command-hint{color:var(--text-soft)}
+.command-palette{background:rgba(0,0,0,.62)}
+.command-box{background:var(--surface);color:var(--text);border-color:var(--border-strong)}
+.command-box input{background:var(--surface-2);color:var(--text);border-color:var(--border)}
+.command-box input::placeholder{color:var(--text-soft)}
+.command-items button{background:transparent;color:var(--text-muted);border-color:var(--border)}
+.command-items button:hover{background:var(--surface-2);color:var(--text-strong)}
+
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f4f7f1;
+  --surface:#ffffff;
+  --surface-2:#edf3eb;
+  --surface-3:#e1ebde;
+  --text:#1b2a20;
+  --text-strong:#102017;
+  --text-muted:#536257;
+  --text-soft:#69776c;
+  --border:rgba(27,42,32,.16);
+  --border-strong:rgba(27,42,32,.28);
+  --accent:#4f7a4b;
+  --accent-strong:#355f38;
+  --accent-ink:#ffffff;
+  --hero-glow:#cfe0c9;
+}
+:root[data-theme="light"] body{background:#e8eee5;color:var(--text)}
+:root[data-theme="light"] .page{background:var(--bg);color:var(--text)}
+:root[data-theme="light"] header{background:rgba(244,247,241,.94);color:var(--text);border-color:var(--border)}
+:root[data-theme="light"] .logo{color:var(--text-strong)}
+:root[data-theme="light"] nav a{color:#526056}
+:root[data-theme="light"] nav a:hover,:root[data-theme="light"] nav a.active{color:var(--accent-strong)}
+:root[data-theme="light"] .hero{
+  background:
+    radial-gradient(circle at 72% 38%,rgba(207,224,201,.95),transparent 43%),
+    linear-gradient(135deg,#f4f7f1 0%,#edf3eb 58%,#f7f9f5 100%);
+}
+:root[data-theme="light"] .hero-note{color:var(--text-muted);border-color:var(--border)}
+:root[data-theme="light"] .hero h1,.hero-fullname{color:var(--text-strong)}
+:root[data-theme="light"] .hero h1 em{
+  background:linear-gradient(110deg,#355f38 5%,#4f7a4b 58%,#6f8f62 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+:root[data-theme="light"] .hero .sub,
+:root[data-theme="light"] .hero-detail,
+:root[data-theme="light"] .hero-location,
+:root[data-theme="light"] .about-copy p,
+:root[data-theme="light"] .work-heading p,
+:root[data-theme="light"] .skill-copy p,
+:root[data-theme="light"] .timeline p,
+:root[data-theme="light"] .cert-heading p,
+:root[data-theme="light"] .extra-heading>p,
+:root[data-theme="light"] .github-feature-grid>div:first-child>p,
+:root[data-theme="light"] .project-record>p,
+:root[data-theme="light"] .showcase-detail,
+:root[data-theme="light"] .archive-heading p,
+:root[data-theme="light"] .skill-inventory-heading p,
+:root[data-theme="light"] .education-extra-grid p,
+:root[data-theme="light"] .github-note,
+:root[data-theme="light"] .about-pillars span{color:var(--text-muted)}
+:root[data-theme="light"] section{background:var(--bg);color:var(--text)}
+:root[data-theme="light"] .about,
+:root[data-theme="light"] .skills,
+:root[data-theme="light"] .certifications,
+:root[data-theme="light"] .github-feature{background:#f4f7f1}
+:root[data-theme="light"] .work,
+:root[data-theme="light"] .experience,
+:root[data-theme="light"] .education-extra{background:#e9f0e6}
+:root[data-theme="light"] .about h2,
+:root[data-theme="light"] .work-heading h2,
+:root[data-theme="light"] .skills h2,
+:root[data-theme="light"] .cert-heading h2,
+:root[data-theme="light"] .github-feature h2,
+:root[data-theme="light"] .extra-heading h2,
+:root[data-theme="light"] .project-record h3,
+:root[data-theme="light"] .card-copy h3,
+:root[data-theme="light"] .timeline h3,
+:root[data-theme="light"] .cert-card h3,
+:root[data-theme="light"] .project-archive-list h3,
+:root[data-theme="light"] .skill-groups h3,
+:root[data-theme="light"] .education-extra-grid h3,
+:root[data-theme="light"] .github-repos b{color:var(--text-strong)}
+:root[data-theme="light"] .section-label,
+:root[data-theme="light"] .about h2 em,
+:root[data-theme="light"] .work-heading h2 em,
+:root[data-theme="light"] .skills h2 em,
+:root[data-theme="light"] .cert-heading h2 em,
+:root[data-theme="light"] .github-feature h2 em,
+:root[data-theme="light"] .extra-heading h2 em,
+:root[data-theme="light"] .project-number,
+:root[data-theme="light"] .archive-count,
+:root[data-theme="light"] .project-link,
+:root[data-theme="light"] .card-copy span,
+:root[data-theme="light"] .card-copy>b,
+:root[data-theme="light"] .hero-copy .mini,
+:root[data-theme="light"] .person-caption span{color:var(--accent-strong)}
+:root[data-theme="light"] .card,
+:root[data-theme="light"] .project-record,
+:root[data-theme="light"] .cert-card,
+:root[data-theme="light"] .about-pillars article,
+:root[data-theme="light"] .skill-groups article,
+:root[data-theme="light"] .education-extra-grid article{
+  background:var(--surface);border-color:var(--border);box-shadow:0 12px 30px rgba(31,55,37,.07)
+}
+:root[data-theme="light"] .visual{background:var(--surface-2)}
+:root[data-theme="light"] .visual-one{background:radial-gradient(circle at 75% 25%,#c5d5ad,#e6eee1 52%,#d8e4d3)}
+:root[data-theme="light"] .visual-two{background:radial-gradient(circle at 70% 30%,#b8d3c5,#e8f0eb 52%,#d5e5dc)}
+:root[data-theme="light"] .visual-three{background:radial-gradient(circle at 70% 25%,#d8cba8,#f0eadb 52%,#e2d8c3)}
+:root[data-theme="light"] .visual>small{color:#334638}
+:root[data-theme="light"] .screen{background:#ffffff;color:var(--text-strong);border-color:rgba(79,122,75,.38);box-shadow:0 14px 40px rgba(37,62,42,.12)}
+:root[data-theme="light"] .screen b,
+:root[data-theme="light"] .screen span{color:var(--text-muted)}
+:root[data-theme="light"] .screen strong{color:var(--accent-strong)}
+:root[data-theme="light"] .skill-list span,
+:root[data-theme="light"] .archive-pills a,
+:root[data-theme="light"] .archive-pills span,
+:root[data-theme="light"] .inventory-pills span,
+:root[data-theme="light"] .filters button,
+:root[data-theme="light"] .element{
+  background:#fff;color:var(--text);border-color:var(--border)
+}
+:root[data-theme="light"] .filters button:hover,
+:root[data-theme="light"] .filters button.selected{
+  background:var(--accent);color:#fff;border-color:var(--accent)
+}
+:root[data-theme="light"] .element.lang,
+:root[data-theme="light"] .element.ai{background:#edf4e9;border-color:rgba(79,122,75,.32)}
+:root[data-theme="light"] .element:hover,
+:root[data-theme="light"] .element.active{background:#e0ecdc;border-color:var(--accent)}
+:root[data-theme="light"] .element strong{color:var(--accent-strong)}
+:root[data-theme="light"] .element small,
+:root[data-theme="light"] .element span,
+:root[data-theme="light"] .project-kind,
+:root[data-theme="light"] .archive-pills span,
+:root[data-theme="light"] .inventory-pills span,
+:root[data-theme="light"] .timeline time,
+:root[data-theme="light"] .timeline small,
+:root[data-theme="light"] .cert-card small{color:var(--text-soft)}
+:root[data-theme="light"] .project-record{background:linear-gradient(145deg,#ffffff,#edf3e9 78%)}
+:root[data-theme="light"] .project-record:hover{background:linear-gradient(145deg,#ffffff,#e4eee0 78%)}
+:root[data-theme="light"] .project-stack span,
+:root[data-theme="light"] .experience-tags span{color:#506055;border-color:var(--border)}
+:root[data-theme="light"] .edu-top b,
+:root[data-theme="light"] .score{color:var(--accent-strong)}
+:root[data-theme="light"] .github-outline,
+:root[data-theme="light"] .social-links a{color:#315438;border-color:rgba(79,122,75,.48)}
+:root[data-theme="light"] .github-outline:hover,
+:root[data-theme="light"] .social-links a:hover{background:#e6f0e2;color:#183a20;border-color:var(--accent)}
+:root[data-theme="light"] .next{
+  background:linear-gradient(135deg,#9fbe7f 0%,#b9d79a 52%,#8fb174 100%);
+  color:#102017;
+}
+:root[data-theme="light"] .next h2{color:#102017}
+:root[data-theme="light"] .next h2 em{color:#ffffff}
+:root[data-theme="light"] .next .section-label,
+:root[data-theme="light"] .next>p,
+:root[data-theme="light"] .next-stats span{color:#294c31}
+:root[data-theme="light"] .next-stats,
+:root[data-theme="light"] .next-stats div{border-color:rgba(16,32,23,.25)}
+:root[data-theme="light"] .next-stats b{color:#102017}
+:root[data-theme="light"] footer{background:#16301f;color:#c9d8ca}
+:root[data-theme="light"] footer b{color:#f2f7f2}
+:root[data-theme="light"] footer>span{color:#b1c3b3}
+:root[data-theme="light"] .command-hint{color:var(--text-soft)}
+:root[data-theme="light"] .command-box{background:#fff;color:var(--text-strong);border-color:var(--border-strong)}
+:root[data-theme="light"] .command-box input{background:#f0f5ee;color:var(--text-strong);border-color:var(--border)}
+:root[data-theme="light"] .command-box input::placeholder{color:var(--text-soft)}
+:root[data-theme="light"] .command-items button{color:var(--text-muted);border-color:var(--border)}
+:root[data-theme="light"] .command-items button:hover{background:#e8f1e5;color:var(--text-strong)}
+
+@media(max-width:850px){
+  nav{background:rgba(11,18,14,.98);border-color:var(--border)}
+  :root[data-theme="light"] nav{background:rgba(244,247,241,.99)}
+  nav a{border-color:var(--border)}
+}
