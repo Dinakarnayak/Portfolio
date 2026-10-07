@@ -1574,3 +1574,36 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 @media (pointer:coarse), (prefers-reduced-motion:reduce){
   .hero-person:after{background:linear-gradient(180deg,#09080600 50%,#090806bb 100%),linear-gradient(90deg,#09080618,transparent 40%)}
 }
+
+/* Premium About section */
+.about{position:relative;overflow:hidden}
+.about:before{content:"ABOUT / 01";position:absolute;right:2vw;top:5.5rem;color:#8fd3ff0d;font:clamp(70px,12vw,180px)/.8 var(--kinetic,"Bebas Neue",sans-serif);letter-spacing:-.04em;pointer-events:none}
+.about-grid{position:relative;z-index:1}
+.about-grid>h2{position:relative}
+.about-grid>h2:after{content:"";display:block;width:54px;height:3px;margin-top:28px;background:linear-gradient(90deg,var(--green),transparent);transform-origin:left;animation:aboutLineIn 1s .15s both}
+.about-copy{position:relative;padding:28px 0 0 34px;border-left:1px solid #8fd3ff2a}
+.about-copy:before{content:"PROFILE / ENGINEERING";position:absolute;left:34px;top:0;color:#8fd3ff;opacity:.7;font:7px var(--mono);letter-spacing:.18em}
+.about-copy p{transition:transform .35s ease,color .35s ease}
+.about-copy p:hover{transform:translateX(6px);color:#f4eee4}
+.about-manifesto{position:relative;margin-top:30px!important;padding:24px 0 0!important;font-size:clamp(24px,3vw,38px)!important}
+.about-manifesto:before{content:"“";position:absolute;left:-28px;top:15px;color:#8fd3ff55;font:70px/.7 Georgia,serif}
+.about-strip{position:relative;z-index:1;gap:1px;margin-top:72px;background:#8fd3ff12;border:1px solid #8fd3ff18}
+.about-strip div{position:relative;padding:24px 22px!important;background:var(--surface);transition:transform .35s ease,background .35s ease,border-color .35s ease}
+.about-strip div:before{content:"";position:absolute;left:0;top:0;width:2px;height:0;background:var(--green);transition:height .35s ease}
+.about-strip div:hover{transform:translateY(-5px);background:#8fd3ff08}
+.about-strip div:hover:before{height:100%}
+.about-strip small{display:block;margin-bottom:11px}
+.about-strip b{display:block;line-height:1.55}
+.about-pillars{position:relative;z-index:1;gap:12px;margin-top:18px}
+.about-pillars article{position:relative;overflow:hidden;min-height:155px!important;padding:20px!important;background:linear-gradient(145deg,var(--surface),#8fd3ff05);border:1px solid #8fd3ff1c!important;transition:transform .4s cubic-bezier(.16,1,.3,1),border-color .35s,box-shadow .35s}
+.about-pillars article:after{content:"";position:absolute;right:-35px;bottom:-35px;width:100px;height:100px;border:1px solid #8fd3ff14;border-radius:50%;transition:transform .5s ease}
+.about-pillars article:hover{transform:translateY(-8px);border-color:#8fd3ff55!important;box-shadow:0 20px 55px #0005}
+.about-pillars article:hover:after{transform:scale(1.5)}
+.about-pillars small{letter-spacing:.18em}
+.about-pillars b{margin:24px 0 8px!important;font-size:26px!important}
+.about-pillars span{max-width:190px}
+.about-reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+.about-reveal.about-visible{opacity:1;transform:none}
+@keyframes aboutLineIn{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+@media(max-width:700px){.about:before{font-size:70px;top:4.5rem}.about-copy{padding-left:18px}.about-copy:before{left:18px}.about-manifesto:before{display:none}.about-strip div{padding:20px 17px!important}.about-pillars article{min-height:135px!important}}
+@media(prefers-reduced-motion:reduce){.about-grid>h2:after,.about-reveal{animation:none;transition:none}.about-reveal{opacity:1;transform:none}.about-strip div,.about-pillars article,.about-copy p{transition:none}}
