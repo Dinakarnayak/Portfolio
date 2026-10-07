@@ -133,8 +133,28 @@ section.visible,.card.visible{opacity:1;transform:translateY(0);transition:opaci
 .portrait-story-corner i{display:inline-block;width:6px;height:6px;margin-left:7px;border-radius:50%;background:#8fd3ff;box-shadow:0 0 12px #8fd3ff;animation:portraitOnlinePulse 1.8s ease-in-out infinite}
 @keyframes portraitOnlinePulse{50%{opacity:.35;transform:scale(.72)}}
 .portrait-story-card .photo-index,.portrait-story-card .person-caption{z-index:5}
+.portrait-story-brackets{position:absolute;inset:34px;z-index:5;pointer-events:none}
+.portrait-story-brackets i{position:absolute;width:24px;height:24px;border-color:#8fd3ff88;border-style:solid;opacity:.8}
+.portrait-story-brackets i:nth-child(1){left:0;top:0;border-width:1px 0 0 1px}
+.portrait-story-brackets i:nth-child(2){right:0;top:0;border-width:1px 1px 0 0}
+.portrait-story-brackets i:nth-child(3){left:0;bottom:0;border-width:0 0 1px 1px}
+.portrait-story-brackets i:nth-child(4){right:0;bottom:0;border-width:0 1px 1px 0}
+.portrait-story-signal{position:absolute;right:24px;top:82px;z-index:5;display:flex;flex-direction:column;gap:3px;width:18px;pointer-events:none}
+.portrait-story-signal b{display:block;height:2px;background:#8fd3ff55;transform-origin:right;animation:portraitSignal 2.4s ease-in-out infinite}
+.portrait-story-signal b:nth-child(2){animation-delay:.15s}.portrait-story-signal b:nth-child(3){animation-delay:.3s}.portrait-story-signal b:nth-child(4){animation-delay:.45s}.portrait-story-signal b:nth-child(5){animation-delay:.6s}.portrait-story-signal b:nth-child(6){animation-delay:.75s}.portrait-story-signal b:nth-child(7){animation-delay:.9s}
+@keyframes portraitSignal{50%{transform:scaleX(.35);opacity:.3}}
+.portrait-story-label{position:absolute;z-index:5;color:#b9dff7;font:7px "DM Mono",monospace;letter-spacing:.14em;opacity:.72;writing-mode:vertical-rl;pointer-events:none}
+.portrait-story-label-a{left:18px;top:42%;transform:rotate(180deg)}
+.portrait-story-label-b{right:18px;bottom:32%;transform:rotate(180deg)}
+.portrait-story-metric{position:absolute;left:25px;top:82px;z-index:5;display:flex;gap:8px;align-items:center;color:#8fa9b8;font:7px "DM Mono",monospace;letter-spacing:.12em}
+.portrait-story-metric strong{color:#8fd3ff;font-weight:400}
+.portrait-story-focus{position:absolute;left:50%;top:47%;width:90px;height:90px;transform:translate(-50%,-50%);border:1px solid #8fd3ff18;border-radius:50%;z-index:4;pointer-events:none;box-shadow:0 0 35px #8fd3ff08}
+.portrait-story-focus:before,.portrait-story-focus:after{content:"";position:absolute;inset:10px;border:1px dashed #8fd3ff16;border-radius:50%;animation:portraitFocus 4s linear infinite}
+.portrait-story-focus:after{inset:28px;animation-direction:reverse}
+@keyframes portraitFocus{to{transform:rotate(360deg)}}
+
 @media (prefers-reduced-motion:reduce){
-  .portrait-story-scan,.portrait-story-corner i{animation:none}
+  .portrait-story-scan,.portrait-story-corner i,.portrait-story-signal b,.portrait-story-focus:before,.portrait-story-focus:after{animation:none}
 }
 }
 
