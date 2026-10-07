@@ -50,7 +50,7 @@
     <div class="ask-dinakar-answer" id="ask-dinakar-answer" aria-live="polite">
       <small>SELECT A TOPIC</small><p>Choose a card above to explore Dinakar's profile.</p>
     </div>
-    <div class="ask-dinakar-links"><a href="#work" data-ai-close>VIEW PROJECTS ↗</a><a href="#contact" data-ai-close>CONTACT ↗</a><a href="https://github.com/Dinakarnayak" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div>
+    <div class="ask-dinakar-links"><a href="#work" class="ask-dinakar-nav-link" data-ai-close>VIEW PROJECTS ↗</a><a href="#contact" class="ask-dinakar-nav-link" data-ai-close>CONTACT ↗</a><a href="https://github.com/Dinakarnayak" class="ask-dinakar-nav-link" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div>
   </div>
 </div>
 </div>
@@ -260,7 +260,19 @@
 const close=()=>{p.hidden=true;p.setAttribute('aria-hidden','true');t.setAttribute('aria-expanded','false');};
 const open=()=>{p.hidden=false;p.setAttribute('aria-hidden','false');t.setAttribute('aria-expanded','true');};
 t.addEventListener('click',open);t.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
-p.addEventListener('click',e=>{if(e.target.closest('[data-ai-close]'))close();});
+p.addEventListener('click',e=>{
+  const link=e.target.closest('.ask-dinakar-nav-link');
+  if(link){
+    close();
+    if(link.getAttribute('target')!=='_blank'){
+      e.preventDefault();
+      const target=document.querySelector(link.getAttribute('href'));
+      setTimeout(()=>target?.scrollIntoView({behavior:'smooth',block:'start'}),60);
+    }
+    return;
+  }
+  if(e.target.closest('[data-ai-close]'))close();
+});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!p.hidden)close();});
 })();
 </script><script>
