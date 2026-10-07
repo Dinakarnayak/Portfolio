@@ -118,7 +118,15 @@ section.visible,.card.visible{opacity:1;transform:translateY(0);transition:opaci
 @media(max-width:1050px){.periodic{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:480px){.periodic{grid-template-columns:repeat(3,minmax(0,1fr))}.element{min-height:83px}}
 
-.hero-person img{width:100%;height:100%;object-fit:cover}
+.hero-person img{width:100%;height:100%;object-fit:cover;will-change:transform;animation:heroPhotoSway 4.8s ease-in-out infinite;transform-origin:center center}
+@keyframes heroPhotoSway{
+  0%,100%{transform:translate3d(-4px,0,0) scale(1.015)}
+  50%{transform:translate3d(5px,-2px,0) scale(1.02)}
+}
+.hero-person:hover img{animation-play-state:paused;transform:translate3d(0,-2px,0) scale(1.025)}
+@media (prefers-reduced-motion:reduce){
+  .hero-person img{animation:none;transform:none}
+}
 
 
 body{margin:0;overflow-x:hidden}header{position:sticky;top:0;z-index:20}
