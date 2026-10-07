@@ -219,12 +219,19 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
 
 /* About section reveal */
 (()=>{
+  const section=document.querySelector('.about');
   const items=[...document.querySelectorAll('.about-grid,.about-strip,.about-pillars')];
-  if(!items.length)return;
+  if(!section||!items.length)return;
   items.forEach(el=>el.classList.add('about-reveal'));
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('about-visible'));return;}
-  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('about-visible');io.unobserve(e.target)}}),{threshold:.12});
-  items.forEach(el=>io.observe(el));
+  const reveal=()=>{
+    section.classList.add('about-visible');
+    items.forEach(el=>el.classList.add('about-visible'));
+  };
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){reveal();return;}
+  const io=new IntersectionObserver(entries=>{
+    if(entries.some(e=>e.isIntersecting)){reveal();io.disconnect();}
+  },{threshold:.12});
+  io.observe(section);
 })();
 
 /* About interactive fact cards */
