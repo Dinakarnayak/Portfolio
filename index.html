@@ -196,5 +196,7 @@ t.addEventListener('click',open);t.addEventListener('keydown',e=>{if(e.key==='En
 p.addEventListener('click',e=>{if(e.target.closest('[data-ai-close]'))close();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!p.hidden)close();});
 })();
+</script><script>
+(()=>{const b=document.getElementById('theme-toggle');if(!b)return;const apply=t=>{t=t==='light'?'light':'dark';document.documentElement.setAttribute('data-theme',t);b.setAttribute('aria-pressed',String(t==='light'));b.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');b.innerHTML='<span aria-hidden="true">'+(t==='light'?'☾':'☼')+'</span>';try{localStorage.setItem('portfolio-theme',t)}catch(e){}};let t='dark';try{const saved=localStorage.getItem('portfolio-theme');if(saved==='light'||saved==='dark')t=saved}catch(e){}apply(t);b.onclick=()=>apply(document.documentElement.getAttribute('data-theme')==='light'?'dark':'light');})();
 </script><script src="script.js"></script></body></html>
 
