@@ -67,24 +67,36 @@ if ("IntersectionObserver" in window && sectionLinks.length) {
 }
 
 
-document.querySelectorAll(".filters button").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".filters button").forEach((item) => item.classList.remove("selected"));
-    button.classList.add("selected");
-    const filter = button.dataset.filter;
-    document.querySelectorAll(".element").forEach((element) => {
-      element.classList.toggle("hidden", filter !== "all" && element.dataset.type !== filter);
+/* Skills matrix — category filters + tile selection */
+(()=>{
+  const filterButtons=[...document.querySelectorAll('.filters [data-filter]')];
+  const elements=[...document.querySelectorAll('.periodic .element')];
+  if(!filterButtons.length||!elements.length)return;
+  const applyFilter=(filter)=>{
+    filterButtons.forEach(btn=>{
+      const active=btn.dataset.filter===filter;
+      btn.classList.toggle('selected',active);
+      btn.setAttribute('aria-pressed',String(active));
+    });
+    elements.forEach(element=>{
+      const visible=filter==='all'||element.dataset.type===filter;
+      element.classList.toggle('hidden',!visible);
+      element.setAttribute('aria-hidden',String(!visible));
+      if(!visible)element.classList.remove('active');
+    });
+  };
+  filterButtons.forEach(button=>{
+    button.setAttribute('aria-pressed',button.classList.contains('selected')?'true':'false');
+    button.addEventListener('click',()=>applyFilter(button.dataset.filter||'all'));
+  });
+  elements.forEach(element=>{
+    element.addEventListener('click',()=>{
+      elements.forEach(item=>item.classList.remove('active'));
+      element.classList.add('active');
     });
   });
-});
-document.querySelectorAll(".element").forEach((element) => {
-  element.addEventListener("click", () => {
-    document.querySelectorAll(".element").forEach((item) => item.classList.remove("active"));
-    element.classList.add("active");
-  });
-});
-
-
+  applyFilter(document.querySelector('.filters [data-filter].selected')?.dataset.filter||'all');
+})();
 
 // Cinematic interactions from reference package — additive, no existing features removed.
 const dismissCinematicLoader=()=>{const loader=document.getElementById('cinematic-loader');if(loader)loader.classList.add('loader-done')};document.addEventListener('DOMContentLoaded',()=>setTimeout(dismissCinematicLoader,350));setTimeout(dismissCinematicLoader,2500);
