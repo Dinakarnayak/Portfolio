@@ -148,33 +148,50 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
 })();
 
 
-/* Ask Dinakar AI profile panel */
+/* Ask Dinakar AI — advanced local portfolio assistant */
 (()=>{
   const trigger=document.querySelector('#ai-profile-trigger');
   const panel=document.querySelector('#ask-dinakar-panel');
   if(!trigger||!panel)return;
   const answer=panel.querySelector('#ask-dinakar-answer');
-  const close=()=>{panel.hidden=true;panel.setAttribute('aria-hidden','true');trigger.setAttribute('aria-expanded','false');document.body.classList.remove('ai-panel-open')};
-  const open=()=>{panel.hidden=false;panel.setAttribute('aria-hidden','false');trigger.setAttribute('aria-expanded','true');document.body.classList.add('ai-panel-open');setTimeout(()=>panel.querySelector('.ask-dinakar-close')?.focus(),80)};
-  const topics={
-    profile:['PROFILE','AI/ML Engineer and Software Developer based in Leicester, UK, currently pursuing an MSc Artificial Intelligence with Industry at the University of Leicester.','My work connects intelligent systems, practical software engineering and thoughtful UX.'],
-    skills:['CORE SKILLS','Python · C++ · JavaScript · TypeScript · React · Node.js · FastAPI · PyTorch · TensorFlow · Scikit-learn · NLP · LLMs · Computer Vision','I build from models and agents through APIs, interfaces and deployment.'],
-    projects:['PROJECTS','29 projects across AI/ML, agents, NLP, software engineering, research and web applications.','Featured work includes autonomous coding agents, TraceLens observability, fraud detection, LinguaSpeak and deep-learning research.'],
-    research:['RESEARCH','AI agents · machine learning · NLP · intelligent systems · explainability · AI security','Current interests focus on reliable, observable and useful AI systems that connect research ideas to real products.']
+  const input=panel.querySelector('#ask-dinakar-input');
+  const send=panel.querySelector('#ask-dinakar-send');
+  const data={
+    profile:['PROFILE','Hi, I’m Dinakar — an AI/ML Engineer and Software Developer based in Leicester, UK, currently pursuing an MSc Artificial Intelligence with Industry.','I turn intelligent-system ideas into useful software, from research prototypes to practical products.'],
+    skills:['CORE SKILLS','Python, C++, JavaScript, TypeScript, React, Node.js, FastAPI, PyTorch, TensorFlow, Scikit-learn, NLP, LLMs and Computer Vision.','I work across models, agents, APIs, interfaces and deployment.'],
+    projects:['PROJECTS','My portfolio covers AI/ML, agents, NLP, software engineering, research and web applications.','Explore the selected work section for coding-agent tooling, observability, fraud detection, LinguaSpeak and deep-learning research.'],
+    research:['RESEARCH','AI agents, machine learning, NLP, intelligent systems, explainability and AI security.','I’m especially interested in reliable, observable AI systems that connect research ideas to real products.'],
+    education:['EDUCATION','MSc Artificial Intelligence with Industry at the University of Leicester, following a B.Tech in Computer Science and Engineering with AI/ML specialisation.','My academic path combines computational intelligence, AI security, responsible AI and production-minded engineering.'],
+    contact:['CONNECT','The portfolio has direct routes to projects, contact and GitHub.','Use the links below to explore the work or connect with Dinakar.']
   };
-  const openPanel=()=>{open();};
-  trigger.addEventListener('click',openPanel);
-  trigger.addEventListener('pointerup',openPanel);
-  trigger.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPanel()}});
+  const render=(key)=>{
+    const d=data[key]; if(!d||!answer)return;
+    answer.innerHTML='<small>'+d[0]+'</small><p>'+d[1]+'</p><span>'+d[2]+'</span>';
+    answer.classList.add('is-visible');
+    panel.querySelectorAll('[data-ai-topic]').forEach(b=>b.classList.toggle('is-active',b.dataset.aiTopic===key));
+  };
+  const answerQuestion=(q)=>{
+    const s=q.toLowerCase();
+    let key='profile';
+    if(/skill|technolog|stack|python|pytorch|react|llm|machine learning/.test(s))key='skills';
+    else if(/project|build|built|work|portfolio|agent|fraud|linguaspeak/.test(s))key='projects';
+    else if(/research|interest|ai|nlp|agent|security|explain/.test(s))key='research';
+    else if(/study|education|degree|msc|university|leicester|btech/.test(s))key='education';
+    else if(/contact|email|connect|github|reach/.test(s))key='contact';
+    render(key);
+  };
+  const close=()=>{panel.hidden=true;panel.setAttribute('aria-hidden','true');trigger.setAttribute('aria-expanded','false');document.body.classList.remove('ai-panel-open');};
+  const open=()=>{panel.hidden=false;panel.setAttribute('aria-hidden','false');trigger.setAttribute('aria-expanded','true');document.body.classList.add('ai-panel-open');setTimeout(()=>panel.querySelector('.ask-dinakar-close')?.focus(),80);};
+  trigger.addEventListener('click',open);
+  trigger.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
   panel.addEventListener('click',e=>{
-    if(e.target.closest('[data-ai-close]')){close();return}
-    const card=e.target.closest('[data-ai-topic]');
-    if(!card)return;
-    const data=topics[card.dataset.aiTopic];
-    if(!data||!answer)return;
-    answer.innerHTML='<small>'+data[0]+'</small><p>'+data[1]+'</p><span>'+data[2]+'</span>';
+    if(e.target.closest('[data-ai-close]')){close();return;}
+    const card=e.target.closest('[data-ai-topic]'); if(card){e.preventDefault();render(card.dataset.aiTopic);return;}
+    const q=e.target.closest('[data-ai-question]'); if(q){e.preventDefault();if(input)input.value=q.dataset.aiQuestion;answerQuestion(q.dataset.aiQuestion);return;}
+    if(e.target.closest('#ask-dinakar-send')){e.preventDefault();answerQuestion(input?.value?.trim()||'Tell me about Dinakar.');if(input)input.focus();}
   });
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)close()});
+  input?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();answerQuestion(input.value.trim()||'Tell me about Dinakar.');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)close();});
 })();
 
 
