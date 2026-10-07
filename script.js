@@ -176,3 +176,14 @@ const themeToggle=document.querySelector('#theme-toggle');if(themeToggle){const 
   });
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)close()});
 })();
+
+
+/* Additive skills / project / experience motion */
+(()=>{
+  const rail=document.querySelector('.experience-progress i');
+  const exp=document.querySelector('.experience');
+  const updateExperience=()=>{if(!rail||!exp)return;const r=exp.getBoundingClientRect(),vh=innerHeight;const start=vh*.72,end=vh*.2;const p=Math.max(0,Math.min(1,(start-r.top)/(r.height-(start-end))));rail.style.height=(p*100)+'%';};
+  addEventListener('scroll',updateExperience,{passive:true});addEventListener('resize',updateExperience);updateExperience();
+  const storyCards=[...document.querySelectorAll('.project-story-card')];
+  if(storyCards.length&&!reduceMotion&&'IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('story-active')}),{threshold:.35});storyCards.forEach(c=>io.observe(c));}
+})();
