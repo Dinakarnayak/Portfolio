@@ -175,9 +175,9 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
     let key='profile';
     if(/skill|technolog|stack|python|pytorch|react|llm|machine learning/.test(s))key='skills';
     else if(/project|build|built|work|portfolio|agent|fraud|linguaspeak/.test(s))key='projects';
-    else if(/research|interest|ai|nlp|agent|security|explain/.test(s))key='research';
-    else if(/study|education|degree|msc|university|leicester|btech/.test(s))key='education';
+    else if(/study|education|degree|msc|university|leicester|btech|academic/.test(s))key='education';
     else if(/contact|email|connect|github|reach/.test(s))key='contact';
+    else if(/research|interest|ai|nlp|agent|security|explain/.test(s))key='research';
     render(key);
   };
   const close=()=>{panel.hidden=true;panel.setAttribute('aria-hidden','true');trigger.setAttribute('aria-expanded','false');document.body.classList.remove('ai-panel-open');};
