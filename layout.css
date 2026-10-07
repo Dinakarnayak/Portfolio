@@ -1993,3 +1993,68 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 :root:not([data-theme="light"]) .periodic .element.active span{
   color:#fffaf1;
 }
+
+
+/* TECH MATRIX FILTERS — dark mode visibility */
+:root:not([data-theme="light"]) .filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+:root:not([data-theme="light"]) .filters button{
+  color:#eee9df;
+  background:#181714;
+  border:1px solid #ffffff30;
+  padding:9px 12px;
+  font:8px var(--mono);
+  letter-spacing:.08em;
+  transition:color .2s ease,background .2s ease,border-color .2s ease,transform .2s ease;
+}
+:root:not([data-theme="light"]) .filters button:hover{
+  color:#fffaf1;
+  background:#28231c;
+  border-color:#d4af72;
+  transform:translateY(-2px);
+}
+:root:not([data-theme="light"]) .filters button.selected{
+  color:#17130e;
+  background:#d4af72;
+  border-color:#d4af72;
+}
+:root:not([data-theme="light"]) .filters button[data-filter="ai"]{
+  border-color:#8fd3ff70;
+  color:#a9ddff;
+}
+:root:not([data-theme="light"]) .filters button[data-filter="back"]{
+  border-color:#9cbd7870;
+  color:#c4e29f;
+}
+:root:not([data-theme="light"]) .filters button[data-filter="front"]{
+  border-color:#d4af7270;
+  color:#f0c878;
+}
+:root:not([data-theme="light"]) .filters button[data-filter="data"]{
+  border-color:#c79ae870;
+  color:#ddbfff;
+}
+:root:not([data-theme="light"]) .filters button[data-filter="lang"]{
+  border-color:#f19b8a70;
+  color:#ffb9a9;
+}
+:root:not([data-theme="light"]) .filters button[data-filter="ai"]:hover,
+:root:not([data-theme="light"]) .filters button[data-filter="back"]:hover,
+:root:not([data-theme="light"]) .filters button[data-filter="front"]:hover,
+:root:not([data-theme="light"]) .filters button[data-filter="data"]:hover,
+:root:not([data-theme="light"]) .filters button[data-filter="lang"]:hover{
+  color:#fffaf1;
+}
+:root[data-theme="light"] .filters button{
+  color:#332b22;
+  background:#fffdf8;
+  border-color:#33281930;
+}
+:root[data-theme="light"] .filters button.selected{
+  color:#fffdf8;
+  background:#211d17;
+  border-color:#211d17;
+}
