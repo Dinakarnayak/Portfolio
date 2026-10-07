@@ -171,14 +171,16 @@ section.visible,.card.visible{opacity:1;transform:translateY(0);transition:opaci
 @keyframes photoWave{0%{transform:translate(-50%,-50%) scale(.45);opacity:.7}70%{opacity:.18}100%{transform:translate(-50%,-50%) scale(1.55);opacity:0}}
 @media(prefers-reduced-motion:reduce){.hero-person:before,.hero-person:after{animation:none;opacity:.22;transform:translate(-50%,-50%) scale(1)}}
 
-/* Cinematic hero portrait: controlled reveal, depth, light sweep, and wave. */
-.hero-person{animation:heroPortraitIn 1.4s cubic-bezier(.16,1,.3,1) both}
-.hero-person img{animation:heroPhotoIn 1.6s cubic-bezier(.16,1,.3,1) both;transform:none}
-.hero-person:after{z-index:4;background:linear-gradient(105deg,transparent 25%,#8fd3ff12 46%,#ffffff18 50%,#8fd3ff08 54%,transparent 75%),linear-gradient(180deg,#09080600 50%,#090806bb 100%),linear-gradient(90deg,#09080618,transparent 40%);background-size:220% 100%,100% 100%,100% 100%;animation:heroLightSweep 5.5s ease-in-out 1.2s both}
-@keyframes heroPortraitIn{0%{opacity:0;transform:translateY(24px) scale(.97);filter:brightness(.65)}55%{opacity:1}100%{opacity:1;transform:translateY(0) scale(1);filter:brightness(1)}}
-@keyframes heroPhotoIn{0%{opacity:0;filter:saturate(.55) contrast(1.02) brightness(.72)}55%{opacity:1;filter:saturate(.7) contrast(1.03) brightness(.9)}100%{opacity:1;filter:saturate(.82) contrast(1.04) brightness(1)}}
-@keyframes heroLightSweep{0%{background-position:120% 0,0 0,0 0;opacity:.15}20%{opacity:1}100%{background-position:-120% 0,0 0,0 0;opacity:.9}}
-@media(prefers-reduced-motion:reduce){.hero-person,.hero-person img,.hero-person:after{animation:none}.hero-person img{transform:none}}
+/* Premium cinematic hero: camera reveal, restrained lens light, and ambient wave. */
+.hero-person{animation:cinemaFrameIn 1.5s cubic-bezier(.16,1,.3,1) both;transform-origin:center center}
+.hero-person img{animation:cinemaPhotoReveal 1.8s cubic-bezier(.16,1,.3,1) both;transform:none}
+.hero-person:before{content:"";position:absolute;inset:-18%;z-index:3;pointer-events:none;background:radial-gradient(circle at 50% 48%,transparent 0 23%,#8fd3ff08 36%,transparent 54%);opacity:0;animation:cinemaLens 5.8s ease-in-out 1.4s both}
+.hero-person:after{z-index:4;content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(108deg,transparent 20%,#ffffff08 43%,#8fd3ff22 49%,#ffffff12 52%,transparent 78%),linear-gradient(180deg,#ffffff0b,transparent 28%,#09080630 100%);background-size:240% 100%,100% 100%;animation:cinemaSweep 6s cubic-bezier(.22,.61,.36,1) 1.1s both}
+@keyframes cinemaFrameIn{0%{opacity:0;transform:translateY(18px) scale(.965);filter:brightness(.72)}55%{opacity:1}100%{opacity:1;transform:translateY(0) scale(1);filter:brightness(1)}}
+@keyframes cinemaPhotoReveal{0%{opacity:0;filter:saturate(.5) contrast(1.02) brightness(.7)}45%{opacity:.92;filter:saturate(.68) contrast(1.03) brightness(.88)}100%{opacity:1;filter:saturate(.82) contrast(1.04) brightness(1)}}
+@keyframes cinemaSweep{0%{background-position:125% 0,0 0;opacity:0}18%{opacity:1}72%{background-position:-115% 0,0 0;opacity:.9}100%{background-position:-115% 0,0 0;opacity:.65}}
+@keyframes cinemaLens{0%{opacity:0;transform:scale(.8)}30%{opacity:.8}65%{opacity:.25}100%{opacity:0;transform:scale(1.12)}}
+@media(prefers-reduced-motion:reduce){.hero-person,.hero-person img,.hero-person:before,.hero-person:after{animation:none}.hero-person img{transform:none}}
 
 body{margin:0;overflow-x:hidden}header{position:sticky;top:0;z-index:20}
 
