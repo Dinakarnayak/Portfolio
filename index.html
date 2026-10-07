@@ -431,5 +431,47 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!p.hidden)close();}
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
+</script><script>
+/* Skills — final interaction safeguard */
+(()=>{
+  const init=()=>{
+    const buttons=[...document.querySelectorAll('#skills .filters button[data-filter]')];
+    const tiles=[...document.querySelectorAll('#skills .periodic .element[data-type]')];
+    if(!buttons.length||!tiles.length)return;
+    const setFilter=(filter)=>{
+      buttons.forEach(button=>{
+        const active=button.dataset.filter===filter;
+        button.classList.toggle('selected',active);
+        button.setAttribute('aria-pressed',active?'true':'false');
+      });
+      tiles.forEach(tile=>{
+        const visible=filter==='all'||tile.dataset.type===filter;
+        tile.hidden=!visible;
+        tile.classList.toggle('hidden',!visible);
+        tile.setAttribute('aria-hidden',visible?'false':'true');
+        if(!visible)tile.classList.remove('active');
+      });
+    };
+    buttons.forEach(button=>{
+      button.setAttribute('type','button');
+      button.onclick=(event)=>{
+        event.preventDefault();
+        event.stopPropagation();
+        setFilter(button.dataset.filter||'all');
+      };
+    });
+    tiles.forEach(tile=>{
+      tile.setAttribute('type','button');
+      tile.onclick=(event)=>{
+        event.preventDefault();
+        event.stopPropagation();
+        tiles.forEach(item=>item.classList.remove('active'));
+        tile.classList.add('active');
+      };
+    });
+    setFilter(buttons.find(button=>button.classList.contains('selected'))?.dataset.filter||'all');
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
 </script></body></html>
 
