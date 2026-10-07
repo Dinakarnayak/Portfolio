@@ -615,3 +615,132 @@ section{background:#0d130f;color:#edf2e9}
 .contact-terminal form>button:hover{background:#b7cd99}
 .next#contact .next-stats{border-color:#52674766}.next#contact .next-stats div{border-color:#52674766}.next#contact .next-stats b{color:#142117}.next#contact .next-stats span{color:#38503c}
 footer{background:#080d09;border-top-color:#ffffff18}footer b{color:#e8efe5}footer a{color:#9fbd80}
+
+
+/* Refined nature palette — lighter sage, eucalyptus and warm ivory.
+   Keeps the cinematic layout while removing the heavy brown cast visible in the contact section. */
+body{background:#0b120e}
+.page{background:#101912}
+header{background:#0d1711ee}
+.hero{background:radial-gradient(ellipse at 72% 45%,#294433 0,#142319 45%,#0b120e 78%)}
+.about{background:#132019}
+.work{background:#17231b}
+.skills{background:#101a14}
+.experience{background:#152118}
+.certifications{background:#101a14}
+.github-feature{background:#0d1711}
+
+:root{
+  --green:#9fbd80;
+  --sage:#a9c68d;
+  --forest:#254a34;
+  --moss:#66845a;
+  --sand:#e4ddc4;
+  --ink:#f1f3e9;
+  --muted:#b8c2b5;
+  --line:#dce9d91f;
+}
+
+.section-label,
+.hero-copy .mini,
+.hero-note b,
+.photo-index span,
+.person-caption span,
+.project-number,
+.archive-count,
+.project-link,
+footer a{color:#a9c98c}
+
+.hero h1 em{
+  background:linear-gradient(110deg,#eef2df 0%,#b7d496 52%,#759b65 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.about h2 em,.work-heading h2 em,.skills h2 em{color:#a9c98c}
+.about-copy p,.skill-copy p,.work-heading p,.timeline p{color:#b9c4b8}
+
+.card,.project-record,.cert-card{
+  background:#18261d;
+  border-color:#dce9d91b;
+}
+.card:hover,.project-record:hover,.cert-card:hover{
+  border-color:#a9c98c88;
+}
+.project-record{
+  background:linear-gradient(145deg,#1d2d22,#111b15 70%);
+}
+.project-record:hover{
+  background:linear-gradient(145deg,#263b2c,#142019 72%);
+}
+.element,.filters button,.archive-pills a,.archive-pills span,.inventory-pills span{
+  background:#16231b;
+}
+.element.lang,.element.ai{
+  background:#1d3023;
+}
+.element:hover,.element.active,.filters button:hover,.filters button.selected{
+  background:#9fbd80;
+  border-color:#9fbd80;
+  color:#102016;
+}
+.element strong{color:#a9c98c}
+
+.visual-one{background:radial-gradient(circle at 75% 25%,#718c5d,#304532 52%,#152018)}
+.visual-two{background:radial-gradient(circle at 70% 30%,#55766a,#294338 52%,#142019)}
+.visual-three{background:radial-gradient(circle at 70% 25%,#7c8760,#3b4930 52%,#172017)}
+
+.next#contact{
+  background:#c7d6ac;
+  color:#142117;
+}
+.next#contact h2{color:#17241a}
+.next#contact h2 em{color:#f3f1df}
+.next#contact .contact-grid>div:first-child>p{color:#3c5741}
+.next#contact .button.dark{
+  background:#173321;
+  border-color:#173321;
+  color:#eef2e5;
+}
+.next#contact .social-links a{
+  color:#294a32;
+  border-color:#68805d;
+}
+.next#contact .social-links a:hover{
+  background:#d6e1bd;
+  border-color:#456444;
+}
+.contact-terminal{
+  background:#0c1510;
+  border-color:#38513d;
+  box-shadow:0 24px 65px #38533d55;
+}
+.terminal-top{
+  background:#122017;
+  border-color:#dce9d91f;
+}
+.contact-terminal input,.contact-terminal textarea{
+  background:#101b14;
+  border-color:#60766066;
+  color:#edf2e8;
+}
+.contact-terminal input:focus,.contact-terminal textarea:focus{
+  border-color:#a9c98c;
+  background:#15251a;
+}
+.contact-terminal form>button{
+  background:#a9c98c;
+  border-color:#a9c98c;
+  color:#132018;
+}
+.contact-terminal form>button:hover{background:#c1d8a5}
+
+.next#contact .next-stats{
+  border-color:#60785b66;
+}
+.next#contact .next-stats div{border-color:#60785b66}
+.next#contact .next-stats b{color:#17251a}
+.next#contact .next-stats span{color:#3c5741}
+
+footer{background:#09110c}
