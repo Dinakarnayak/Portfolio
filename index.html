@@ -364,5 +364,47 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!p.hidden)close();}
 </script><script>
 /* Hero AI topic fallback removed: main assistant handler owns all six topics. */
 (()=>{const p=document.getElementById('ask-dinakar-panel');if(p)p.removeAttribute('data-topic-bound');})();
+</script><script>
+/* DINAKAR AI — direct interaction safeguard */
+(()=>{
+  const init=()=>{
+    const panel=document.getElementById('ask-dinakar-panel');
+    const answer=document.getElementById('ask-dinakar-answer');
+    const input=document.getElementById('ask-dinakar-input');
+    if(!panel||!answer)return;
+    const replies={
+      profile:['PROFILE','Hi, I’m Dinakar — an AI/ML Engineer and Software Developer based in Leicester, UK, currently pursuing an MSc Artificial Intelligence with Industry.','I turn intelligent-system ideas into useful software.'],
+      skills:['CORE SKILLS','Python, C++, JavaScript, TypeScript, React, Node.js, FastAPI, PyTorch, TensorFlow, Scikit-learn, NLP, LLMs and Computer Vision.','I work across models, agents, APIs, interfaces and deployment.'],
+      projects:['PROJECTS','I build AI/ML, agent, NLP, research and software-engineering projects.','Explore the selected work section for the projects in my portfolio.'],
+      research:['RESEARCH','My interests include AI agents, machine learning, NLP, intelligent systems, explainability and AI security.','I focus on reliable, observable and useful AI systems.'],
+      education:['EDUCATION','I’m pursuing an MSc Artificial Intelligence with Industry at the University of Leicester, following a B.Tech in Computer Science and Engineering with an AI/ML specialisation.','My academic path combines AI, security, responsible systems and practical engineering.'],
+      contact:['CONNECT','You can explore my projects, contact section or GitHub profile from this assistant.','Choose one of the navigation links below to continue.']
+    };
+    const show=(key)=>{
+      const d=replies[key]; if(!d)return;
+      answer.innerHTML='<small>'+d[0]+'</small><p>'+d[1]+'</p><span>'+d[2]+'</span>';
+      answer.classList.add('is-visible');
+      panel.querySelectorAll('[data-ai-topic]').forEach(b=>b.classList.toggle('is-active',b.getAttribute('data-ai-topic')===key));
+    };
+    panel.querySelectorAll('[data-ai-topic]').forEach(btn=>{
+      btn.onclick=(e)=>{e.preventDefault();e.stopPropagation();show(btn.getAttribute('data-ai-topic'));};
+    });
+    panel.querySelectorAll('[data-ai-question]').forEach(btn=>{
+      btn.onclick=(e)=>{
+        e.preventDefault();e.stopPropagation();
+        const q=btn.getAttribute('data-ai-question')||'';
+        if(input)input.value=q;
+        const s=q.toLowerCase();
+        if(/skill|strongest|technology|stack|python|pytorch|react|llm/.test(s))show('skills');
+        else if(/build|work|project|portfolio|agent|fraud|linguaspeak/.test(s))show('projects');
+        else if(/research|interest|ai|nlp|security|explain/.test(s))show('research');
+        else if(/study|education|degree|msc|university|leicester|btech/.test(s))show('education');
+        else if(/contact|connect|github|reach/.test(s))show('contact');
+        else show('profile');
+      };
+    });
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
 </script></body></html>
 
