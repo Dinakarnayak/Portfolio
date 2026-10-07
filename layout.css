@@ -680,3 +680,20 @@ footer>span{color:var(--text-soft)}
 :root[data-theme="light"] .next-stats b{color:#f8fbf5}
 :root[data-theme="light"] .social-links a{color:#f1f7ec;border-color:rgba(245,248,242,.45)}
 :root[data-theme="light"] .social-links a small{color:#d8e6d1}
+
+/* Contact / "Let's build" CTA — refined natural jewel tone */
+.next{background:linear-gradient(135deg,#496b50 0%,#5f8057 50%,#3d5d45 100%);color:#f7faf5}
+.next .section-label,.next>p,.next-stats span{color:#dcebd7}
+.next h2{color:#f8fbf6}.next h2 em{color:#cfe7bd}
+.next-stats,.next-stats div{border-color:rgba(247,250,245,.25)}
+.next-stats b{color:#f8fbf6}
+.social-links a{color:#f2f8ef;border-color:rgba(247,250,245,.45)}
+.social-links a small{color:#d5e5d0}
+.button.dark{background:#eef6ea;color:#1d3521}.button.dark:hover{background:#fff;color:#17301b}
+:root[data-theme="light"] .next{background:linear-gradient(135deg,#496b50 0%,#5f8057 50%,#3d5d45 100%);color:#f7faf5}
+:root[data-theme="light"] .next h2{color:#f8fbf6}:root[data-theme="light"] .next h2 em{color:#cfe7bd}
+:root[data-theme="light"] .next .section-label,:root[data-theme="light"] .next>p,:root[data-theme="light"] .next-stats span{color:#dcebd7}
+:root[data-theme="light"] .next-stats,:root[data-theme="light"] .next-stats div{border-color:rgba(247,250,245,.25)}
+:root[data-theme="light"] .next-stats b{color:#f8fbf6}
+:root[data-theme="light"] .social-links a{color:#f2f8ef;border-color:rgba(247,250,245,.45)}
+:root[data-theme="light"] .social-links a small{color:#d5e5d0}
