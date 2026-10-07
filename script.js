@@ -149,3 +149,30 @@ const themeToggle=document.querySelector('#theme-toggle');if(themeToggle){const 
   search?.addEventListener('input',update);
   update();
 })();
+
+
+/* Ask Dinakar AI profile panel */
+(()=>{
+  const trigger=document.querySelector('#ai-profile-trigger');
+  const panel=document.querySelector('#ask-dinakar-panel');
+  if(!trigger||!panel)return;
+  const answer=panel.querySelector('#ask-dinakar-answer');
+  const close=()=>{panel.hidden=true;panel.setAttribute('aria-hidden','true');trigger.setAttribute('aria-expanded','false');document.body.classList.remove('ai-panel-open')};
+  const open=()=>{panel.hidden=false;panel.setAttribute('aria-hidden','false');trigger.setAttribute('aria-expanded','true');document.body.classList.add('ai-panel-open');setTimeout(()=>panel.querySelector('.ask-dinakar-close')?.focus(),80)};
+  const topics={
+    profile:['PROFILE','AI/ML Engineer and Software Developer based in Leicester, UK, currently pursuing an MSc Artificial Intelligence with Industry at the University of Leicester.','My work connects intelligent systems, practical software engineering and thoughtful UX.'],
+    skills:['CORE SKILLS','Python · C++ · JavaScript · TypeScript · React · Node.js · FastAPI · PyTorch · TensorFlow · Scikit-learn · NLP · LLMs · Computer Vision','I build from models and agents through APIs, interfaces and deployment.'],
+    projects:['PROJECTS','29 projects across AI/ML, agents, NLP, software engineering, research and web applications.','Featured work includes autonomous coding agents, TraceLens observability, fraud detection, LinguaSpeak and deep-learning research.'],
+    research:['RESEARCH','AI agents · machine learning · NLP · intelligent systems · explainability · AI security','Current interests focus on reliable, observable and useful AI systems that connect research ideas to real products.']
+  };
+  trigger.addEventListener('click',open);
+  panel.addEventListener('click',e=>{
+    if(e.target.closest('[data-ai-close]')){close();return}
+    const card=e.target.closest('[data-ai-topic]');
+    if(!card)return;
+    const data=topics[card.dataset.aiTopic];
+    if(!data||!answer)return;
+    answer.innerHTML='<small>'+data[0]+'</small><p>'+data[1]+'</p><span>'+data[2]+'</span>';
+  });
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)close()});
+})();
