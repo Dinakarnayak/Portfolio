@@ -248,22 +248,22 @@
   </div>
 
   <div class="cert-compact-list">
-    <button class="cert-compact-row is-selected" type="button" data-cert="aws" aria-pressed="true">
+    <button class="cert-compact-row is-selected" type="button" data-cert="aws" aria-pressed="true" onclick="selectCertificate('aws')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('aws')}">
       <span>01</span><strong>Machine Learning Specialty</strong><small>AWS · NOV 2023</small>
     </button>
-    <button class="cert-compact-row" type="button" data-cert="servicenow-dev" aria-pressed="false">
+    <button class="cert-compact-row" type="button" data-cert="servicenow-dev" aria-pressed="false" onclick="selectCertificate('servicenow-dev')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('servicenow-dev')}">
       <span>02</span><strong>Application Developer</strong><small>ServiceNow · AUG 2024</small>
     </button>
-    <button class="cert-compact-row" type="button" data-cert="servicenow-admin" aria-pressed="false">
+    <button class="cert-compact-row" type="button" data-cert="servicenow-admin" aria-pressed="false" onclick="selectCertificate('servicenow-admin')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('servicenow-admin')}">
       <span>03</span><strong>System Administrator</strong><small>ServiceNow · JUN 2024</small>
     </button>
-    <button class="cert-compact-row" type="button" data-cert="ethical" aria-pressed="false">
+    <button class="cert-compact-row" type="button" data-cert="ethical" aria-pressed="false" onclick="selectCertificate('ethical')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('ethical')}">
       <span>04</span><strong>Certified Ethical Hacker</strong><small>Great Learning · OCT 2024</small>
     </button>
-    <button class="cert-compact-row" type="button" data-cert="infosys" aria-pressed="false">
+    <button class="cert-compact-row" type="button" data-cert="infosys" aria-pressed="false" onclick="selectCertificate('infosys')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('infosys')}">
       <span>05</span><strong>Statistics for R Programming</strong><small>Infosys Springboard · OCT 2024</small>
     </button>
-    <button class="cert-compact-row" type="button" data-cert="jdbc" aria-pressed="false">
+    <button class="cert-compact-row" type="button" data-cert="jdbc" aria-pressed="false" onclick="selectCertificate('jdbc')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('jdbc')}">
       <span>06</span><strong>Java Database Connectivity</strong><small>Coursera · 2024</small>
     </button>
   </div>
@@ -283,6 +283,32 @@
   </div>
 </section>
 
+<!-- CERTIFICATE INLINE SELECTOR -->
+<script>
+window.selectCertificate = function(key) {
+  const data = {
+    aws: {mark:'AWS', title:'AWS Certified Machine Learning — Specialty', copy:'Machine learning credential focused on designing, building and deploying ML solutions on AWS.', issuer:'AMAZON WEB SERVICES', date:'NOV 2023'},
+    'servicenow-dev': {mark:'SN', title:'Certified Application Developer', copy:'Application development credential covering practical development on the ServiceNow platform.', issuer:'SERVICENOW', date:'AUG 2024'},
+    'servicenow-admin': {mark:'SN', title:'Certified System Administrator', copy:'Platform administration credential covering configuration, users, data and core ServiceNow capabilities.', issuer:'SERVICENOW', date:'JUN 2024'},
+    ethical: {mark:'CEH', title:'Certified Ethical Hacker', copy:'Ethical hacking credential focused on security concepts, reconnaissance, vulnerabilities and defensive thinking.', issuer:'GREAT LEARNING', date:'OCT 2024'},
+    infosys: {mark:'R', title:'Statistics for R Programming', copy:'Statistics credential covering practical analysis and statistical programming with R.', issuer:'INFOSYS SPRINGBOARD', date:'OCT 2024'},
+    jdbc: {mark:'JDBC', title:'Java Database Connectivity (JDBC)', copy:'Credential covering Java database connectivity and application-level database interaction.', issuer:'COURSERA', date:'2024'}
+  };
+  const d=data[key];
+  if(!d)return;
+  document.querySelectorAll('#certifications .cert-compact-row').forEach(function(row){
+    const active=row.dataset.cert===key;
+    row.classList.toggle('is-selected',active);
+    row.setAttribute('aria-pressed',active?'true':'false');
+  });
+  const set=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
+  set('cert-focus-mark',d.mark);
+  set('cert-focus-title',d.title);
+  set('cert-focus-copy',d.copy);
+  set('cert-focus-issuer',d.issuer);
+  set('cert-focus-date',d.date);
+};
+</script>
 <section class="achievements achievements-cinematic" id="achievements">
   <div class="section-label">07 / ACHIEVEMENTS</div>
   <div class="achievements-head">
