@@ -744,3 +744,18 @@ footer a{color:#a9c98c}
 .next#contact .next-stats span{color:#3c5741}
 
 footer{background:#09110c}
+
+/* Lower contact/footer area — clean natural sage finish */
+.next#contact{
+  background:linear-gradient(180deg,#d3dfbd 0%,#bdcfaa 55%,#a9bf91 100%);
+}
+.next#contact .next-stats{
+  background:transparent;
+}
+footer{
+  background:#203526;
+  color:#dbe7d2;
+}
+footer b{color:#edf3e7}
+footer>span{color:#b8c9b1}
+footer a{color:#b5d18f}
