@@ -268,46 +268,86 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
 })();
 
 
-/* Achievements — interactive milestone controller */
+/* Achievements — single authoritative controller */
 (()=>{
-  const rows=[...document.querySelectorAll('#achievements .achievement-row')];
-  const title=document.getElementById('achievement-detail-title');
-  const copy=document.getElementById('achievement-detail-copy');
-  const link=document.getElementById('achievement-detail-link');
-  if(!rows.length||!title||!copy||!link)return;
-  const details={
-    research:{title:'EEG MODEL ACCURACY',copy:'A GRU-based emotion classification model evaluated on EEG data, reaching 95.55% test accuracy.',href:'#work',label:'EXPLORE THE WORK'},
-    academic:{title:'COMPUTER SCIENCE',copy:'Final B.Tech CGPA of 8.31/10 in Computer Science & Engineering with an Artificial Intelligence & Machine Learning specialisation.',href:'#education',label:'VIEW EDUCATION'},
-    build:{title:'PROJECT PORTFOLIO',copy:'15+ selected projects spanning AI, machine learning, agents, software engineering and research.',href:'#github',label:'EXPLORE GITHUB'}
-  };
-  const select=(key)=>{
-    const d=details[key]||details.research;
-    rows.forEach(row=>{
-      const active=row.dataset.achievement===key;
-      row.classList.toggle('is-active',active);
-      row.setAttribute('aria-expanded',active?'true':'false');
+  const init=()=>{
+    const section=document.getElementById('achievements');
+    if(!section)return;
+
+    const buttons=[...section.querySelectorAll('.achievement-controls .achievement-dot[data-achievement]')];
+    const number=document.getElementById('achievement-hero-number');
+    const unit=document.getElementById('achievement-hero-unit');
+    const index=document.getElementById('achievement-live-index');
+    const kicker=document.getElementById('achievement-stage-kicker');
+    const title=document.getElementById('achievement-stage-title');
+    const copy=document.getElementById('achievement-stage-copy');
+    const link=document.getElementById('achievement-stage-link');
+    const note=document.getElementById('achievement-bottom-note');
+
+    if(buttons.length!==3||!number||!unit||!index||!kicker||!title||!copy||!link||!note)return;
+
+    const data={
+      research:{
+        number:'95.55',unit:'%',index:'01',kicker:'RESEARCH · 2025',
+        title:'EEG MODEL<br><em>ACCURACY</em>',
+        copy:'A GRU-based emotion classification model evaluated on EEG data, reaching 95.55% test accuracy.',
+        href:'#work',label:'EXPLORE THE WORK',
+        note:'95.55% TEST ACCURACY · EEG EMOTION CLASSIFICATION'
+      },
+      academic:{
+        number:'8.31',unit:'/10',index:'02',kicker:'ACADEMIC · 2025',
+        title:'COMPUTER<br><em>SCIENCE</em>',
+        copy:'Final B.Tech performance in Computer Science & Engineering with an Artificial Intelligence & Machine Learning specialisation.',
+        href:'#education',label:'VIEW EDUCATION',
+        note:'8.31 / 10 FINAL B.TECH CGPA · AI / ML'
+      },
+      build:{
+        number:'15',unit:'+',index:'03',kicker:'BUILD · 2021—2026',
+        title:'PROJECT<br><em>PORTFOLIO</em>',
+        copy:'15+ selected projects spanning AI, machine learning, agents, software engineering and research.',
+        href:'#github',label:'EXPLORE GITHUB',
+        note:'15+ SELECTED PROJECTS · AI · SOFTWARE'
+      }
+    };
+
+    const select=(key)=>{
+      const d=data[key]||data.research;
+      buttons.forEach(btn=>{
+        const active=btn.dataset.achievement===key;
+        btn.classList.toggle('is-active',active);
+        btn.setAttribute('aria-pressed',active?'true':'false');
+      });
+      number.textContent=d.number;
+      unit.textContent=d.unit;
+      index.textContent=d.index;
+      kicker.textContent=d.kicker;
+      title.innerHTML=d.title;
+      copy.textContent=d.copy;
+      link.href=d.href;
+      link.innerHTML=d.label+' <span>↗</span>';
+      note.textContent=d.note;
+    };
+
+    buttons.forEach(btn=>{
+      btn.type='button';
+      btn.onclick=(event)=>{
+        event.preventDefault();
+        event.stopPropagation();
+        select(btn.dataset.achievement);
+      };
+      btn.onkeydown=(event)=>{
+        if(event.key==='Enter'||event.key===' '){
+          event.preventDefault();
+          select(btn.dataset.achievement);
+        }
+      };
     });
-    title.textContent=d.title;copy.textContent=d.copy;link.href=d.href;link.innerHTML=d.label+' <span>↗</span>';
+
+    select('research');
   };
-  rows.forEach(row=>row.addEventListener('click',()=>select(row.dataset.achievement)));
-})();
 
-
-/* Achievements — cinematic milestone switching */
-(()=>{
-  const dots=[...document.querySelectorAll('#achievements .achievement-dot')];
-  const number=document.getElementById('achievement-hero-number');
-  const unit=document.getElementById('achievement-hero-unit');
-  const index=document.getElementById('achievement-live-index');
-  const kicker=document.getElementById('achievement-stage-kicker');
-  const title=document.getElementById('achievement-stage-title');
-  const copy=document.getElementById('achievement-stage-copy');
-  const link=document.getElementById('achievement-stage-link');
-  const note=document.getElementById('achievement-bottom-note');
-  if(!dots.length||!number||!unit||!index||!kicker||!title||!copy||!link||!note)return;
-  const data={research:{number:'95.55',unit:'%',index:'01',kicker:'RESEARCH · 2025',title:'EEG MODEL<br><em>ACCURACY</em>',copy:'A GRU-based emotion classification model evaluated on EEG data, reaching 95.55% test accuracy.',href:'#work',label:'EXPLORE THE WORK',note:'95.55% TEST ACCURACY · EEG EMOTION CLASSIFICATION'},academic:{number:'8.31',unit:'/10',index:'02',kicker:'ACADEMIC · 2025',title:'COMPUTER<br><em>SCIENCE</em>',copy:'Final B.Tech performance in Computer Science & Engineering with an Artificial Intelligence & Machine Learning specialisation.',href:'#education',label:'VIEW EDUCATION',note:'8.31 / 10 FINAL B.TECH CGPA · AI / ML'},build:{number:'15',unit:'+',index:'03',kicker:'BUILD · 2021—2026',title:'PROJECT<br><em>PORTFOLIO</em>',copy:'15+ selected projects spanning AI, machine learning, agents, software engineering and research.',href:'#github',label:'EXPLORE GITHUB',note:'15+ SELECTED PROJECTS · AI · SOFTWARE'}};
-  const select=(key)=>{const d=data[key]||data.research;dots.forEach(dot=>{const active=dot.dataset.achievement===key;dot.classList.toggle('is-active',active);dot.setAttribute('aria-pressed',active?'true':'false')});number.textContent=d.number;unit.textContent=d.unit;index.textContent=d.index;kicker.textContent=d.kicker;title.innerHTML=d.title;copy.textContent=d.copy;link.href=d.href;link.innerHTML=d.label+' <span>↗</span>';note.textContent=d.note};
-  dots.forEach(dot=>dot.addEventListener('click',()=>select(dot.dataset.achievement)));
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
+  else init();
 })();
 
 
