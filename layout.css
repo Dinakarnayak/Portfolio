@@ -1956,3 +1956,40 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 :root[data-theme="light"] .periodic .element.active strong{
   color:#8b641f;
 }
+
+
+/* Tech Matrix dark-mode readability repair */
+:root:not([data-theme="light"]) .periodic .element{
+  color:#f3eee6;
+  background:#171613;
+  border-color:#ffffff24;
+}
+:root:not([data-theme="light"]) .periodic .element small{
+  color:#b8aea0;
+}
+:root:not([data-theme="light"]) .periodic .element strong{
+  color:#9edcff;
+  text-shadow:0 0 14px #9edcff1f;
+}
+:root:not([data-theme="light"]) .periodic .element span{
+  color:#eee7dc;
+}
+:root:not([data-theme="light"]) .periodic .element.lang,
+:root:not([data-theme="light"]) .periodic .element.ai{
+  background:#201e19;
+  border-color:#d4af7250;
+}
+:root:not([data-theme="light"]) .periodic .element:hover,
+:root:not([data-theme="light"]) .periodic .element.active{
+  background:#29251e;
+  border-color:#d4af72;
+}
+:root:not([data-theme="light"]) .periodic .element:hover strong,
+:root:not([data-theme="light"]) .periodic .element.active strong{
+  color:#f0c878;
+  text-shadow:0 0 18px #d4af7240;
+}
+:root:not([data-theme="light"]) .periodic .element:hover span,
+:root:not([data-theme="light"]) .periodic .element.active span{
+  color:#fffaf1;
+}
