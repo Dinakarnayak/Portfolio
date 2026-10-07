@@ -226,3 +226,17 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
   const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('about-visible');io.unobserve(e.target)}}),{threshold:.12});
   items.forEach(el=>io.observe(el));
 })();
+
+/* About interactive fact cards */
+(()=>{
+ const facts={
+  focus:["CURRENT FOCUS","AI agents, intelligent systems and reliable AI workflows."],
+  study:["CURRENTLY STUDYING","MSc Artificial Intelligence with Industry at the University of Leicester."],
+  build:["HOW I BUILD","Prototype quickly, validate what matters, then turn the useful version into maintainable software."],
+  mindset:["ENGINEERING MINDSET","Reliable, observable and useful systems with thoughtful UX."]
+ };
+ document.querySelectorAll('[data-about-fact]').forEach(btn=>btn.addEventListener('click',()=>{
+   document.querySelectorAll('[data-about-fact]').forEach(b=>b.classList.remove('is-active'));
+   btn.classList.add('is-active');
+ }));
+})();
