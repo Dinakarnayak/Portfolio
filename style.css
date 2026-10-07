@@ -759,3 +759,55 @@ footer{
 footer b{color:#edf3e7}
 footer>span{color:#b8c9b1}
 footer a{color:#b5d18f}
+
+
+/* Final dark-theme accent correction: blue/cyan instead of green. */
+:root[data-theme="dark"]{
+  --green:#8fd3ff;
+  --sage:#a9e1ff;
+  --forest:#173b57;
+  --moss:#4e86a8;
+  --sand:#d9efff;
+}
+:root[data-theme="dark"] .logo span,
+:root[data-theme="dark"] nav a:hover,
+:root[data-theme="dark"] nav a.active,
+:root[data-theme="dark"] .insta,
+:root[data-theme="dark"] .section-label,
+:root[data-theme="dark"] .hero-copy .mini,
+:root[data-theme="dark"] .hero-note b,
+:root[data-theme="dark"] .photo-index span,
+:root[data-theme="dark"] .person-caption span,
+:root[data-theme="dark"] .project-number,
+:root[data-theme="dark"] .archive-count,
+:root[data-theme="dark"] .project-link,
+:root[data-theme="dark"] footer a,
+:root[data-theme="dark"] .about h2 em,
+:root[data-theme="dark"] .work-heading h2 em,
+:root[data-theme="dark"] .skills h2 em,
+:root[data-theme="dark"] .element strong{color:#8fd3ff}
+:root[data-theme="dark"] .hero h1 em{
+  background:linear-gradient(110deg,#eaf7ff 0%,#8fd3ff 55%,#4e9ac7 100%);
+  background-clip:text;-webkit-background-clip:text;color:transparent;
+}
+:root[data-theme="dark"] .hero-location span,
+:root[data-theme="dark"] .terminal-top small:before{background:#8fd3ff;box-shadow:0 0 12px #8fd3ff}
+:root[data-theme="dark"] .line-link{color:#8fd3ff;border-color:#8fd3ff66}
+:root[data-theme="dark"] .card:hover,
+:root[data-theme="dark"] .project-record:hover,
+:root[data-theme="dark"] .cert-card:hover{border-color:#8fd3ff88}
+:root[data-theme="dark"] .project-record{border-color:#8fd3ff38}
+:root[data-theme="dark"] .filters button:hover,
+:root[data-theme="dark"] .filters button.selected,
+:root[data-theme="dark"] .element:hover,
+:root[data-theme="dark"] .element.active{
+  background:#8fd3ff;border-color:#8fd3ff;color:#0b1620;
+}
+:root[data-theme="dark"] .element.lang,
+:root[data-theme="dark"] .element.ai{border-color:#8fd3ff40}
+:root[data-theme="dark"] .contact-terminal input:focus,
+:root[data-theme="dark"] .contact-terminal textarea:focus{border-color:#8fd3ff}
+:root[data-theme="dark"] .contact-terminal form>button{background:#8fd3ff;border-color:#8fd3ff;color:#0b1620}
+:root[data-theme="dark"] .contact-terminal form>button:hover{background:#a9e1ff}
+:root[data-theme="dark"] .form-success strong{color:#8fd3ff}
+:root[data-theme="dark"] :focus-visible{outline-color:#8fd3ff}
