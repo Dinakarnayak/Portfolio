@@ -238,13 +238,13 @@ header nav a{white-space:nowrap;text-decoration:none;transition:color .2s ease}
 .insta:hover{background:var(--green);border-color:var(--green);color:#111}
 .menu{display:none}
 .hero{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);align-items:center;flex:1;gap:clamp(38px,6vw,110px);padding:clamp(38px,5vh,70px) 0}
-.hero-copy{position:relative;z-index:2;max-width:720px;padding:24px 0}
-.hero h1{font-family:var(--kinetic,"Bebas Neue",sans-serif);font-size:clamp(90px,11.2vw,174px);font-weight:400;line-height:.76;letter-spacing:.005em;text-transform:uppercase}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);align-items:center;flex:1;gap:clamp(38px,6vw,110px);padding:clamp(24px,3vh,44px) 0}
+.hero-copy{position:relative;z-index:2;max-width:720px;padding:6px 0}
+.hero h1{margin:.12em 0 .18em;font-family:var(--kinetic,"Bebas Neue",sans-serif);font-size:clamp(82px,10vw,156px);font-weight:400;line-height:.8;letter-spacing:.005em;text-transform:uppercase}
 .hero h1 em{font-style:normal;background:linear-gradient(110deg,#f2dcb3 5%,#c99e5d 58%,#81603a 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
 .hero-fullname{display:block;margin-top:20px;color:#c2b9ad;font:500 clamp(14px,1.35vw,20px)/1.2 var(--mono);letter-spacing:.17em}
-.hero .sub{margin-top:30px;max-width:510px;font-size:14px}
-.hero-person{position:relative;width:100%;height:min(70vh,690px);min-height:460px;align-self:center;overflow:hidden;border:1px solid #c99e5d44;background:#12100d;box-shadow:0 30px 100px #0009}
+.hero .sub{margin:20px 0 22px;max-width:510px;font-size:14px}
+.hero-person{position:relative;width:100%;height:min(62vh,580px);min-height:430px;align-self:center;overflow:hidden;border:1px solid #c99e5d44;background:#12100d;box-shadow:0 30px 100px #0009}
 .hero-person:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#09080600 50%,#090806bb 100%),linear-gradient(90deg,#09080618,transparent 40%)}
 .hero-person img{display:block;object-fit:cover;object-position:57% 42%}
 .photo-index,.person-caption{z-index:1}
