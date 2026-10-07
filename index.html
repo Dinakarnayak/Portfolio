@@ -406,5 +406,27 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!p.hidden)close();}
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
+</script><script>
+/* DINAKAR AI — guaranteed close controls */
+(()=>{
+  const init=()=>{
+    const panel=document.getElementById('ask-dinakar-panel');
+    const trigger=document.getElementById('ai-profile-trigger');
+    if(!panel)return;
+    const close=()=>{
+      panel.hidden=true;
+      panel.setAttribute('aria-hidden','true');
+      if(trigger)trigger.setAttribute('aria-expanded','false');
+      document.body.classList.remove('ai-panel-open');
+    };
+    panel.querySelectorAll('[data-ai-close]').forEach(el=>{
+      el.onclick=(e)=>{e.preventDefault();e.stopPropagation();close();};
+    });
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape' && !panel.hidden){e.preventDefault();close();}
+    });
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
 </script></body></html>
 
