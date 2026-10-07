@@ -362,32 +362,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!p.hidden)close();}
   else init();
 })();
 </script><script>
-/* Hero AI topic buttons — isolated reliable interaction */
-(()=>{
-  const init=()=>{
-    const panel=document.getElementById('ask-dinakar-panel');
-    const answer=document.getElementById('ask-dinakar-answer');
-    if(!panel||!answer||panel.dataset.topicBound==='1')return;
-    panel.dataset.topicBound='1';
-    const data={
-      profile:['PROFILE','Hi, I’m Dinakar. I’m an AI/ML Engineer and Software Developer based in Leicester, UK, currently pursuing an MSc Artificial Intelligence with Industry.','I build intelligent systems and practical software, connecting AI research with useful products.'],
-      skills:['CORE SKILLS','Python · C++ · JavaScript · TypeScript · React · Node.js · FastAPI · PyTorch · TensorFlow · Scikit-learn · NLP · LLMs · Computer Vision','My work spans models, agents, APIs, interfaces and deployment.'],
-      projects:['PROJECTS','AI/ML, agents, NLP, software engineering, research and web applications.','Featured work includes coding-agent tooling, observability, fraud detection, LinguaSpeak and deep-learning research.'],
-      research:['RESEARCH','AI agents · machine learning · NLP · intelligent systems · explainability · AI security','I’m interested in reliable, observable and useful AI systems that connect research ideas to real products.']
-    };
-    panel.addEventListener('click',e=>{
-      const button=e.target.closest('[data-ai-topic]');
-      if(!button)return;
-      e.preventDefault();
-      e.stopPropagation();
-      const item=data[button.getAttribute('data-ai-topic')];
-      if(!item)return;
-      answer.innerHTML='<small>'+item[0]+'</small><p><strong>'+item[1]+'</strong></p><span>'+item[2]+'</span>';
-      answer.classList.add('is-visible');
-      panel.querySelectorAll('[data-ai-topic]').forEach(x=>x.classList.toggle('is-active',x===button));
-    },true);
-  };
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
-})();
+/* Hero AI topic fallback removed: main assistant handler owns all six topics. */
+(()=>{const p=document.getElementById('ask-dinakar-panel');if(p)p.removeAttribute('data-topic-bound');})();
 </script></body></html>
 
