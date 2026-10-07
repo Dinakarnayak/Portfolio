@@ -1717,3 +1717,28 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 @keyframes aboutAiOrbit{0%{transform:rotate(0deg) translateX(0)}25%{transform:translate(7px,5px)}50%{transform:translate(0,10px)}75%{transform:translate(-7px,5px)}100%{transform:translate(0,0)}}
 @media(max-width:700px){.about-ai-trigger{position:relative;right:auto;top:auto;margin:16px 0 8px}.about-ai-panel{position:relative;right:auto;top:auto;width:100%;margin:8px 0 18px}.about-ui .about-ai-trigger{position:absolute;right:0;top:0}}
 @media(prefers-reduced-motion:reduce){.about-ai-trigger,.about-ai-panel,.about-ai-actions button{transition:none}.about-ai-orbit i{animation:none}}
+
+
+/* About visibility safeguard */
+.about .about-grid>h2,
+.about .about-copy,
+.about .about-copy p,
+.about .about-strip,
+.about .about-pillars article{
+  opacity:1;
+  transform:none;
+  filter:none;
+}
+.about.about-visible .about-grid>h2{animation:aboutTitleIn .8s cubic-bezier(.16,1,.3,1) both}
+.about.about-visible .about-copy{animation:aboutCopyIn .8s cubic-bezier(.16,1,.3,1) .08s both}
+.about.about-visible .about-copy p{animation:aboutTextIn .55s ease both}
+.about.about-visible .about-copy p:nth-child(1){animation-delay:.18s}
+.about.about-visible .about-copy p:nth-child(2){animation-delay:.25s}
+.about.about-visible .about-copy p:nth-child(3){animation-delay:.32s}
+.about.about-visible .about-copy p:nth-child(4){animation-delay:.39s}
+.about.about-visible .about-copy p:nth-child(5){animation-delay:.46s}
+.about.about-visible .about-copy p:nth-child(6){animation-delay:.53s}
+@keyframes aboutTitleIn{from{opacity:0;transform:translateX(-24px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+@keyframes aboutCopyIn{from{opacity:0;transform:translateX(24px);filter:blur(2px)}to{opacity:1;transform:none;filter:none}}
+@keyframes aboutTextIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.about.about-visible .about-grid>h2,.about.about-visible .about-copy,.about.about-visible .about-copy p{animation:none!important}}
