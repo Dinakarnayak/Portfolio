@@ -2317,3 +2317,13 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 .achievements-footer{padding-top:5px}.achievements-footer span{transition:color .25s ease}.achievements-footer span:hover{color:var(--text-strong)}
 @media(max-width:800px){.achievement-feature{min-height:330px}.achievement-feature .achievement-number b{font-size:clamp(72px,20vw,110px)}}
 @media(prefers-reduced-motion:reduce){.achievement-card:before,.achievement-card:after{transition:none}}
+
+
+/* SKILL FILTERS — make category selection actually filter the matrix */
+.periodic .element.hidden{display:none!important;opacity:0;pointer-events:none}
+.periodic{transition:opacity .2s ease}
+.filters button{cursor:pointer}
+.filters button.selected{position:relative}
+.filters button.selected:after{content:"";position:absolute;left:12px;right:12px;bottom:5px;height:2px;background:currentColor;border-radius:2px;transform-origin:left;animation:skillFilterIn .25s ease both}
+@keyframes skillFilterIn{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.filters button.selected:after{animation:none}}
