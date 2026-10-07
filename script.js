@@ -240,3 +240,24 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
    btn.classList.add('is-active');
  }));
 })();
+
+
+/* About AI assistant */
+(()=>{
+ const trigger=document.getElementById('about-ai-trigger');
+ const panel=document.getElementById('about-ai-panel');
+ const close=document.getElementById('about-ai-close');
+ const answer=document.getElementById('about-ai-answer');
+ if(!trigger||!panel||!close||!answer)return;
+ const replies={
+  profile:'<strong>Hi, I’m Dinakar.</strong> I’m an AI/ML Engineer and Software Developer based in Leicester, UK, with a Computer Science background and a focus on turning intelligent ideas into useful software.',
+  work:'I build across <strong>AI agents, NLP, machine learning, backend APIs and full-stack applications</strong>. My projects combine research experiments with practical software, including agent workflows and tools for evaluating AI systems.',
+  study:'I’m currently pursuing an <strong>MSc Artificial Intelligence with Industry at the University of Leicester</strong>, developing deeper knowledge in computational intelligence, AI security, responsible AI and production-minded engineering.',
+  ai:'My interests include <strong>AI agents, NLP, LLMs, machine learning, intelligent systems and AI security</strong>. I’m especially interested in making AI systems useful, observable and reliable.'
+ };
+ const setOpen=open=>{panel.classList.toggle('is-open',open);panel.setAttribute('aria-hidden',String(!open));trigger.setAttribute('aria-expanded',String(open));if(!open){answer.classList.remove('is-visible');answer.innerHTML='';}};
+ trigger.addEventListener('click',()=>setOpen(!panel.classList.contains('is-open')));
+ close.addEventListener('click',()=>{setOpen(false);trigger.focus()});
+ panel.querySelectorAll('[data-about-ai]').forEach(btn=>btn.addEventListener('click',()=>{answer.innerHTML=replies[btn.dataset.aboutAi]||'';answer.classList.add('is-visible')}));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('is-open')){setOpen(false);trigger.focus()}});
+})();
