@@ -1646,3 +1646,24 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 @media(max-width:850px){.about-ui-head,.about-ui-grid{grid-template-columns:1fr}.about-ui-facts{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.about-identity h2{font-size:70px!important}.about-ui-facts,.about-ui-footer{grid-template-columns:1fr}.about-ui-footer>div{border-right:0;border-bottom:1px solid #8fd3ff18}.about-ui-footer>div:last-child{border-bottom:0}.about-ui-story{min-height:290px;padding:24px}}
 @media(prefers-reduced-motion:reduce){.about-status i,.about-ui-head,.about-ui-grid,.about-ui-footer{animation:none}.about-fact{transition:none}}
+
+/* Theme-safe About UI */
+.about-ui .about-intro p,
+.about-ui .about-ui-story>p{color:var(--text-muted)}
+.about-ui .about-intro strong,
+.about-ui .about-ui-story h3,
+.about-ui .about-fact b,
+.about-ui .about-ui-footer b{color:var(--text-strong)}
+.about-ui .about-fact small{color:var(--text-soft)}
+.about-ui .about-ui-footer small{color:var(--text-soft)}
+.about-ui .about-intro,
+.about-ui .about-ui-story,
+.about-ui .about-fact,
+.about-ui .about-ui-footer{border-color:var(--border);background:var(--surface)}
+.about-ui .about-fact:hover,
+.about-ui .about-fact.is-active{background:var(--surface-2);border-color:var(--border-strong)}
+.about-ui .about-ui-story .about-manifesto{color:var(--accent)!important;border-color:var(--border)}
+.about-ui .about-status{color:var(--text-muted)}
+.about-ui .about-status b{color:var(--accent)}
+.about-ui .about-ui-footer>div{border-color:var(--border)}
+.about-ui .about-ui-footer b i{background:var(--accent);box-shadow:0 0 14px var(--accent)}
