@@ -1,51 +1,110 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050505"><meta name="description" content="Dinakar Nayak — AI/ML Engineer and Software Developer.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Dinakar Nayak — AI/ML Engineer and Software Developer.">
 <title>Dinakar Nayak — AI/ML Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="site">
-<header class="topbar"><a class="brand" href="#home">DN<span>.</span></a><nav id="nav"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav><a class="top-cta" href="#contact">Let's talk <b>↗</b></a><button id="menu" aria-label="Menu">☰</button></header>
+<header class="nav">
+  <a class="logo" href="#home">DINAKAR<span>•</span></a>
+  <nav><a href="#about">About</a><a href="#work">Work</a><a href="#learning">Learning</a></nav>
+  <a class="nav-mail" href="mailto:dinakarnayak4248@gmail.com">Let's talk ↗</a>
+  <button class="menu" aria-label="Open menu">☰</button>
+</header>
 
 <main id="home">
 <section class="hero">
-  <div class="hero-copy"><div class="eyebrow"><i></i> AI / ML ENGINEER · SOFTWARE DEVELOPER</div><h1>Dinakar<br><span>Nayak.</span></h1><p class="hero-role">I build intelligent products, machine learning systems and clean software experiences.</p><div class="hero-actions"><a class="black-btn" href="#projects">View my work <b>↓</b></a><a class="under-link" href="https://github.com/Dinakarnayak" target="_blank" rel="noopener">GitHub ↗</a></div></div>
-  <div class="hero-card"><div class="hero-card-top"><span>01 / 06</span><span>LEICESTER, UK</span></div><div class="portrait"><img src="assets/uni.jpeg" alt="Dinakar at the University of Leicester"><div class="portrait-shade"></div><div class="portrait-copy"><small>CURRENTLY STUDYING</small><strong>MSc Artificial Intelligence<br>with Industry</strong><em>University of Leicester</em></div></div></div>
+  <div class="hero-top"><span>AI / ML ENGINEER</span><span>LEICESTER · UK</span></div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="hello">Hi, I'm Dinakar.</p>
+      <h1>AI/ML<br><em>Engineer.</em></h1>
+      <p class="lead">I build intelligent products, AI systems and thoughtful digital experiences — from research prototypes to real software.</p>
+      <div class="hero-links"><a class="pill" href="#work">See my work ↓</a><a href="https://github.com/Dinakarnayak" target="_blank" rel="noopener">GitHub ↗</a></div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/uni.jpeg" alt="Dinakar at the University of Leicester">
+      <div class="photo-label"><span>01</span><b>University of Leicester</b><small>MSc Artificial Intelligence with Industry</small></div>
+    </div>
+  </div>
+  <div class="scroll-note">SCROLL TO EXPLORE ↓</div>
 </section>
 
-<section class="intro-card" id="about"><div class="intro-label">01 / PROFILE</div><div class="intro-main"><h2>Your next<br><span>AI engineer.</span></h2><p>I'm a computer science graduate specialising in AI and machine learning, currently pursuing my MSc at the University of Leicester. I enjoy turning complex ideas into practical systems — from AI agents and NLP to backend APIs and applied research.</p><a class="under-link" href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank" rel="noopener">More about me ↗</a></div><div class="facts"><div><small>EDUCATION</small><strong>MSc Artificial Intelligence</strong><span>University of Leicester</span></div><div><small>DEGREE</small><strong>B.Tech CSE — AI & ML</strong><span>8.31 / 10 · 2025</span></div><div><small>FOCUS</small><strong>AI · ML · Software</strong><span>Research + product</span></div></div></section>
-
-<section class="section projects" id="projects"><div class="section-title"><div><small>02 / SELECTED WORK</small><h2>Things I've<br><span>built.</span></h2></div><p>Selected projects across AI agents, observability, generative AI, NLP and software engineering.</p></div>
-<div class="project-cards">
-<article class="project big"><div class="project-image agent"><span>AGENT / 001</span><div class="terminal"><b>issue → patch</b><i>✓ tests passed</i><small>awaiting human review</small></div></div><div class="project-info"><div><small>AI AGENTS · PYTHON · FASTAPI</small><h3>Autonomous AI Coding Agent</h3><p>GitHub issue → proposed patch → isolated validation → human-reviewed PR.</p></div><a href="https://github.com/Dinakarnayak/autonomous-ai-coding-agent" target="_blank" rel="noopener">View project ↗</a></div></article>
-<article class="project"><div class="project-image trace"><span>TRACE / 0028</span><div class="trace-bars"><i></i><i></i><i></i><i></i><i></i></div></div><div class="project-info"><div><small>AI OBSERVABILITY</small><h3>TraceLens</h3><p>Tracing, evaluation, latency, token usage and cost for AI agent runs.</p></div><a href="https://github.com/Dinakarnayak/tracelens-agent-observability" target="_blank" rel="noopener">View project ↗</a></div></article>
-<article class="project"><div class="project-image fraud"><span>MODEL / 003</span><div class="model-bars"><i></i><i></i><i></i><i></i><i></i></div></div><div class="project-info"><div><small>GENERATIVE AI · FRAUD</small><h3>Generative AI for Fraud</h3><p>GANs, VAEs, XGBoost and SHAP for detection and explainability.</p></div><a href="https://github.com/Dinakarnayak/Generative-AI-for-Fraud" target="_blank" rel="noopener">View project ↗</a></div></article>
-<article class="project"><div class="project-image speech"><span>AUDIO / 004</span><div class="wave"></div></div><div class="project-info"><div><small>NLP · SPEECH · FLASK</small><h3>LinguaSpeak</h3><p>Speech-to-text, translation and text-to-speech in one application.</p></div><a href="https://github.com/Dinakarnayak/LinguaSpeak-NLP-Speech-Translator" target="_blank" rel="noopener">View project ↗</a></div></article>
-</div>
-<div class="archive"><span>MORE PROJECTS</span><div><a href="https://github.com/Dinakarnayak/DeepLearningAssignments">Deep Learning ↗</a><a href="https://github.com/Dinakarnayak/ai-task-web-app">AI Task App ↗</a><a href="https://github.com/Dinakarnayak/WorkForce-API">WorkForce API ↗</a><a href="https://github.com/Dinakarnayak/z-vote">Z-Vote ↗</a><a href="https://github.com/Dinakarnayak/Stock-Market-Prediction">Stock Prediction ↗</a></div></div>
+<section class="intro" id="about">
+  <div class="kicker">01 / ABOUT ME</div>
+  <div class="intro-content">
+    <h2>Turning ideas<br>into <em>intelligent</em><br>products.</h2>
+    <div>
+      <p>I'm a Computer Science graduate specialising in AI & Machine Learning, currently pursuing my MSc Artificial Intelligence with Industry at the University of Leicester.</p>
+      <p>I enjoy building AI agents, NLP systems, computer-vision models, APIs and research prototypes that solve practical problems.</p>
+      <a class="text-link" href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank" rel="noopener">More about me ↗</a>
+    </div>
+  </div>
 </section>
 
-<section class="stats"><div><strong>95.55</strong><span>%</span><small>EEG MODEL ACCURACY</small></div><div><strong>15</strong><span>+</span><small>PROJECTS</small></div><div><strong>8.31</strong><span>/10</span><small>B.TECH CGPA</small></div><div><strong>10</strong><span>+</span><small>TECH AREAS</small></div></section>
+<section class="work" id="work">
+  <div class="section-head"><div><span class="kicker">02 / SELECTED WORK</span><h2>Things I've<br><em>built.</em></h2></div><p>AI, software and research projects I've worked on from idea to implementation.</p></div>
+  <div class="work-list">
+    <a class="work-card featured" href="https://github.com/Dinakarnayak/Generative-AI-for-Fraud" target="_blank" rel="noopener">
+      <div class="mockup fraud"><span>GENERATIVE AI / 001</span><div class="dashboard"><b>FRAUD DETECTION</b><strong>98.4%</strong><small>MODEL CONFIDENCE</small><i></i></div></div>
+      <div class="work-info"><div><small>GENERATIVE AI · ML · XGBOOST</small><h3>Generative AI for Fraud</h3><p>Detection, synthetic data generation and explainable machine learning.</p></div><b>↗</b></div>
+    </a>
+    <a class="work-card" href="https://github.com/Dinakarnayak/LinguaSpeak-NLP-Speech-Translator" target="_blank" rel="noopener">
+      <div class="mockup speech"><span>NLP / 002</span><div class="browser"><b>LinguaSpeak</b><div class="wave"></div><small>Speech → Translation → Voice</small></div></div>
+      <div class="work-info"><div><small>NLP · SPEECH · FLASK</small><h3>LinguaSpeak</h3><p>Speech-to-text, translation and text-to-speech in one application.</p></div><b>↗</b></div>
+    </a>
+    <a class="work-card" href="https://github.com/Dinakarnayak/DeepLearningAssignments" target="_blank" rel="noopener">
+      <div class="mockup model"><span>DEEP LEARNING / 003</span><div class="grid-model"><i></i><i></i><i></i><i></i><i></i></div></div>
+      <div class="work-info"><div><small>PYTORCH · TENSORFLOW · CV</small><h3>Deep Learning Research</h3><p>Experiments across neural networks, computer vision and sequence models.</p></div><b>↗</b></div>
+    </a>
+    <a class="work-card" href="https://github.com/Dinakarnayak/ai-task-web-app" target="_blank" rel="noopener">
+      <div class="mockup app"><span>SOFTWARE / 004</span><div class="app-window"><b>AI TASKS</b><div>✓ Research paper</div><div>○ Build prototype</div><div>○ Deploy model</div></div></div>
+      <div class="work-info"><div><small>REACT · NODE · AI</small><h3>AI Task Web App</h3><p>A practical productivity interface combining software engineering and AI.</p></div><b>↗</b></div>
+    </a>
+  </div>
+  <div class="more-work"><span>MORE FROM THE ARCHIVE</span><a href="https://github.com/Dinakarnayak" target="_blank" rel="noopener">View GitHub ↗</a></div>
+</section>
 
-<section class="section experience" id="experience"><div class="section-title"><div><small>03 / EXPERIENCE</small><h2>Work &<br><span>learning.</span></h2></div><p>Engineering experience across AI product development, research and UK industry.</p></div><div class="experience-list">
-<article><time>2026 — NOW</time><div><small>LEICESTER, UK</small><h3>MSc Artificial Intelligence with Industry</h3><p>University of Leicester · computational intelligence, AI security, big data, predictive analytics and generative development.</p></div></article>
-<article><time>2025 — NOW</time><div><small>AI PRODUCT DEVELOPMENT</small><h3>Founder · Next Tech AI</h3><p>Exploring AI products through research, prototyping and iterative software development.</p></div></article>
-<article><time>2025</time><div><small>REMOTE · AI / ML</small><h3>Artificial Intelligence Engineer · Wajooba</h3><p>GPT-based course generation, NLP pipelines, LLM fine-tuning and deployment.</p></div></article>
-<article><time>2021 — 2025</time><div><small>BENGALURU, INDIA</small><h3>B.Tech Computer Science & Engineering — AI & ML</h3><p>Dayananda Sagar University · graduated with 8.31/10.</p></div></article>
-</div></section>
+<section class="numbers">
+  <div><strong>95.55</strong><span>%</span><small>EEG MODEL ACCURACY</small></div>
+  <div><strong>15</strong><span>+</span><small>PROJECTS</small></div>
+  <div><strong>8.31</strong><span>/10</span><small>B.TECH CGPA</small></div>
+  <div><strong>10</strong><span>+</span><small>TECH AREAS</small></div>
+</section>
 
-<section class="section skills" id="skills"><div class="section-title"><div><small>04 / SKILLS</small><h2>My<br><span>toolbox.</span></h2></div><p>The technologies I use to move from idea to experiment to working product.</p></div><div class="skill-grid"><div><small>01 · LANGUAGES</small><strong>Python<br>C++ · Java<br>JavaScript · TypeScript</strong></div><div><small>02 · AI / ML</small><strong>PyTorch · TensorFlow<br>Keras · Scikit-learn<br>NLP · LLMs · Computer Vision</strong></div><div><small>03 · DEVELOPMENT</small><strong>React · Node.js<br>Flask · FastAPI<br>REST · JWT · RBAC</strong></div><div><small>04 · DATA / CLOUD</small><strong>PostgreSQL · MySQL<br>MongoDB · AWS<br>Docker · Vercel</strong></div></div></section>
+<section class="learning" id="learning">
+  <div class="kicker">03 / ALWAYS LEARNING</div>
+  <div class="learning-grid">
+    <h2>Always<br><em>learning.</em></h2>
+    <div><p>Currently exploring multimodal AI, medical AI, agent systems, uncertainty, explainability and reliable generative AI.</p><p>My goal is simple: build systems that are useful, measurable and trustworthy.</p><a class="pill dark" href="https://github.com/Dinakarnayak" target="_blank" rel="noopener">Explore GitHub ↗</a></div>
+  </div>
+</section>
 
-<section class="section research"><div class="research-banner"><div><small>05 / WHAT'S NEXT</small><h2>Always<br><span>learning.</span></h2></div><p>I'm especially interested in multimodal AI, medical AI, agent systems, uncertainty and explainable AI — building systems that are useful, measurable and trustworthy.</p><a class="black-btn" href="https://github.com/Dinakarnayak" target="_blank" rel="noopener">Explore GitHub ↗</a></div></section>
+<section class="experience">
+  <div class="kicker">04 / EXPERIENCE & EDUCATION</div>
+  <div class="timeline">
+    <article><time>2026 — NOW</time><div><small>LEICESTER, UK</small><h3>MSc Artificial Intelligence with Industry</h3><p>University of Leicester</p></div></article>
+    <article><time>2025 — NOW</time><div><small>AI PRODUCT DEVELOPMENT</small><h3>Founder · Next Tech AI</h3><p>AI product exploration, prototyping and software development.</p></div></article>
+    <article><time>2025</time><div><small>AI / ML</small><h3>Artificial Intelligence Engineer · Wajooba</h3><p>LLM, NLP and AI-powered learning systems.</p></div></article>
+    <article><time>2021 — 2025</time><div><small>BENGALURU, INDIA</small><h3>B.Tech CSE — AI & ML</h3><p>Dayananda Sagar University · 8.31/10</p></div></article>
+  </div>
+</section>
 
-<section class="contact" id="contact"><div class="contact-inner"><small>06 / CONTACT</small><h2>Let's build<br><span>something useful.</span></h2><p>AI/ML · Software Engineering · Research · Collaboration</p><a class="contact-mail" href="mailto:dinakarnayak4248@gmail.com">dinakarnayak4248@gmail.com <b>↗</b></a><div class="socials"><a href="https://github.com/Dinakarnayak" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div></section>
+<section class="cta" id="contact">
+  <div class="kicker">05 / LET'S BUILD</div>
+  <h2>Let's build<br><em>something great.</em></h2>
+  <a class="email" href="mailto:dinakarnayak4248@gmail.com">dinakarnayak4248@gmail.com ↗</a>
+  <div class="social"><a href="https://github.com/Dinakarnayak" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/dinakar-nayak-n-125762232/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+</section>
 </main>
-<footer><b>DN<span>.</span></b><small>AI/ML Engineer · Software Developer · Leicester, UK</small><a href="#home">BACK TO TOP ↑</a></footer>
+
+<footer><b>DINAKAR<span>•</span></b><small>AI/ML ENGINEER · SOFTWARE DEVELOPER</small><a href="#home">BACK TO TOP ↑</a></footer>
 <script src="script.js"></script>
-</div>
-</body></html>
+</body>
+</html>
