@@ -2232,3 +2232,39 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 }
 :root[data-theme="light"] .ai-profile-copy strong{color:#211d17}
 :root[data-theme="light"] .ai-profile-copy span{color:#6c6256}
+
+
+/* DINAKAR AI — keep the open assistant above every portfolio section */
+.ask-dinakar-panel{
+  position:fixed !important;
+  z-index:2147483000 !important;
+  isolation:isolate;
+  inset:0 !important;
+}
+.ask-dinakar-backdrop{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0;
+}
+.ask-dinakar-card{
+  position:relative !important;
+  z-index:1 !important;
+  pointer-events:auto !important;
+}
+.ask-dinakar-panel[aria-hidden="true"]{
+  pointer-events:none !important;
+}
+.ask-dinakar-panel[aria-hidden="false"]{
+  pointer-events:auto !important;
+}
+.ask-dinakar-close,
+.ask-dinakar-grid button,
+.ask-dinakar-links a{
+  position:relative;
+  z-index:2;
+  pointer-events:auto !important;
+}
+.ai-profile-card{
+  position:absolute;
+  z-index:2147482000 !important;
+}
