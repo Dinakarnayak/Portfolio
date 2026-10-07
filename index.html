@@ -32,6 +32,12 @@
 .cert-compact-row.is-selected>span,.cert-compact-row.is-selected small{color:var(--accent)}
 .cert-focus{margin-top:28px}
 @media(max-width:700px){.cert-compact-row{grid-template-columns:40px 1fr;gap:12px;padding:18px 0}.cert-compact-row small{grid-column:2;justify-self:start;margin-top:-5px}.cert-compact-row strong{font-size:24px}}
+</style><style id="certification-education-format">
+.certification-education-grid{margin-top:0}
+.certification-education-grid article{min-height:0}
+.certification-education-grid article h3{max-width:430px}
+.certification-education-grid article p{max-width:480px}
+@media(max-width:700px){.certification-education-grid{grid-template-columns:1fr}}
 </style></head>
 <body><script>(function(){var l=document.getElementById("cinematic-loader");if(!l)return;window.setTimeout(function(){l.classList.add("loader-done");l.style.opacity="0";l.style.visibility="hidden";l.style.pointerEvents="none";},2500);})();</script><div id="cinematic-loader"><div class="loader-mark">DN<span>•</span></div><div class="loader-line"><i></i></div><small>INITIALISING PORTFOLIO</small></div><div class="scroll-progress"></div><div class="ambient-noise"></div>
 <div class="page">
@@ -239,47 +245,61 @@
 <section class="education-extra" id="education"><div class="section-label">05 / EDUCATION</div><p class="legacy-section-copy">Formal study in computer science and AI, now extended through postgraduate work in artificial intelligence.</p><div class="extra-heading"><h2>Building a deeper<br><em>technical foundation.</em></h2><p>Formal study in computer science and AI, extended through postgraduate work in artificial intelligence.</p></div><div class="education-extra-grid"><article><div class="edu-top"><span>CURRENT STUDY · 2026—2028</span><b>MSc</b></div><small>POSTGRADUATE · FULL TIME</small><h3>MSc Artificial Intelligence with Industry</h3><p>University of Leicester · United Kingdom</p><p class="edu-copy">Coursework includes AI and machine learning, computational intelligence, AI security and ethics, software engineering, big data, predictive analytics, and generative development.</p><div class="inventory-pills"><span>AI security & ethics</span><span>Predictive analytics</span><span>Computational intelligence</span></div></article><article><div class="edu-top"><span>2021—2025</span><b>B.Tech</b></div><small>UNDERGRADUATE</small><h3>Computer Science & Engineering</h3><p>Specialization in Artificial Intelligence & Machine Learning<br>Dayananda Sagar University · Bengaluru, India</p><strong class="score">8.31<small>/10 CGPA</small></strong></article><article><div class="edu-top"><span>PRE-UNIVERSITY</span><b>PUC</b></div><h3>PCMC</h3><p>St. Joseph Indian Composite PU College</p><strong class="score">74.50<small>% score</small></strong></article></div></section>
 <section class="certifications cert-gallery" id="certifications">
   <div class="section-label">06 / CERTIFICATIONS</div>
-  <div class="cert-gallery-head">
-    <div>
-      <p class="cert-kicker">CREDENTIALS · SELECTED</p>
-      <h2>Proof of<br><em>learning.</em></h2>
-    </div>
-    <p>Recognised credentials across cloud, AI, development and cybersecurity.</p>
+  <p class="legacy-section-copy">Selected professional credentials across cloud, AI, development, statistics and cybersecurity.</p>
+
+  <div class="extra-heading">
+    <h2>Proof of<br><em>learning.</em></h2>
+    <p>Professional certifications and recognised learning milestones across technology and security.</p>
   </div>
 
-  <div class="cert-compact-list">
-    <button class="cert-compact-row is-selected" type="button" data-cert="aws" aria-pressed="true" onclick="selectCertificate('aws')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('aws')}">
-      <span>01</span><strong>Machine Learning Specialty</strong><small>AWS · NOV 2023</small>
-    </button>
-    <button class="cert-compact-row" type="button" data-cert="servicenow-dev" aria-pressed="false" onclick="selectCertificate('servicenow-dev')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('servicenow-dev')}">
-      <span>02</span><strong>Application Developer</strong><small>ServiceNow · AUG 2024</small>
-    </button>
-    <button class="cert-compact-row" type="button" data-cert="servicenow-admin" aria-pressed="false" onclick="selectCertificate('servicenow-admin')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('servicenow-admin')}">
-      <span>03</span><strong>System Administrator</strong><small>ServiceNow · JUN 2024</small>
-    </button>
-    <button class="cert-compact-row" type="button" data-cert="ethical" aria-pressed="false" onclick="selectCertificate('ethical')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('ethical')}">
-      <span>04</span><strong>Certified Ethical Hacker</strong><small>Great Learning · OCT 2024</small>
-    </button>
-    <button class="cert-compact-row" type="button" data-cert="infosys" aria-pressed="false" onclick="selectCertificate('infosys')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('infosys')}">
-      <span>05</span><strong>Statistics for R Programming</strong><small>Infosys Springboard · OCT 2024</small>
-    </button>
-    <button class="cert-compact-row" type="button" data-cert="jdbc" aria-pressed="false" onclick="selectCertificate('jdbc')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCertificate('jdbc')}">
-      <span>06</span><strong>Java Database Connectivity</strong><small>Coursera · 2024</small>
-    </button>
-  </div>
+  <div class="education-extra-grid certification-education-grid">
+    <article>
+      <div class="edu-top"><span>NOV 2023</span><b>AWS</b></div>
+      <small>AMAZON WEB SERVICES · SPECIALTY</small>
+      <h3>Machine Learning Specialty</h3>
+      <p>Machine learning credential focused on designing, building and deploying ML solutions on AWS.</p>
+      <div class="inventory-pills"><span>Machine Learning</span><span>AWS</span></div>
+    </article>
 
-  <div class="cert-focus" id="cert-focus" aria-live="polite">
-    <div class="cert-focus-mark"><span id="cert-focus-mark">AWS</span><i>✓</i></div>
-    <div>
-      <small>SELECTED CREDENTIAL</small>
-      <h3 id="cert-focus-title">AWS Certified Machine Learning — Specialty</h3>
-      <p id="cert-focus-copy">Machine learning credential focused on designing, building and deploying ML solutions on AWS.</p>
-    </div>
-    <div class="cert-focus-meta">
-      <span>ISSUER <b id="cert-focus-issuer">AMAZON WEB SERVICES</b></span>
-      <span>ISSUED <b id="cert-focus-date">NOV 2023</b></span>
-      <span>STATUS <b>VERIFIED</b></span>
-    </div>
+    <article>
+      <div class="edu-top"><span>AUG 2024</span><b>SN</b></div>
+      <small>SERVICENOW · CERTIFIED</small>
+      <h3>Application Developer</h3>
+      <p>Application development credential covering practical development on the ServiceNow platform.</p>
+      <div class="inventory-pills"><span>Development</span><span>ServiceNow</span></div>
+    </article>
+
+    <article>
+      <div class="edu-top"><span>JUN 2024</span><b>SN</b></div>
+      <small>SERVICENOW · CERTIFIED</small>
+      <h3>System Administrator</h3>
+      <p>Platform administration credential covering configuration, users, data and core ServiceNow capabilities.</p>
+      <div class="inventory-pills"><span>Administration</span><span>ServiceNow</span></div>
+    </article>
+
+    <article>
+      <div class="edu-top"><span>OCT 2024</span><b>CEH</b></div>
+      <small>GREAT LEARNING · SECURITY</small>
+      <h3>Certified Ethical Hacker</h3>
+      <p>Ethical hacking credential focused on security concepts, reconnaissance, vulnerabilities and defensive thinking.</p>
+      <div class="inventory-pills"><span>Cybersecurity</span><span>Ethical Hacking</span></div>
+    </article>
+
+    <article>
+      <div class="edu-top"><span>OCT 2024</span><b>R</b></div>
+      <small>INFOSYS SPRINGBOARD · STATISTICS</small>
+      <h3>Statistics for R Programming</h3>
+      <p>Statistics credential covering practical analysis and statistical programming with R.</p>
+      <div class="inventory-pills"><span>R Programming</span><span>Statistics</span></div>
+    </article>
+
+    <article>
+      <div class="edu-top"><span>2024</span><b>JDBC</b></div>
+      <small>COURSERA · PROGRAMMING</small>
+      <h3>Java Database Connectivity</h3>
+      <p>Credential covering Java database connectivity and application-level database interaction.</p>
+      <div class="inventory-pills"><span>Java</span><span>Databases</span></div>
+    </article>
   </div>
 </section>
 
