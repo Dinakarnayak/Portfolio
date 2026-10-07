@@ -187,3 +187,7 @@ const themeToggle=document.querySelector('#theme-toggle');if(themeToggle){const 
   const storyCards=[...document.querySelectorAll('.project-story-card')];
   if(storyCards.length&&!reduceMotion&&'IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('story-active')}),{threshold:.35});storyCards.forEach(c=>io.observe(c));}
 })();
+
+
+/* Project Stories scroll state */
+(()=>{const cards=[...document.querySelectorAll('.project-story-card')],bar=document.querySelector('.story-progress i b');if(!cards.length)return;const update=()=>{let active=0,best=Infinity;cards.forEach((card,i)=>{const r=card.getBoundingClientRect();const d=Math.abs((r.top+r.height*.35)-innerHeight*.42);if(d<best){best=d;active=i}card.style.setProperty('--story-depth',Math.min(i,2));});cards.forEach((card,i)=>card.classList.toggle('story-active',i===active));if(bar)bar.style.width=((active+1)/cards.length*100)+'%')};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update()})();
