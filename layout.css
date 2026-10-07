@@ -1409,3 +1409,36 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
 @media(max-width:900px){.build-story-head{grid-template-columns:1fr;gap:22px}.build-steps{grid-template-columns:repeat(2,1fr)}.build-steps article:nth-child(2){border-right:0}.build-steps article:nth-child(-n+2){border-bottom:1px solid #d9efff22}}
 @media(max-width:600px){.build-story{padding:72px 6vw}.build-steps{grid-template-columns:1fr}.build-steps article,.build-steps article:nth-child(2){border-right:0;border-bottom:1px solid #d9efff22}.build-steps article:last-child{border-bottom:0}.build-steps article>span{margin-bottom:30px}}
 @media(prefers-reduced-motion:reduce){.build-steps article{transition:none}.build-marquee span{animation:none}}
+
+
+/* Cinematic AI profile avatar */
+.ai-profile-card{position:absolute;right:2.2vw;bottom:11%;z-index:12;width:230px;padding:13px 14px 12px;display:grid;grid-template-columns:52px 1fr;gap:10px 12px;align-items:center;background:rgba(6,17,27,.84);border:1px solid #8fd3ff38;box-shadow:0 18px 55px #020912aa,0 0 35px #8fd3ff0d;backdrop-filter:blur(18px);transform:translateZ(0);transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.ai-profile-card:hover{transform:translateY(-6px);border-color:#8fd3ff88;box-shadow:0 24px 65px #020912cc,0 0 45px #8fd3ff16}
+.ai-avatar{position:relative;width:52px;height:52px;display:grid;place-items:center}
+.ai-avatar-core{position:relative;width:42px;height:42px;border-radius:50%;overflow:hidden;border:1px solid #8fd3ff88;box-shadow:0 0 22px #8fd3ff2b}
+.ai-avatar-core img{width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(.9) contrast(1.08)}
+.ai-avatar-core span{position:absolute;right:2px;bottom:2px;padding:2px 4px;border-radius:4px;background:#07111bdf;color:#a9e1ff;font:6px "DM Mono",monospace;letter-spacing:.08em}
+.ai-orbit{position:absolute;border:1px solid #8fd3ff55;border-radius:50%;inset:2px;animation:ai-orbit 4.5s linear infinite}
+.ai-orbit-two{inset:6px;border-color:#4e9ac744;animation-duration:3.2s;animation-direction:reverse}
+.ai-online{position:absolute;right:1px;top:3px;width:7px;height:7px;border-radius:50%;background:#8fd3ff;box-shadow:0 0 0 3px #8fd3ff16,0 0 14px #8fd3ff;animation:ai-pulse 2s ease-in-out infinite}
+.ai-profile-copy{min-width:0;display:flex;flex-direction:column;gap:3px}
+.ai-profile-copy small{color:#8fd3ff;font:7px "DM Mono",monospace;letter-spacing:.12em}
+.ai-profile-copy strong{color:#edf7ff;font:10px Montserrat,sans-serif;letter-spacing:.08em}
+.ai-profile-copy span{color:#8ea7b8;font:7px "DM Mono",monospace;white-space:nowrap}
+.ai-profile-meta{grid-column:1/-1;display:flex;justify-content:space-between;padding-top:9px;border-top:1px solid #d9efff18;color:#708c9d;font:6px "DM Mono",monospace;letter-spacing:.1em}
+@keyframes ai-orbit{to{transform:rotate(360deg)}}
+@keyframes ai-pulse{0%,100%{opacity:.65;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}
+:root[data-theme="light"] .ai-profile-card{background:#fffdf8e8;border-color:#936b3540;box-shadow:0 18px 55px #4438201c}
+:root[data-theme="light"] .ai-profile-card:hover{border-color:#936b35a0}
+:root[data-theme="light"] .ai-avatar-core{border-color:#936b3580;box-shadow:0 0 22px #936b3528}
+:root[data-theme="light"] .ai-avatar-core span{background:#211d17df;color:#f0d8ad}
+:root[data-theme="light"] .ai-orbit{border-color:#936b3555}
+:root[data-theme="light"] .ai-orbit-two{border-color:#4f898244}
+:root[data-theme="light"] .ai-online{background:#4f8982;box-shadow:0 0 0 3px #4f898220,0 0 14px #4f8982}
+:root[data-theme="light"] .ai-profile-copy small{color:#805b2c}
+:root[data-theme="light"] .ai-profile-copy strong{color:#211d17}
+:root[data-theme="light"] .ai-profile-copy span{color:#6c6256}
+:root[data-theme="light"] .ai-profile-meta{border-color:#211d1720;color:#806f5e}
+@media(max-width:1100px){.ai-profile-card{right:1.5vw;bottom:7%;width:205px}}
+@media(max-width:900px){.ai-profile-card{position:relative;right:auto;bottom:auto;margin:-20px 6vw 28px;width:min(310px,calc(100% - 12vw))}}
+@media(prefers-reduced-motion:reduce){.ai-orbit,.ai-online{animation:none}}
