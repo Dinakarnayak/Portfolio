@@ -216,3 +216,13 @@ const contactForm=document.querySelector('#contactForm');if(contactForm){contact
     hero.classList.remove('hero-hovering');
   });
 })();
+
+/* About section reveal */
+(()=>{
+  const items=[...document.querySelectorAll('.about-grid,.about-strip,.about-pillars')];
+  if(!items.length)return;
+  items.forEach(el=>el.classList.add('about-reveal'));
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('about-visible'));return;}
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('about-visible');io.unobserve(e.target)}}),{threshold:.12});
+  items.forEach(el=>io.observe(el));
+})();
