@@ -230,36 +230,32 @@
       <p class="achievements-kicker">SELECTED MILESTONES · 2021—2026</p>
       <h2>Built.<br><em>Proven.</em></h2>
     </div>
-    <p class="achievements-intro">A concise record of academic performance, applied machine learning and the breadth of systems built across the journey.</p>
+    <p class="achievements-intro">A living record of academic performance, applied machine learning and the systems built along the way. Select a milestone to explore it.</p>
   </div>
-  <div class="achievement-grid">
-    <article class="achievement-card achievement-feature">
-      <div class="achievement-index">01 / RESEARCH</div>
-      <div class="achievement-number"><b>95.55</b><span>%</span></div>
-      <div class="achievement-meter"><i style="width:95.55%"></i></div>
-      <h3>EEG MODEL ACCURACY</h3>
-      <p>GRU-based emotion classification evaluated on EEG data.</p>
-      <div class="achievement-line"></div>
-      <a href="#work">EXPLORE THE WORK <span>↗</span></a>
-    </article>
-    <article class="achievement-card">
-      <div class="achievement-index">02 / ACADEMIC</div>
-      <div class="achievement-number"><b>8.31</b><span>/10</span></div>
-      <div class="achievement-meta"><span>FINAL B.TECH CGPA</span><span>AI / ML</span></div>
-      <h3>COMPUTER SCIENCE</h3>
-      <p>Computer Science & Engineering with an Artificial Intelligence & Machine Learning specialisation.</p>
-      <div class="achievement-line"></div>
-      <a href="#education">VIEW EDUCATION <span>↗</span></a>
-    </article>
-    <article class="achievement-card">
-      <div class="achievement-index">03 / BUILD</div>
-      <div class="achievement-number"><b>15</b><span>+</span></div>
-      <div class="achievement-meta"><span>SELECTED PROJECTS</span><span>AI · SOFTWARE</span></div>
-      <h3>PROJECT PORTFOLIO</h3>
-      <p>AI, machine learning, agents, software engineering and research projects across the portfolio.</p>
-      <div class="achievement-line"></div>
-      <a href="#github">EXPLORE GITHUB <span>↗</span></a>
-    </article>
+  <div class="achievement-list" role="list">
+    <button class="achievement-row is-active" type="button" data-achievement="research" aria-expanded="true">
+      <span class="achievement-row-index">01</span>
+      <span class="achievement-row-main"><small>RESEARCH · 2025</small><strong>EEG MODEL ACCURACY</strong><em>GRU-based emotion classification evaluated on EEG data.</em></span>
+      <span class="achievement-row-value"><b>95.55</b><i>%</i></span>
+      <span class="achievement-row-arrow">↗</span>
+    </button>
+    <button class="achievement-row" type="button" data-achievement="academic" aria-expanded="false">
+      <span class="achievement-row-index">02</span>
+      <span class="achievement-row-main"><small>ACADEMIC · 2025</small><strong>COMPUTER SCIENCE</strong><em>Final B.Tech performance with an AI / ML specialisation.</em></span>
+      <span class="achievement-row-value"><b>8.31</b><i>/10</i></span>
+      <span class="achievement-row-arrow">↗</span>
+    </button>
+    <button class="achievement-row" type="button" data-achievement="build" aria-expanded="false">
+      <span class="achievement-row-index">03</span>
+      <span class="achievement-row-main"><small>BUILD · 2021—2026</small><strong>PROJECT PORTFOLIO</strong><em>AI, agents, software engineering and research across the portfolio.</em></span>
+      <span class="achievement-row-value"><b>15</b><i>+</i></span>
+      <span class="achievement-row-arrow">↗</span>
+    </button>
+  </div>
+  <div class="achievement-detail" id="achievement-detail" aria-live="polite">
+    <div><span>SELECTED MILESTONE</span><strong id="achievement-detail-title">EEG MODEL ACCURACY</strong></div>
+    <p id="achievement-detail-copy">A GRU-based emotion classification model evaluated on EEG data, reaching 95.55% test accuracy.</p>
+    <a id="achievement-detail-link" href="#work">EXPLORE THE WORK <span>↗</span></a>
   </div>
   <div class="achievements-footer">
     <span><i></i> CURIOUS BY DEFAULT</span>
