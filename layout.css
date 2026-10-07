@@ -1920,3 +1920,39 @@ header:hover{box-shadow:0 12px 35px rgba(0,0,0,.14)}
   .achievements-footer{flex-direction:column;gap:8px}
 }
 @media(prefers-reduced-motion:reduce){.achievement-card{transition:none}.achievement-card:hover{transform:none}}
+
+
+/* TECH MATRIX — stronger type colour */
+.periodic .element strong{
+  color:#8fd3ff;
+  text-shadow:0 0 16px #8fd3ff22;
+  transition:color .25s ease,text-shadow .25s ease,transform .25s ease;
+}
+.periodic .element span{
+  color:#d7d0c5;
+  transition:color .25s ease;
+}
+.periodic .element small{
+  color:#8c8274;
+}
+.periodic .element:hover strong,
+.periodic .element.active strong{
+  color:#d4af72;
+  text-shadow:0 0 18px #d4af7245;
+  transform:translateX(2px);
+}
+.periodic .element:hover span,
+.periodic .element.active span{
+  color:var(--text-strong);
+}
+:root[data-theme="light"] .periodic .element strong{
+  color:#176b92;
+  text-shadow:none;
+}
+:root[data-theme="light"] .periodic .element span{
+  color:#51483d;
+}
+:root[data-theme="light"] .periodic .element:hover strong,
+:root[data-theme="light"] .periodic .element.active strong{
+  color:#8b641f;
+}
