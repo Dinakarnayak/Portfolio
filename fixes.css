@@ -1,0 +1,12 @@
+/* Loaded last: layout fixes that must win over earlier rules. */
+
+/* Decorative orbs, tickers and tilted panels must never widen the page on phones.
+   `clip` (not `hidden`) keeps position: sticky working. */
+html, body { overflow-x: clip; }
+
+@media (max-width: 600px) {
+  .skills-bento-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .skills-bento-card, .skills-bento-card:first-child { grid-column: auto !important; grid-row: auto !important; min-width: 0; }
+  .about-ai-panel { max-width: 100%; transform: none !important; }
+  .skills-bento { padding-inline: 18px; }
+}
